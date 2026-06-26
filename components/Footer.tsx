@@ -16,16 +16,18 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 border-t border-white/5">
+    <footer className="bg-[#001833] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-[#FDB515] flex items-center justify-center text-[#003262] font-bold text-sm">
                 C
               </div>
-              <span className="text-white font-semibold text-lg">California Claw</span>
+              <span className="text-white font-bold text-lg">
+                California <span className="text-[#FDB515]">Claw</span>
+              </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-5">
               Premium claw machine services for universities, restaurants, and businesses.
@@ -34,16 +36,16 @@ export default function Footer() {
             <div className="space-y-2">
               <a
                 href="mailto:team@californiaclaw.com"
-                className="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors"
+                className="flex items-center gap-2 text-slate-400 hover:text-[#FDB515] text-sm transition-colors"
               >
-                <Mail className="w-4 h-4 text-violet-400" />
+                <Mail className="w-4 h-4 text-[#FDB515]" />
                 team@californiaclaw.com
               </a>
               <a
                 href="tel:+15105064159"
-                className="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors"
+                className="flex items-center gap-2 text-slate-400 hover:text-[#FDB515] text-sm transition-colors"
               >
-                <Phone className="w-4 h-4 text-violet-400" />
+                <Phone className="w-4 h-4 text-[#FDB515]" />
                 (510) 506-4159
               </a>
             </div>
@@ -57,7 +59,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-white text-sm transition-colors"
+                    className="text-slate-400 hover:text-[#FDB515] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -74,7 +76,7 @@ export default function Footer() {
             </p>
             <a
               href="#contact"
-              className="inline-block bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors"
+              className="inline-block btn-gold text-sm px-6 py-3 rounded-xl"
             >
               Get a Free Machine →
             </a>

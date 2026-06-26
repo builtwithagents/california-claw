@@ -10,11 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          purple: '#7c3aed',
-          indigo: '#4f46e5',
-          dark: '#0d0620',
-          darker: '#07031a',
-          gold: '#f59e0b',
+          navy: '#003262',
+          'navy-dark': '#001833',
+          'navy-mid': '#002244',
+          'navy-light': '#004d99',
+          gold: '#FDB515',
+          'gold-light': '#FFD060',
+          'gold-dark': '#CC8800',
           emerald: '#10b981',
         },
       },
@@ -22,7 +24,7 @@ const config: Config = {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-gradient': 'radial-gradient(ellipse at 60% 0%, rgba(124,58,237,0.25) 0%, transparent 60%), radial-gradient(ellipse at 0% 100%, rgba(79,70,229,0.15) 0%, transparent 50%), linear-gradient(to bottom, #0d0620, #12042a)',
+        'hero-gradient': 'radial-gradient(ellipse at 60% 0%, rgba(253,181,21,0.12) 0%, transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(0,50,98,0.4) 0%, transparent 50%), linear-gradient(to bottom, #001833, #002f5f)',
         'card-shine': 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%)',
       },
       animation: {
@@ -35,8 +37,8 @@ const config: Config = {
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(124,58,237,0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(124,58,237,0.6)' },
+          '0%': { boxShadow: '0 0 20px rgba(253,181,21,0.3)' },
+          '100%': { boxShadow: '0 0 40px rgba(253,181,21,0.6)' },
         },
       },
     },

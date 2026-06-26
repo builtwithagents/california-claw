@@ -14,14 +14,14 @@ export default function Hero() {
       />
 
       {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-violet-600/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-600/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#003262]/30 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#FDB515]/8 blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Copy */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-violet-500/15 border border-violet-500/25 text-violet-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-[#FDB515]/15 border border-[#FDB515]/30 text-[#FDB515] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
               <Sparkles className="w-3.5 h-3.5" />
               100% Free for your business
             </div>
@@ -40,14 +40,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-violet-900/40 hover:shadow-violet-900/60 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 btn-gold px-8 py-4 rounded-xl shadow-lg shadow-yellow-900/30 hover:-translate-y-0.5 hover:shadow-yellow-900/50"
               >
                 Get Your Free Machine
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#benefits"
-                className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 text-white font-semibold px-8 py-4 rounded-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#FDB515]/50 hover:text-[#FDB515] text-white font-semibold px-8 py-4 rounded-xl transition-all"
               >
                 See How It Works
               </a>
@@ -55,11 +55,7 @@ export default function Hero() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3">
-              {[
-                '✓ No contracts',
-                '✓ No upfront costs',
-                '✓ We handle everything',
-              ].map((badge) => (
+              {['✓ No contracts', '✓ No upfront costs', '✓ We handle everything'].map((badge) => (
                 <span
                   key={badge}
                   className="text-sm text-slate-400 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg"
@@ -74,16 +70,16 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative animate-float">
               {/* Machine card */}
-              <div className="w-72 h-96 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-white/10 shadow-2xl overflow-hidden relative">
+              <div className="w-72 h-96 rounded-3xl bg-gradient-to-b from-[#002244] to-[#001222] border border-white/10 shadow-2xl overflow-hidden relative">
                 {/* Top display */}
-                <div className="absolute inset-x-4 top-4 h-16 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg tracking-widest">
+                <div className="absolute inset-x-4 top-4 h-16 rounded-xl bg-gradient-to-r from-[#003262] to-[#004d99] flex items-center justify-center border border-[#FDB515]/30">
+                  <span className="text-[#FDB515] font-bold text-lg tracking-widest drop-shadow-sm">
                     JOY CATCHER
                   </span>
                 </div>
 
                 {/* Glass panel */}
-                <div className="absolute inset-x-4 top-24 bottom-16 rounded-xl bg-gradient-to-b from-sky-900/40 to-slate-900/60 border border-white/10 overflow-hidden">
+                <div className="absolute inset-x-4 top-24 bottom-16 rounded-xl bg-gradient-to-b from-sky-900/30 to-[#001833]/60 border border-white/10 overflow-hidden">
                   {/* Prize pile */}
                   <div className="absolute inset-0 flex flex-wrap gap-2 p-3 items-end justify-center">
                     {['🧸', '🐻', '🦄', '🐸', '🐶', '🎀', '🐱', '🦊', '🐼', '🐨', '🎪', '🌟'].map(
@@ -113,7 +109,7 @@ export default function Hero() {
                 <div className="absolute inset-x-4 bottom-4 h-10 flex items-center justify-between">
                   <div className="flex gap-2">
                     <div className="w-6 h-6 rounded-full bg-red-500 shadow-md shadow-red-900" />
-                    <div className="w-6 h-6 rounded-full bg-yellow-400 shadow-md shadow-yellow-900" />
+                    <div className="w-6 h-6 rounded-full bg-[#FDB515] shadow-md shadow-yellow-900" />
                   </div>
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -124,10 +120,10 @@ export default function Hero() {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-bounce">
+              <div className="absolute -top-4 -right-4 bg-[#FDB515] text-[#001833] text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-bounce">
                 FREE!
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg">
+              <div className="absolute -bottom-4 -left-4 bg-[#003262] border border-[#FDB515]/40 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg">
                 ✓ Fully Maintained
               </div>
             </div>

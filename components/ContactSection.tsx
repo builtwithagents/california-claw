@@ -15,13 +15,13 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: Info */}
           <div>
-            <p className="text-violet-600 font-semibold text-sm uppercase tracking-wider mb-3">
+            <p className="text-[#003262] font-semibold text-sm uppercase tracking-wider mb-3">
               Get Started
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Ready for a free
               <br />
-              <span className="text-gradient">claw machine?</span>
+              <span className="text-gradient-navy">claw machine?</span>
             </h2>
             <p className="text-lg text-slate-500 mb-8 leading-relaxed">
               Tell us about your location and we&apos;ll get back to you within 24 hours
@@ -30,32 +30,32 @@ export default function ContactSection() {
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3 text-slate-700">
-                <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-violet-600" />
+                <div className="w-10 h-10 rounded-xl bg-[#003262]/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#003262]" />
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 mb-0.5">Call or text us</p>
-                  <a href="tel:+15105064159" className="font-semibold hover:text-violet-600 transition-colors">
+                  <a href="tel:+15105064159" className="font-semibold hover:text-[#003262] transition-colors">
                     (510) 506-4159
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-slate-700">
-                <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-violet-600" />
+                <div className="w-10 h-10 rounded-xl bg-[#003262]/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#003262]" />
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 mb-0.5">Email us directly</p>
-                  <a href="mailto:team@californiaclaw.com" className="font-semibold hover:text-violet-600 transition-colors">
+                  <a href="mailto:team@californiaclaw.com" className="font-semibold hover:text-[#003262] transition-colors">
                     team@californiaclaw.com
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-violet-50 border border-violet-100 rounded-2xl p-5">
-              <p className="text-sm text-violet-800 font-semibold mb-1">What happens next?</p>
-              <ol className="space-y-1.5 text-sm text-violet-700">
+            <div className="bg-[#003262]/5 border border-[#003262]/15 rounded-2xl p-5">
+              <p className="text-sm text-[#003262] font-semibold mb-1">What happens next?</p>
+              <ol className="space-y-1.5 text-sm text-[#003262]/80">
                 <li>1. We review your request within 24 hours</li>
                 <li>2. Quick call to discuss your space</li>
                 <li>3. We schedule installation at your convenience</li>
@@ -97,7 +97,7 @@ export default function ContactSection() {
                       type="text"
                       required
                       placeholder="Jane Smith"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#003262] focus:ring-2 focus:ring-[#003262]/10 outline-none transition-all text-sm"
                     />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                       type="email"
                       required
                       placeholder="jane@company.com"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#003262] focus:ring-2 focus:ring-[#003262]/10 outline-none transition-all text-sm"
                     />
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function ContactSection() {
                     type="text"
                     required
                     placeholder="UC Berkeley, Joe's Diner, etc."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#003262] focus:ring-2 focus:ring-[#003262]/10 outline-none transition-all text-sm"
                   />
                 </div>
 
@@ -138,7 +138,7 @@ export default function ContactSection() {
                     name="phone"
                     type="tel"
                     placeholder="(510) 555-0100"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#003262] focus:ring-2 focus:ring-[#003262]/10 outline-none transition-all text-sm"
                   />
                 </div>
 
@@ -151,14 +151,14 @@ export default function ContactSection() {
                     name="message"
                     rows={3}
                     placeholder="Type of business, approximate sq footage, foot traffic..."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#003262] focus:ring-2 focus:ring-[#003262]/10 outline-none transition-all text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={pending}
-                  className="w-full bg-violet-600 hover:bg-violet-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-8 py-3.5 rounded-xl transition-all shadow-md shadow-violet-200"
+                  className="w-full btn-gold disabled:opacity-60 disabled:cursor-not-allowed px-8 py-3.5 rounded-xl shadow-md shadow-yellow-100"
                 >
                   {pending ? 'Sending...' : 'Submit Request →'}
                 </button>

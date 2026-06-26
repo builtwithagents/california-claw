@@ -25,19 +25,19 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-950/95 backdrop-blur-md shadow-lg shadow-black/20'
+          ? 'bg-[#001833]/95 backdrop-blur-md shadow-lg shadow-black/30'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md group-hover:shadow-violet-500/40 transition-shadow">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg bg-[#FDB515] flex items-center justify-center font-bold text-[#003262] text-sm shadow-md">
               C
             </div>
-            <span className="text-white font-semibold text-lg tracking-tight">
-              California Claw
+            <span className="text-white font-bold text-lg tracking-tight">
+              California <span className="text-[#FDB515]">Claw</span>
             </span>
           </Link>
 
@@ -47,7 +47,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                className="text-slate-300 hover:text-[#FDB515] text-sm font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-md shadow-violet-900/30"
+              className="btn-gold px-5 py-2.5 rounded-xl shadow-md shadow-yellow-900/20 text-sm"
             >
               Get a Free Machine
             </a>
@@ -77,13 +77,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-slate-950/98 backdrop-blur-md border-t border-white/10">
+        <div className="md:hidden bg-[#001833]/98 backdrop-blur-md border-t border-white/10">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block text-slate-300 hover:text-white py-2 text-sm font-medium transition-colors"
+                className="block text-slate-300 hover:text-[#FDB515] py-2 text-sm font-medium transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -91,7 +91,7 @@ export default function Header() {
             ))}
             <a
               href="#contact"
-              className="block bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors text-center mt-2"
+              className="block btn-gold px-5 py-3 rounded-xl text-sm text-center mt-2"
               onClick={() => setMobileOpen(false)}
             >
               Get a Free Machine

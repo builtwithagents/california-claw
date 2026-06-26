@@ -48,7 +48,7 @@ export default async function CountyPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-hero-gradient min-h-[60vh] flex items-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <div className="inline-flex items-center gap-2 bg-violet-500/20 border border-violet-500/30 text-violet-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#FDB515]/15 border border-[#FDB515]/30 text-[#FDB515] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
             <MapPin className="w-4 h-4" />
             Now serving {county.city}
           </div>
@@ -63,7 +63,7 @@ export default async function CountyPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
+              className="btn-gold px-8 py-3.5 rounded-xl"
             >
               Request a Free Machine
             </a>
@@ -86,7 +86,7 @@ export default async function CountyPage({ params }: Props) {
           <div className="grid sm:grid-cols-2 gap-4">
             {benefits.map((benefit) => (
               <div key={benefit} className="flex items-start gap-3 bg-white p-5 rounded-xl shadow-sm">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-[#003262] flex-shrink-0 mt-0.5" />
                 <span className="text-slate-700">{benefit}</span>
               </div>
             ))}
@@ -103,14 +103,14 @@ export default async function CountyPage({ params }: Props) {
       <section className="bg-slate-900 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left">
           <div className="flex items-center gap-3 text-white">
-            <Phone className="w-5 h-5 text-violet-400" />
-            <a href="tel:+15105064159" className="hover:text-violet-400 transition-colors">
+            <Phone className="w-5 h-5 text-[#FDB515]" />
+            <a href="tel:+15105064159" className="hover:text-[#FDB515] transition-colors">
               (510) 506-4159
             </a>
           </div>
           <div className="flex items-center gap-3 text-white">
-            <Mail className="w-5 h-5 text-violet-400" />
-            <a href="mailto:team@californiaclaw.com" className="hover:text-violet-400 transition-colors">
+            <Mail className="w-5 h-5 text-[#FDB515]" />
+            <a href="mailto:team@californiaclaw.com" className="hover:text-[#FDB515] transition-colors">
               team@californiaclaw.com
             </a>
           </div>
