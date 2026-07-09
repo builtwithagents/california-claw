@@ -46,31 +46,26 @@ export default async function CountyPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-hero-gradient min-h-[60vh] flex items-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FDB515]/15 border border-[#FDB515]/30 text-[#FDB515] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-            <MapPin className="w-4 h-4" />
+      <section className="relative bg-brand-cream min-h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center">
+          <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">
+            <MapPin className="w-4 h-4 text-brand-gold" />
             Now serving {county.city}
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-6 leading-tight">
             Free Claw Machines in{' '}
-            <span className="text-gradient">{county.name}</span>
+            <span className="highlight-gold">{county.name}</span>
           </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-navy/70 mb-8 max-w-2xl mx-auto">
             {county.description} We handle everything — installation, maintenance,
             and restocking — at zero cost to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="btn-gold px-8 py-3.5 rounded-xl"
-            >
+            <a href="#contact" className="btn-gold px-8 py-3.5">
               Request a Free Machine
             </a>
-            <Link
-              href="/"
-              className="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
-            >
+            <Link href="/" className="btn-outline px-8 py-3.5">
               Back to Home
             </Link>
           </div>
@@ -78,16 +73,16 @@ export default async function CountyPage({ params }: Props) {
       </section>
 
       {/* Benefits in this area */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Everything included, nothing to pay
+          <h2 className="font-display text-3xl font-extrabold text-brand-navy text-center mb-12">
+            Everything included, <span className="highlight-gold">nothing to pay</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-start gap-3 bg-white p-5 rounded-xl shadow-sm">
-                <CheckCircle2 className="w-5 h-5 text-[#003262] flex-shrink-0 mt-0.5" />
-                <span className="text-slate-700">{benefit}</span>
+              <div key={benefit} className="card-fun flex items-start gap-3 p-5">
+                <CheckCircle2 className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
+                <span className="text-brand-navy/80">{benefit}</span>
               </div>
             ))}
           </div>
@@ -100,17 +95,17 @@ export default async function CountyPage({ params }: Props) {
       </div>
 
       {/* Simple local contact strip */}
-      <section className="bg-slate-900 py-12">
+      <section className="bg-brand-navy py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left">
           <div className="flex items-center gap-3 text-white">
-            <Phone className="w-5 h-5 text-[#FDB515]" />
-            <a href="tel:+15105064159" className="hover:text-[#FDB515] transition-colors">
+            <Phone className="w-5 h-5 text-brand-gold" />
+            <a href="tel:+15105064159" className="hover:text-brand-gold transition-colors">
               (510) 506-4159
             </a>
           </div>
           <div className="flex items-center gap-3 text-white">
-            <Mail className="w-5 h-5 text-[#FDB515]" />
-            <a href="mailto:team@californiaclaw.com" className="hover:text-[#FDB515] transition-colors">
+            <Mail className="w-5 h-5 text-brand-gold" />
+            <a href="mailto:team@californiaclaw.com" className="hover:text-brand-gold transition-colors">
               team@californiaclaw.com
             </a>
           </div>

@@ -6,36 +6,28 @@ const benefits = [
     title: 'Free Machine Placement',
     description:
       'No upfront costs, no rental fees, no surprises. We place our premium claw machines at your location completely free of charge.',
-    color: 'text-emerald-600',
-    bg: 'bg-emerald-50',
-    border: 'border-emerald-100',
+    chip: 'bg-brand-gold/20 text-brand-navy',
   },
   {
     icon: Wrench,
     title: 'Full Maintenance',
     description:
       'We handle all repairs, technical issues, and regular maintenance. Your team never needs to think about upkeep.',
-    color: 'text-[#003262]',
-    bg: 'bg-blue-50',
-    border: 'border-blue-100',
+    chip: 'bg-brand-sky/50 text-brand-navy',
   },
   {
     icon: Package,
     title: 'Regular Restocking',
     description:
       'Fresh prizes delivered and restocked on schedule. We ensure your machine always looks irresistible to customers.',
-    color: 'text-[#003262]',
-    bg: 'bg-blue-50',
-    border: 'border-blue-100',
+    chip: 'bg-brand-coral/15 text-brand-coral',
   },
   {
     icon: Zap,
     title: 'Zero Hidden Fees',
     description:
       'Seriously — nothing. We manage everything from installation to prizes to ongoing service. Your cost is always zero.',
-    color: 'text-amber-600',
-    bg: 'bg-amber-50',
-    border: 'border-amber-100',
+    chip: 'bg-emerald-100 text-emerald-600',
   },
 ]
 
@@ -44,16 +36,13 @@ export default function Benefits() {
     <section id="benefits" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-[#003262] font-semibold text-sm uppercase tracking-wider mb-3">
-            Why California Claw
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            All the benefits,
-            <span className="text-gradient-navy"> none of the hassle</span>
+          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHY CALIFORNIA CLAW</div>
+          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
+            All the fun, <span className="highlight-gold">none of the work</span>
           </h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-navy/60 max-w-2xl mx-auto">
             We make it incredibly simple to add entertainment value to your location.
-            Our turnkey solution means you get everything with none of the work.
+            Our turnkey setup means you get everything with none of the hassle.
           </p>
         </div>
 
@@ -61,15 +50,12 @@ export default function Benefits() {
           {benefits.map((item) => {
             const Icon = item.icon
             return (
-              <div
-                key={item.title}
-                className={`card-hover bg-white border ${item.border} rounded-2xl p-6 shadow-sm`}
-              >
-                <div className={`${item.bg} w-12 h-12 rounded-xl flex items-center justify-center mb-5`}>
-                  <Icon className={`w-6 h-6 ${item.color}`} />
+              <div key={item.title} className="card-fun p-6">
+                <div className={`${item.chip} w-12 h-12 rounded-2xl flex items-center justify-center mb-5`}>
+                  <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{item.title}</h3>
+                <p className="text-brand-navy/60 text-sm leading-relaxed">{item.description}</p>
               </div>
             )
           })}

@@ -4,17 +4,15 @@ import { counties } from '@/lib/counties'
 
 export default function ServiceAreas() {
   return (
-    <section id="service-areas" className="section-padding bg-white">
+    <section id="service-areas" className="section-padding bg-brand-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-[#003262] font-semibold text-sm uppercase tracking-wider mb-3">
-            Where We Operate
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            Serving all of California
+          <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">WHERE WE OPERATE</div>
+          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
+            Serving the <span className="highlight-gold">San Francisco Bay Area</span> &amp; San Diego
           </h2>
-          <p className="text-lg text-slate-500 max-w-xl mx-auto">
-            From the Bay Area to Southern California — if you&apos;re in one of these counties,
+          <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
+            From the San Francisco Bay Area to San Diego — if you&apos;re in one of these counties,
             we can have a machine at your door.
           </p>
         </div>
@@ -24,25 +22,26 @@ export default function ServiceAreas() {
             <Link
               key={county.slug}
               href={`/${county.slug}`}
-              className="group card-hover flex items-start gap-3 bg-slate-50 hover:bg-[#003262] border border-slate-200 hover:border-[#003262] rounded-xl p-4 transition-all"
+              className="group card-fun flex items-start gap-3 p-4"
             >
-              <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 group-hover:border-[#FDB515]/50 group-hover:bg-[#FDB515]/10 flex items-center justify-center flex-shrink-0 transition-colors">
-                <MapPin className="w-4 h-4 text-[#003262] group-hover:text-[#FDB515] transition-colors" />
+              <div className="w-9 h-9 rounded-xl bg-brand-gold/20 group-hover:bg-brand-gold flex items-center justify-center flex-shrink-0 transition-colors">
+                <MapPin className="w-4 h-4 text-brand-navy" />
               </div>
               <div>
-                <div className="font-semibold text-slate-900 group-hover:text-white transition-colors text-sm">
-                  {county.name}
-                </div>
-                <div className="text-slate-400 group-hover:text-slate-300 text-xs mt-0.5 transition-colors">{county.city}</div>
+                <div className="font-bold text-brand-navy text-sm">{county.name}</div>
+                <div className="text-brand-navy/50 text-xs mt-0.5">{county.city}</div>
               </div>
             </Link>
           ))}
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-slate-500 text-sm">
+          <p className="text-brand-navy/60 text-sm">
             Don&apos;t see your county?{' '}
-            <a href="#contact" className="text-[#003262] hover:text-[#004d99] font-medium underline underline-offset-2 transition-colors">
+            <a
+              href="#contact"
+              className="text-brand-navy font-bold underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
+            >
               Reach out anyway — we&apos;re expanding fast.
             </a>
           </p>

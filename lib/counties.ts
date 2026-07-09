@@ -30,34 +30,16 @@ export const counties = [
     description: 'Serving Oakland, Berkeley, and surrounding East Bay communities.',
   },
   {
-    slug: 'los-angeles-county',
-    name: 'Los Angeles County',
-    city: 'Los Angeles',
-    description: 'Premium placements across LA\'s diverse entertainment and dining scene.',
-  },
-  {
-    slug: 'orange-county',
-    name: 'Orange County',
-    city: 'Santa Ana',
-    description: 'Boosting foot traffic at OC shopping centers, restaurants, and campuses.',
+    slug: 'contra-costa-county',
+    name: 'Contra Costa County',
+    city: 'Martinez',
+    description: 'Covering Walnut Creek, Concord, and communities throughout Contra Costa.',
   },
   {
     slug: 'san-diego-county',
     name: 'San Diego County',
     city: 'San Diego',
     description: 'Bringing the claw machine experience to San Diego\'s vibrant venue scene.',
-  },
-  {
-    slug: 'riverside-county',
-    name: 'Riverside County',
-    city: 'Riverside',
-    description: 'Serving Inland Empire businesses with free, full-service machine placements.',
-  },
-  {
-    slug: 'contra-costa-county',
-    name: 'Contra Costa County',
-    city: 'Martinez',
-    description: 'Covering Walnut Creek, Concord, and communities throughout Contra Costa.',
   },
 ]
 

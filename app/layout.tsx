@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Baloo_2 } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const baloo = Baloo_2({ subsets: ['latin'], variable: '--font-baloo', weight: ['600', '700', '800'] })
 
 export const metadata: Metadata = {
   title: 'California Claw — Free Claw Machine Placement',
   description:
-    'Premium claw machine services for universities, restaurants, and businesses across California. Zero cost, full maintenance, maximum fun.',
+    'Premium claw machine services for universities, restaurants, and businesses across the San Francisco Bay Area and San Diego. Zero cost, full maintenance, maximum fun.',
   keywords: [
     'free claw machine',
     'claw machine placement',
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-white text-slate-900">
+    <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
+      <body className="bg-brand-cream text-brand-navy font-sans">
         <Header />
         <main>{children}</main>
         <Footer />

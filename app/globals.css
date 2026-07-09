@@ -4,9 +4,10 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
     --navy: #003262;
     --gold: #FDB515;
+    --cream: #FFF9EF;
+    --coral: #FF6B5E;
   }
 
   html {
@@ -19,33 +20,62 @@
 }
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(to right, #FDB515, #FFD060);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Gold highlighter swipe behind a word */
+  .highlight-gold {
+    background: linear-gradient(180deg, transparent 55%, #FDB515 55%, #FDB515 92%, transparent 92%);
+    padding: 0 0.15em;
+    border-radius: 2px;
   }
 
-  .text-gradient-navy {
-    background: linear-gradient(to right, #003262, #004d99);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Chunky toy-like buttons */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-gold text-brand-navy font-bold rounded-full border-2 border-brand-navy transition-all;
+    box-shadow: 4px 4px 0 #003262;
+  }
+  .btn-gold:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #003262;
+  }
+  .btn-gold:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #003262;
   }
 
-  .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-brand-navy font-bold rounded-full border-2 border-brand-navy transition-all;
+    box-shadow: 4px 4px 0 rgba(0, 50, 98, 0.15);
+  }
+  .btn-outline:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 rgba(0, 50, 98, 0.15);
+  }
+
+  /* Sticker-style badge */
+  .sticker {
+    @apply inline-flex items-center gap-2 bg-white border-2 border-brand-navy rounded-full font-bold text-brand-navy;
+    box-shadow: 3px 3px 0 rgba(0, 50, 98, 0.12);
+  }
+
+  /* Playful card */
+  .card-fun {
+    @apply bg-white border-2 border-brand-navy/10 rounded-3xl transition-all duration-200;
+  }
+  .card-fun:hover {
+    @apply border-brand-navy;
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 #FDB515;
+  }
+
+  /* Confetti dot background */
+  .bg-confetti {
+    background-image:
+      radial-gradient(#FDB515 1.5px, transparent 1.5px),
+      radial-gradient(#003262 1.2px, transparent 1.2px);
+    background-size: 48px 48px, 64px 64px;
+    background-position: 0 0, 24px 32px;
   }
 
   .section-padding {
     @apply py-20 px-4 sm:px-6 lg:px-8;
-  }
-
-  .btn-gold {
-    @apply bg-[#FDB515] hover:bg-[#FFD060] text-[#001833] font-bold transition-all;
-  }
-
-  .btn-navy {
-    @apply bg-[#003262] hover:bg-[#004d99] text-white font-semibold transition-all;
   }
 }
