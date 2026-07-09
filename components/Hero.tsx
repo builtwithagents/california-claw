@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import joyCatcher from '@/public/joy-catcher.jpg'
 
@@ -33,7 +34,7 @@ export default function Hero() {
               customers get the fun — you pay nothing, ever.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-5">
               <a href="#contact" className="btn-gold px-8 py-4 text-lg">
                 Get Your Free Machine
                 <ArrowRight className="w-5 h-5" />
@@ -42,6 +43,19 @@ export default function Hero() {
                 How It Works
               </a>
             </div>
+
+            {/* Event rental path */}
+            <Link
+              href="/rent-a-claw-machine"
+              className="inline-flex items-center gap-2 text-brand-navy font-semibold mb-10 group"
+            >
+              <span className="text-lg">🎉</span>
+              Interested in renting one for an event?
+              <span className="underline decoration-brand-gold decoration-2 underline-offset-4 group-hover:decoration-4 transition-all">
+                Click here
+              </span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3">
