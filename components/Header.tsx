@@ -12,6 +12,7 @@ const navLinks = [
   { label: 'Rent for Events', href: '/rent-a-claw-machine' },
   { label: 'About Us', href: '/#about' },
   { label: 'Service Areas', href: '/#service-areas' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 export default function Header() {

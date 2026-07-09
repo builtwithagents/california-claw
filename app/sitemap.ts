@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { counties } from '@/lib/counties'
 import { rentalCities } from '@/lib/rentalCities'
+import { posts } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://californiaclaw.com'
@@ -19,6 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const postRoutes = posts.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: new Date(p.updatedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
     {
       url: base,
@@ -32,7 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${base}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
     ...rentalCityRoutes,
     ...countyRoutes,
+    ...postRoutes,
   ]
 }
