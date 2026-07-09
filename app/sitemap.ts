@@ -1,11 +1,19 @@
 import { MetadataRoute } from 'next'
 import { counties } from '@/lib/counties'
+import { rentalCities } from '@/lib/rentalCities'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://californiaclaw.com'
 
   const countyRoutes = counties.map((county) => ({
     url: `${base}/${county.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
+  const rentalCityRoutes = rentalCities.map((c) => ({
+    url: `${base}/rent-a-claw-machine/${c.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
@@ -24,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    ...rentalCityRoutes,
     ...countyRoutes,
   ]
 }

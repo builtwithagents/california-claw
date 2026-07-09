@@ -1,38 +1,54 @@
 import type { Metadata } from 'next'
-import { Check, Gift, Truck, Sparkles, PartyPopper, MapPin } from 'lucide-react'
+import Link from 'next/link'
+import { Check, Sparkles, MapPin, ArrowRight } from 'lucide-react'
+import { rentalCities } from '@/lib/rentalCities'
+import CountyScene from '@/components/CountyScene'
+import RentalPricing from '@/components/RentalPricing'
+import RentalIncluded from '@/components/RentalIncluded'
 import RentalForm from '@/components/RentalForm'
 
 export const metadata: Metadata = {
-  title: 'Rent a Claw Machine in the San Francisco Bay Area & San Diego — California Claw',
+  title: 'Rent a Claw Machine — Event Rental Prices & Packages | California Claw',
   description:
-    'Rent a claw machine for your party, wedding, or corporate event. We deliver and set up across San Francisco, Oakland, San Jose, the Peninsula, Marin, and San Diego. Unlimited plushie prizes, from $200.',
+    'Rent a claw machine for your next party, wedding, or corporate event. Simple flat pricing from $200 with unlimited plushie prizes, delivery, and setup across the San Francisco Bay Area and San Diego.',
   alternates: { canonical: '/rent-a-claw-machine' },
   openGraph: {
-    title: 'Rent a Claw Machine — San Francisco Bay Area & San Diego',
+    title: 'Rent a Claw Machine for Your Event',
     description:
-      'The hit of any party — a real claw machine stocked with unlimited plushie prizes. Delivery and setup included across the Bay Area and San Diego.',
+      'The hit of any party — a real claw machine stocked with unlimited plushie prizes. Simple flat pricing, delivery and setup included.',
   },
 }
 
-const deliveryAreas = [
-  'San Francisco',
-  'Oakland & Berkeley',
-  'San Jose',
-  'Santa Clara & Sunnyvale',
-  'Palo Alto & Mountain View',
-  'San Mateo & the Peninsula',
-  'Marin County',
-  'Walnut Creek & Concord',
-  'San Diego',
-  'La Jolla & Pacific Beach',
-  'Carlsbad & Oceanside',
-  'Chula Vista',
+const deliveryAreas: { label: string; href?: string }[] = [
+  { label: 'San Francisco', href: '/rent-a-claw-machine/san-francisco' },
+  { label: 'Oakland & Berkeley' },
+  { label: 'San Jose' },
+  { label: 'Santa Clara & Sunnyvale' },
+  { label: 'Palo Alto & Mountain View' },
+  { label: 'San Mateo & the Peninsula' },
+  { label: 'Marin County' },
+  { label: 'Walnut Creek & Concord' },
+  { label: 'San Diego', href: '/rent-a-claw-machine/san-diego' },
+  { label: 'La Jolla & Pacific Beach' },
+  { label: 'Carlsbad & Oceanside' },
+  { label: 'Chula Vista' },
+]
+
+const eventTypes = [
+  'Birthday parties',
+  'Weddings',
+  'Corporate events',
+  'Graduations',
+  'Grand openings',
+  'School & campus events',
+  'Holiday parties',
+  'Bar & bat mitzvahs',
 ]
 
 const faqs = [
   {
-    q: 'Do you rent claw machines in San Francisco and the Bay Area?',
-    a: 'Yes — we deliver claw machines throughout the San Francisco Bay Area, including San Francisco, Oakland, Berkeley, San Jose, the Peninsula, and Marin, plus the greater San Diego area. We handle delivery, setup, and pickup for every rental.',
+    q: 'Where do you rent claw machines?',
+    a: 'We deliver claw machines throughout the San Francisco Bay Area and the greater San Diego area. See our city pages for local details, or just ask — we handle delivery, setup, and pickup for every rental.',
   },
   {
     q: 'How much does it cost to rent a claw machine?',
@@ -50,45 +66,6 @@ const faqs = [
     q: 'What kind of space do I need?',
     a: 'A standard machine needs about a 3-by-3-foot footprint and a nearby power outlet. We set up indoors or outdoors (under cover), and our team handles the heavy lifting.',
   },
-]
-
-const tiers = [
-  {
-    duration: '1 Hour',
-    price: '200',
-    blurb: 'Perfect for a quick crowd-pleaser',
-    popular: false,
-  },
-  {
-    duration: '2 Hours',
-    price: '350',
-    blurb: 'Our most-booked party package',
-    popular: true,
-  },
-  {
-    duration: '3 Hours',
-    price: '500',
-    blurb: 'Keep the fun going all evening',
-    popular: false,
-  },
-]
-
-const included = [
-  { icon: Gift, title: 'Unlimited plushie prizes', description: 'Every play wins — we keep it stocked the whole time.' },
-  { icon: Truck, title: 'Delivery & setup', description: 'We bring it, plug it in, and take it away after.' },
-  { icon: Sparkles, title: 'Free-play mode', description: 'No coins needed. Guests just walk up and grab.' },
-  { icon: PartyPopper, title: 'A guaranteed crowd-pleaser', description: 'The photo-op and centerpiece your event needs.' },
-]
-
-const eventTypes = [
-  'Birthday parties',
-  'Weddings',
-  'Corporate events',
-  'Graduations',
-  'Grand openings',
-  'School & campus events',
-  'Holiday parties',
-  'Bar & bat mitzvahs',
 ]
 
 const faqSchema = {
@@ -139,90 +116,11 @@ export default function RentPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="section-padding bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">SIMPLE PRICING</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-              Pick your <span className="highlight-gold">party</span> package
-            </h2>
-            <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
-              Flat pricing, no hidden fees. Every package includes unlimited prizes,
-              delivery, and setup.
-            </p>
-          </div>
+      {/* Pricing (shared) */}
+      <RentalPricing />
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {tiers.map((tier) => (
-              <div
-                key={tier.duration}
-                className={`card-fun p-8 text-center relative ${
-                  tier.popular ? 'border-brand-navy shadow-[6px_6px_0_#FDB515]' : ''
-                }`}
-              >
-                {tier.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-3 py-1 rounded-full bg-brand-gold text-brand-navy border-2 border-brand-navy whitespace-nowrap">
-                    Most Popular
-                  </span>
-                )}
-                <p className="font-display text-lg font-bold text-brand-navy mb-2">{tier.duration}</p>
-                <div className="mb-3">
-                  <span className="font-display text-5xl font-extrabold text-brand-navy">${tier.price}</span>
-                </div>
-                <p className="text-brand-navy/60 text-sm mb-6">{tier.blurb}</p>
-                <a href="#book" className={`${tier.popular ? 'btn-gold' : 'btn-outline'} w-full px-6 py-3`}>
-                  Book {tier.duration}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          {/* Custom / mini */}
-          <div className="mt-6 max-w-4xl mx-auto card-fun p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div>
-              <h3 className="font-display text-xl font-bold text-brand-navy mb-1">
-                Something bigger or smaller?
-              </h3>
-              <p className="text-brand-navy/60 text-sm">
-                Events over 3 hours, multiple machines, or a compact mini machine for
-                tight spaces — we&apos;ll put together a custom quote.
-              </p>
-            </div>
-            <a href="#book" className="btn-outline px-6 py-3 flex-shrink-0">
-              Get a Custom Quote
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* What's included */}
-      <section className="section-padding bg-brand-cream relative overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-14">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">EVERY RENTAL INCLUDES</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-              Everything for one flat price
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {included.map((item) => {
-              const Icon = item.icon
-              return (
-                <div key={item.title} className="card-fun p-6">
-                  <div className="bg-brand-gold/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-brand-navy" />
-                  </div>
-                  <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{item.title}</h3>
-                  <p className="text-brand-navy/60 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* What's included (shared) */}
+      <RentalIncluded />
 
       {/* Event types */}
       <section className="section-padding bg-white">
@@ -245,10 +143,44 @@ export default function RentPage() {
         </div>
       </section>
 
-      {/* Where we deliver */}
+      {/* Rentals by city */}
       <section className="section-padding bg-brand-cream relative overflow-hidden">
         <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
-        <div className="relative max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto relative">
+          <div className="text-center mb-12">
+            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">RENTALS BY CITY</div>
+            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
+              Find your <span className="highlight-gold">city</span>
+            </h2>
+            <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
+              Local delivery details, event ideas, and pricing for your area.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {rentalCities.map((c) => (
+              <Link key={c.slug} href={`/rent-a-claw-machine/${c.slug}`} className="card-fun p-6 flex items-center gap-5 group">
+                <div className="w-28 flex-shrink-0">
+                  <CountyScene scene={c.scene} />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-brand-navy mb-1">
+                    Rent in {c.city}
+                  </h3>
+                  <p className="text-brand-navy/60 text-sm mb-2">Claw machine rentals across {c.city}.</p>
+                  <span className="inline-flex items-center gap-1 text-brand-navy font-semibold text-sm underline decoration-brand-gold decoration-2 underline-offset-4 group-hover:decoration-4 transition-all">
+                    See {c.city} rentals
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Where we deliver */}
+      <section className="section-padding bg-white">
+        <div className="max-w-5xl mx-auto text-center">
           <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHERE WE DELIVER</div>
           <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
             Claw machine rentals across the{' '}
@@ -259,21 +191,32 @@ export default function RentPage() {
             one of these cities, we can bring the fun to your event:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {deliveryAreas.map((area) => (
-              <span
-                key={area}
-                className="inline-flex items-center gap-2 bg-white border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
-              >
-                <MapPin className="w-4 h-4 text-brand-gold" />
-                {area}
-              </span>
-            ))}
+            {deliveryAreas.map((area) =>
+              area.href ? (
+                <Link
+                  key={area.label}
+                  href={area.href}
+                  className="inline-flex items-center gap-2 bg-brand-navy text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-navy-light transition-colors"
+                >
+                  <MapPin className="w-4 h-4 text-brand-gold" />
+                  {area.label}
+                </Link>
+              ) : (
+                <span
+                  key={area.label}
+                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                >
+                  <MapPin className="w-4 h-4 text-brand-gold" />
+                  {area.label}
+                </span>
+              )
+            )}
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-cream">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
@@ -283,7 +226,7 @@ export default function RentPage() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="card-fun p-6">
+              <div key={faq.q} className="card-fun p-6 bg-white">
                 <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{faq.q}</h3>
                 <p className="text-brand-navy/70 leading-relaxed">{faq.a}</p>
               </div>
