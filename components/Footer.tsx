@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, Clock } from 'lucide-react'
 import logo from '@/public/california-claw-logo.jpg'
 
 const quickLinks = [
@@ -56,6 +56,10 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-brand-gold" />
                 (510) 506-4159
               </a>
+              <div className="flex items-center gap-2 text-white/60 text-sm">
+                <Clock className="w-4 h-4 text-brand-gold" />
+                Open daily, 9am–9pm
+              </div>
             </div>
           </div>
 

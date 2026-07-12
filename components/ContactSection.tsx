@@ -2,7 +2,7 @@
 
 import { useActionState } from 'react'
 import { submitContactForm, type FormState } from '@/app/actions'
-import { Mail, Phone, CheckCircle2, AlertCircle } from 'lucide-react'
+import { Mail, Phone, Clock, CheckCircle2, AlertCircle } from 'lucide-react'
 
 const initialState: FormState = {}
 
@@ -56,6 +56,15 @@ export default function ContactSection() {
                   >
                     team@californiaclaw.com
                   </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-2xl bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-brand-navy" />
+                </div>
+                <div>
+                  <p className="text-xs text-brand-navy/50 mb-0.5">Hours</p>
+                  <p className="font-bold text-brand-navy">Open daily, 9am–9pm</p>
                 </div>
               </div>
             </div>

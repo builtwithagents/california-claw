@@ -35,10 +35,42 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://californiaclaw.com'),
 }
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'California Claw',
+  alternateName: 'Coastal Vending Company DBA California Claw',
+  url: 'https://californiaclaw.com',
+  telephone: '+15105064159',
+  email: 'team@californiaclaw.com',
+  areaServed: [
+    { '@type': 'Place', name: 'San Francisco Bay Area' },
+    { '@type': 'Place', name: 'San Diego' },
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ],
+    opens: '09:00',
+    closes: '21:00',
+  },
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
       <body className="bg-brand-cream text-brand-navy font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />
