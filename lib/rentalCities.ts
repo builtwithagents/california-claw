@@ -48,7 +48,7 @@ export const rentalCities: RentalCity[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine in San Francisco?',
-        a: 'Our San Francisco event packages are $200 for one hour, $350 for two hours, and $500 for three hours — each with unlimited plushie prizes, delivery, and setup included. Larger events or multiple machines are quoted custom.',
+        a: 'Our San Francisco event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours — each with unlimited plushie prizes, delivery, and setup included. Longer events or multiple machines are quoted custom.',
       },
       {
         q: 'Do you deliver to my San Francisco neighborhood or venue?',
@@ -97,7 +97,7 @@ export const rentalCities: RentalCity[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine in San Diego?',
-        a: 'San Diego event packages are $200 for one hour, $350 for two hours, and $500 for three hours, each including unlimited plushie prizes, delivery, and setup. Longer events or multiple machines get a custom quote.',
+        a: 'San Diego event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours, each including unlimited plushie prizes, delivery, and setup. Longer events or multiple machines get a custom quote.',
       },
       {
         q: 'Do you deliver across San Diego County?',

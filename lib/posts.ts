@@ -28,11 +28,11 @@ export const posts: Post[] = [
     publishedAt: '2026-06-15',
     updatedAt: '2026-06-15',
     metaDescription:
-      'Claw machine rental pricing explained: what a 1, 2, or 3-hour rental costs, what\'s included, common hidden fees to watch for, and how to pick the right package for your event.',
+      'Claw machine rental pricing explained: what a 1, 2, 3, 4, or 6-hour rental costs, what\'s included, common hidden fees to watch for, and how to pick the right package for your event.',
     content: [
       {
         type: 'p',
-        text: "If you're planning an event and searching \"how much to rent a claw machine,\" you want a number, not a sales pitch. So here it is: our packages run $200 for one hour, $350 for two hours, and $500 for three hours — flat rate, no surprises. Here's exactly what that gets you, and how to think about which package fits your event.",
+        text: "If you're planning an event and searching \"how much to rent a claw machine,\" you want a number, not a sales pitch. So here it is: our packages run $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours — flat rate, no surprises. Here's exactly what that gets you, and how to think about which package fits your event.",
       },
       { type: 'h2', text: 'California Claw pricing at a glance' },
       {
@@ -40,8 +40,10 @@ export const posts: Post[] = [
         items: [
           '1 hour — $200. A quick, high-energy activation for a shorter event or a busy happy hour.',
           '2 hours — $350. Our most-booked package, and the sweet spot for most parties.',
-          '3 hours — $500. Keeps guests entertained for the full length of a longer event.',
-          '4+ hours, multiple machines, or a compact mini machine — custom quote.',
+          '3 hours — $475. Keeps guests entertained for the full length of a longer event.',
+          '4 hours — $575. For a longer reception or an all-afternoon celebration.',
+          '6 hours — $700. Our wedding and corporate-event favorite — covers cocktail hour through the reception, or a full workday.',
+          'Beyond 6 hours, multiple machines, or a compact mini machine — custom quote.',
         ],
       },
       {
@@ -67,7 +69,7 @@ export const posts: Post[] = [
         type: 'list',
         items: [
           'Coin or token fees — some rentals are coin-operated by default, meaning guests pay per play unless you buy a "free-play" upgrade.',
-          'Prize restocking fees — if the machine runs empty, some companies charge to refill it mid-event.',
+          'Prize caps — many competitors include around 25 starter prizes, then charge roughly $150 for each additional batch of 25. Ours are unlimited, restocked all event long, at no extra charge.',
           'Delivery fees based on distance — often not disclosed until the invoice.',
           'Setup/breakdown labor charged separately from the rental itself.',
         ],
@@ -83,8 +85,17 @@ export const posts: Post[] = [
         items: [
           '1 hour: a good fit for a short office happy hour, a pop-up activation, or any event where guests filter through quickly (roughly 20–40 people).',
           '2 hours: right for most birthday parties, engagement parties, or the cocktail-hour portion of a wedding (roughly 40–100 guests).',
-          '3 hours: best when the machine needs to hold attention for a full evening — receptions, larger corporate parties, or all-day events.',
-          'Custom: for weddings with a long reception, festivals, or any event that wants more than one machine running at once.',
+          '3–4 hours: best when the machine needs to hold attention for a full evening — receptions, larger corporate parties, or all-day events.',
+          '6 hours: our most-booked option for weddings and corporate events that run from cocktail hour through the night, or a full workday.',
+          'Custom: for events longer than 6 hours, festivals, or any event that wants more than one machine running at once.',
+        ],
+      },
+      { type: 'h2', text: 'Optional add-ons' },
+      {
+        type: 'list',
+        items: [
+          'Second machine — half the price of your booked tier (for example, +$350 on a 6-hour booking). Worth it once you\'re past about 150 guests and one machine starts to bottleneck.',
+          'Extended hours — $45/hour beyond the 6-hour package, if your event runs long.',
         ],
       },
       { type: 'h2', text: 'A few things that can affect your quote' },
@@ -217,14 +228,14 @@ export const posts: Post[] = [
         type: 'list',
         items: [
           'Cocktail hour (60–90 min): the most popular slot — it fills the gap while photos happen and keeps guests near the bar area entertained.',
-          'Reception (2–3 hours): good for a more casual, family-style event where you want a standing activity running most of the night.',
-          'Late-night lull: a fun way to re-energize the room before dancing picks back up.',
+          'Reception (3–4 hours): good for a more casual, family-style event where you want a standing activity running most of the night.',
+          'Cocktail hour through the reception (6 hours): our most-booked wedding package — the machine stays out from the first toast to last dance.',
         ],
       },
       { type: 'h2', text: 'What a rental includes' },
       {
         type: 'p',
-        text: 'Our packages are flat-rate: $200 for one hour, $350 for two hours, and $500 for three. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 2-hour package, which comfortably covers cocktail hour with room to spare.',
+        text: "Our packages are flat-rate: $200 for one hour, $350 for two hours, $475 for three, $575 for four, and $700 for six. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 6-hour package, which covers cocktail hour through the reception, since unlimited prizes and a flat price mean there's nothing to negotiate mid-event.",
       },
       { type: 'h2', text: 'Setup details your venue will ask about' },
       {
@@ -283,7 +294,8 @@ export const posts: Post[] = [
         items: [
           "1 hour ($200): a good fit for a shorter kids' party or a quick backyard gathering.",
           '2 hours ($350): our most-booked package, and the sweet spot for a typical birthday party.',
-          '3 hours ($500): best for an all-afternoon or all-evening bash where you want the machine running the whole time.',
+          '3 hours ($475) or 4 hours ($575): best for an all-afternoon or all-evening bash where you want the machine running the whole time.',
+          '6 hours ($700): for a large blowout party or a rental shared across multiple back-to-back celebrations in one day.',
         ],
       },
       { type: 'h2', text: 'Backyard, home, or venue setups' },
@@ -350,7 +362,8 @@ export const posts: Post[] = [
         items: [
           '1 hour ($200): a quick energy boost for a Friday happy hour or a short lull in the day.',
           '2 hours ($350): the standard choice for a holiday party or team celebration.',
-          '3 hours ($500): best for an all-day open house, offsite, or larger company event.',
+          '3 hours ($475) or 4 hours ($575): best for a larger company event that runs most of the afternoon.',
+          '6 hours ($700): our most-booked option for an all-day open house, offsite, or company-wide event.',
         ],
       },
       { type: 'h2', text: 'What the space needs to provide' },

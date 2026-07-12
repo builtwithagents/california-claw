@@ -6,6 +6,7 @@ import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
 import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
+import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
@@ -109,6 +110,9 @@ export default async function RentalCityPage({ params }: Props) {
 
       {/* Pricing (shared) */}
       <RentalPricing cityLabel={city.city} />
+
+      {/* Add-ons (shared) */}
+      <RentalAddOns />
 
       {/* What's included (shared) */}
       <RentalIncluded />

@@ -5,6 +5,7 @@ import { rentalCities } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
 import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
+import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
@@ -54,7 +55,7 @@ const faqs = [
   },
   {
     q: 'How much does it cost to rent a claw machine?',
-    a: 'Our event packages are $200 for one hour, $350 for two hours, and $500 for three hours. Every package includes unlimited plushie prizes, delivery, and setup. Longer events, multiple machines, or a compact mini machine are available on a custom quote.',
+    a: 'Our event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours. Every package includes unlimited plushie prizes, delivery, and setup — no per-play or per-prize charges. Events over six hours, multiple machines, or a compact mini machine are available on a custom quote.',
   },
   {
     q: 'How far in advance should I book?',
@@ -120,6 +121,9 @@ export default function RentPage() {
 
       {/* Pricing (shared) */}
       <RentalPricing />
+
+      {/* Add-ons (shared) */}
+      <RentalAddOns />
 
       {/* What's included (shared) */}
       <RentalIncluded />
