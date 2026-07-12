@@ -5,6 +5,7 @@ export type RentalCity = {
   city: string
   region: string
   scene: string
+  heroImage?: string
   metaDescription: string
   heroSub: string
   intro: string
@@ -20,6 +21,7 @@ export const rentalCities: RentalCity[] = [
     city: 'San Francisco',
     region: 'the San Francisco Bay Area',
     scene: 'golden-gate',
+    heroImage: '/rental-hero-san-francisco.jpg',
     metaDescription:
       'Rent a claw machine in San Francisco for your party, wedding, or corporate event. Delivery and setup across the Mission, SoMa, the Marina, and beyond. Unlimited plushie prizes, from $200.',
     heroSub:
@@ -69,6 +71,7 @@ export const rentalCities: RentalCity[] = [
     city: 'San Diego',
     region: 'the San Diego area',
     scene: 'san-diego',
+    heroImage: '/rental-hero-san-diego.jpg',
     metaDescription:
       'Rent a claw machine in San Diego for your party, wedding, or event. Delivery and setup across Pacific Beach, North Park, La Jolla, and beyond. Unlimited plushie prizes, from $200.',
     heroSub:

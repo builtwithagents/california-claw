@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Check, MapPin, ClipboardList, Truck, PartyPopper } from 'lucide-react'
 import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
@@ -91,7 +92,20 @@ export default async function RentalCityPage({ params }: Props) {
               </div>
             </div>
             <div className="max-w-md mx-auto lg:mx-0 w-full animate-float">
-              <CountyScene scene={city.scene} />
+              {city.heroImage ? (
+                <div className="relative aspect-[4/3] w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]">
+                  <Image
+                    src={city.heroImage}
+                    alt={`${city.city} skyline`}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 448px, 90vw"
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <CountyScene scene={city.scene} />
+              )}
             </div>
           </div>
         </div>
