@@ -59,12 +59,28 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: { '@type': 'Organization', name: 'California Claw' },
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {post.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <section className="relative bg-brand-cream overflow-hidden">
         <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
@@ -98,13 +114,34 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </article>
 
-      {otherPosts.length > 0 && (
+      {post.faqs.length > 0 && (
         <section className="section-padding bg-brand-cream">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
+              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
+                Frequently asked questions
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {post.faqs.map((faq) => (
+                <div key={faq.q} className="card-fun p-6 bg-white">
+                  <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{faq.q}</h3>
+                  <p className="text-brand-navy/70 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {otherPosts.length > 0 && (
+        <section className="section-padding bg-white">
           <div className="max-w-3xl mx-auto">
             <div className="sticker text-xs px-4 py-1.5 mb-6 -rotate-1">KEEP READING</div>
             <div className="grid gap-4">
               {otherPosts.map((p) => (
-                <Link key={p.slug} href={`/blog/${p.slug}`} className="card-fun bg-white p-6 block">
+                <Link key={p.slug} href={`/blog/${p.slug}`} className="card-fun bg-brand-cream p-6 block">
                   <h3 className="font-display text-lg font-bold text-brand-navy mb-1">{p.title}</h3>
                   <p className="text-brand-navy/60 text-sm">{p.excerpt}</p>
                 </Link>
