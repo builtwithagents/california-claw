@@ -7,8 +7,6 @@ import { Menu, X } from 'lucide-react'
 import logo from '@/public/california-claw-logo.jpg'
 
 const navLinks = [
-  { label: 'Benefits', href: '/#benefits' },
-  { label: 'Machines', href: '/#machines' },
   { label: 'Rent for Events', href: '/rent-a-claw-machine' },
   { label: 'About Us', href: '/#about' },
   { label: 'Service Areas', href: '/#service-areas' },
