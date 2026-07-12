@@ -17,8 +17,23 @@ const paths = [
     icon: PartyPopper,
     tag: 'For your event',
     title: 'Rent one for a party',
-    description:
-      'Renting for a birthday, wedding, or corporate event? Get a claw machine with unlimited plushie prizes, delivered and set up for you.',
+    description: (
+      <>
+        Renting for a{' '}
+        <Link href="/blog/claw-machine-rental-for-a-birthday-party" className="underline decoration-brand-gold decoration-2 underline-offset-2 hover:decoration-4">
+          birthday
+        </Link>
+        ,{' '}
+        <Link href="/blog/renting-a-claw-machine-for-a-wedding" className="underline decoration-brand-gold decoration-2 underline-offset-2 hover:decoration-4">
+          wedding
+        </Link>
+        , or{' '}
+        <Link href="/blog/renting-a-claw-machine-for-the-office" className="underline decoration-brand-gold decoration-2 underline-offset-2 hover:decoration-4">
+          corporate event
+        </Link>
+        ? Get a claw machine with unlimited plushie prizes, delivered and set up for you.
+      </>
+    ),
     points: ['From $200', 'Unlimited prizes', 'Delivery & setup included'],
     cta: 'See Rental Pricing',
     href: '/rent-a-claw-machine',

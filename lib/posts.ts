@@ -186,6 +186,198 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: 'renting-a-claw-machine-for-a-wedding',
+    title: 'Renting a Claw Machine for Your Wedding: A Planning Guide',
+    excerpt:
+      "Claw machines are showing up at weddings as a playful surprise during cocktail hour or the reception. Here's how to plan one in — timing, setup, and what a rental includes.",
+    category: 'Weddings',
+    readTime: '4 min read',
+    publishedAt: '2026-07-08',
+    updatedAt: '2026-07-08',
+    metaDescription:
+      'How to rent a claw machine for your wedding: best timing during the day, setup and space requirements, pricing, and tips for a smooth, photo-worthy activation.',
+    content: [
+      {
+        type: 'p',
+        text: "A claw machine isn't the first thing most couples picture at a wedding — which is exactly why it works. It's an unexpected, playful moment that gives guests something to do, without competing with the parts of the day that matter most.",
+      },
+      { type: 'h2', text: 'Why couples are adding one to the day' },
+      {
+        type: 'list',
+        items: [
+          'Keeps guests entertained during cocktail hour, while the wedding party is off taking photos.',
+          'A genuine surprise that photographs and films well — great for guest reels and candid shots.',
+          'Free-play means no one is fumbling for cash or tokens in formal attire.',
+          'Doubles as a party favor station — guests walk away with a plushie prize.',
+        ],
+      },
+      { type: 'h2', text: 'When to schedule it during your day' },
+      {
+        type: 'list',
+        items: [
+          'Cocktail hour (60–90 min): the most popular slot — it fills the gap while photos happen and keeps guests near the bar area entertained.',
+          'Reception (2–3 hours): good for a more casual, family-style event where you want a standing activity running most of the night.',
+          'Late-night lull: a fun way to re-energize the room before dancing picks back up.',
+        ],
+      },
+      { type: 'h2', text: 'What a rental includes' },
+      {
+        type: 'p',
+        text: 'Our packages are flat-rate: $200 for one hour, $350 for two hours, and $500 for three. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 2-hour package, which comfortably covers cocktail hour with room to spare.',
+      },
+      { type: 'h2', text: 'Setup details your venue will ask about' },
+      {
+        type: 'list',
+        items: [
+          'Footprint: about 3 by 3 feet, plus a bit of clearance for guests to gather around.',
+          'Power: one standard outlet nearby is all it needs.',
+          'Indoor or outdoor: we set up either, as long as an outdoor spot has some cover.',
+        ],
+      },
+      { type: 'h2', text: 'A few planning tips' },
+      {
+        type: 'list',
+        items: [
+          'Loop in your venue coordinator early so they can carve out space near the bar or lounge area, away from the dance floor.',
+          "Book your date as soon as it's set — weekend dates fill up two to three weeks out, and wedding season books faster.",
+          "If you're working with a planner, they can coordinate delivery timing directly with our team.",
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Check pricing and lock in your wedding date.',
+        cta: { label: 'See rental packages', href: '/rent-a-claw-machine' },
+      },
+    ],
+  },
+  {
+    slug: 'claw-machine-rental-for-a-birthday-party',
+    title: 'Claw Machine Rental for a Birthday Party (or Any Party)',
+    excerpt:
+      "A claw machine turns a birthday party into a full arcade moment. Here's how to plan one for kids, adults, or a mixed-age crowd.",
+    category: 'Parties',
+    readTime: '4 min read',
+    publishedAt: '2026-07-10',
+    updatedAt: '2026-07-10',
+    metaDescription:
+      'Planning a claw machine rental for a birthday party or celebration: pricing by the hour, which age groups it works best for, setup requirements, and tips for a smooth party.',
+    content: [
+      {
+        type: 'p',
+        text: "Bounce houses and face painting are great, but they age out fast. A claw machine doesn't — it works for a 7-year-old's birthday just as well as a 40th, which makes it one of the easiest activations to book for a mixed-age party.",
+      },
+      { type: 'h2', text: 'Why it works for parties' },
+      {
+        type: 'list',
+        items: [
+          'No supervision required — guests walk up and play on their own.',
+          'Wide age range appeal: kids grab plushies, adults get a dose of nostalgia.',
+          "Free-play mode means you're not managing tickets, tokens, or cash all day.",
+          'Doubles as a party favor station, since every prize is included and unlimited.',
+        ],
+      },
+      { type: 'h2', text: 'Picking your package' },
+      {
+        type: 'list',
+        items: [
+          "1 hour ($200): a good fit for a shorter kids' party or a quick backyard gathering.",
+          '2 hours ($350): our most-booked package, and the sweet spot for a typical birthday party.',
+          '3 hours ($500): best for an all-afternoon or all-evening bash where you want the machine running the whole time.',
+        ],
+      },
+      { type: 'h2', text: 'Backyard, home, or venue setups' },
+      {
+        type: 'p',
+        text: "We deliver and set up wherever the party is — a backyard, a rented venue, or a community clubhouse. It needs about a 3-by-3-foot footprint and a nearby outlet, and we're happy to work outdoors as long as there's some cover in case of weather.",
+      },
+      { type: 'h2', text: 'Tips for a smooth party' },
+      {
+        type: 'list',
+        items: [
+          "Place it away from the cake and gift table so it doesn't compete for space during those moments.",
+          'For mixed-age parties, give younger kids first crack at it before things get crowded.',
+          "Book two to three weeks ahead if you're aiming for a weekend — those dates go first.",
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Ready to book the machine for your next party?',
+        cta: { label: 'See pricing and packages', href: '/rent-a-claw-machine#pricing' },
+      },
+    ],
+  },
+  {
+    slug: 'renting-a-claw-machine-for-the-office',
+    title: 'Renting a Claw Machine for the Office: A Guide for Team Events',
+    excerpt:
+      "Holiday party, team offsite, or just a Friday pick-me-up — a rented claw machine is an easy way to add energy to an office event. Here's how it works, and how it's different from our free placement program.",
+    category: 'Corporate Events',
+    readTime: '5 min read',
+    publishedAt: '2026-07-12',
+    updatedAt: '2026-07-12',
+    metaDescription:
+      'How to rent a claw machine for an office party or team event: pricing, what the space needs to provide, and how a one-time rental differs from a free permanent placement.',
+    content: [
+      {
+        type: 'p',
+        text: "Offices reach out to us in two very different situations: some want a claw machine for a single event, others want one permanently in the break room. Both are things we do — this guide is about the first one.",
+      },
+      { type: 'h2', text: 'Rental vs. a free permanent machine' },
+      {
+        type: 'p',
+        text: "If you're planning a one-time event — a holiday party, an offsite, a launch — you want a rental, which is what this article covers. If you're looking to add a claw machine as an ongoing office perk, we also place machines permanently at no cost to the business. That's a separate program, and we've written up exactly how it works.",
+      },
+      {
+        type: 'callout',
+        text: 'Looking for a permanent machine instead of a one-time rental?',
+        cta: { label: 'How free placement works', href: '/blog/free-claw-machine-for-your-business-how-it-works' },
+      },
+      { type: 'h2', text: 'Good occasions for an office rental' },
+      {
+        type: 'list',
+        items: [
+          'Holiday parties and end-of-year celebrations',
+          'Team offsites or summer parties',
+          'Product launches or company anniversaries',
+          'Recruiting events or campus visits',
+          'Client appreciation days',
+        ],
+      },
+      { type: 'h2', text: 'Picking a package' },
+      {
+        type: 'list',
+        items: [
+          '1 hour ($200): a quick energy boost for a Friday happy hour or a short lull in the day.',
+          '2 hours ($350): the standard choice for a holiday party or team celebration.',
+          '3 hours ($500): best for an all-day open house, offsite, or larger company event.',
+        ],
+      },
+      { type: 'h2', text: 'What the space needs to provide' },
+      {
+        type: 'list',
+        items: [
+          'About a 3-by-3-foot footprint, ideally near where people already gather.',
+          'A standard power outlet nearby.',
+          "If you're in a shared building, a quick check with facilities or building management on delivery access.",
+        ],
+      },
+      { type: 'h2', text: 'Planning tips' },
+      {
+        type: 'list',
+        items: [
+          'Loop in whoever books vendors for office events (often HR or an office manager) — they can request a quote and coordinate delivery timing.',
+          'Schedule delivery outside of core meeting hours if the space is also a working area during the day.',
+          'Pairs well with catered lunch or an afternoon happy hour.',
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Ready to book a machine for your next office event?',
+        cta: { label: 'See rental packages', href: '/rent-a-claw-machine' },
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {

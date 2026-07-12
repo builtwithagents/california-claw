@@ -3,10 +3,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Check, MapPin, ClipboardList, Truck, PartyPopper } from 'lucide-react'
 import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
+import { getOccasionHref } from '@/lib/occasionLinks'
 import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
 import RentalIncluded from '@/components/RentalIncluded'
-import RentalForm from '@/components/RentalForm'
+import RelatedGuides from '@/components/RelatedGuides'
+import RequestForm from '@/components/RequestForm'
 
 type Props = {
   params: Promise<{ city: string }>
@@ -119,18 +121,37 @@ export default async function RentalCityPage({ params }: Props) {
             {city.city} events we love
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {city.eventTypes.map((type) => (
-              <span
-                key={type}
-                className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
-              >
-                <Check className="w-4 h-4 text-brand-gold" />
-                {type}
-              </span>
-            ))}
+            {city.eventTypes.map((type) => {
+              const href = getOccasionHref(type)
+              const pill = (
+                <>
+                  <Check className="w-4 h-4 text-brand-gold" />
+                  {type}
+                </>
+              )
+              return href ? (
+                <Link
+                  key={type}
+                  href={href}
+                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
+                >
+                  {pill}
+                </Link>
+              ) : (
+                <span
+                  key={type}
+                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                >
+                  {pill}
+                </span>
+              )
+            })}
           </div>
         </div>
       </section>
+
+      {/* Planning guides */}
+      <RelatedGuides />
 
       {/* How it works */}
       <section className="section-padding bg-brand-cream relative overflow-hidden">
@@ -251,7 +272,7 @@ export default async function RentalCityPage({ params }: Props) {
               </p>
             </div>
 
-            <RentalForm />
+            <RequestForm defaultType="event" defaultCity={city.city} />
           </div>
         </div>
       </section>

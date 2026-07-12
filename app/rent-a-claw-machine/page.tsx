@@ -2,10 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Check, Sparkles, MapPin, ArrowRight } from 'lucide-react'
 import { rentalCities } from '@/lib/rentalCities'
+import { getOccasionHref } from '@/lib/occasionLinks'
 import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
 import RentalIncluded from '@/components/RentalIncluded'
-import RentalForm from '@/components/RentalForm'
+import RelatedGuides from '@/components/RelatedGuides'
+import RequestForm from '@/components/RequestForm'
 
 export const metadata: Metadata = {
   title: 'Rent a Claw Machine — Event Rental Prices & Packages | California Claw',
@@ -130,18 +132,37 @@ export default function RentPage() {
             Perfect for any <span className="highlight-gold">occasion</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {eventTypes.map((type) => (
-              <span
-                key={type}
-                className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
-              >
-                <Check className="w-4 h-4 text-brand-gold" />
-                {type}
-              </span>
-            ))}
+            {eventTypes.map((type) => {
+              const href = getOccasionHref(type)
+              const pill = (
+                <>
+                  <Check className="w-4 h-4 text-brand-gold" />
+                  {type}
+                </>
+              )
+              return href ? (
+                <Link
+                  key={type}
+                  href={href}
+                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
+                >
+                  {pill}
+                </Link>
+              ) : (
+                <span
+                  key={type}
+                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                >
+                  {pill}
+                </span>
+              )
+            })}
           </div>
         </div>
       </section>
+
+      {/* Planning guides */}
+      <RelatedGuides />
 
       {/* Rentals by city */}
       <section className="section-padding bg-brand-cream relative overflow-hidden">
@@ -272,7 +293,7 @@ export default function RentPage() {
               </ul>
             </div>
 
-            <RentalForm />
+            <RequestForm defaultType="event" />
           </div>
         </div>
       </section>
