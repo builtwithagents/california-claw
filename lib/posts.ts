@@ -646,6 +646,317 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: 'where-to-rent-a-claw-machine-san-francisco-bay-area',
+    title: 'Where to Rent a Claw Machine in the San Francisco Bay Area',
+    excerpt:
+      'A local guide to renting a claw machine across the San Francisco Bay Area — the counties and cities we deliver to, how much lead time to give us, and why local delivery-and-setup beats hauling a machine yourself.',
+    category: 'Rentals',
+    readTime: '6 min read',
+    publishedAt: '2026-07-06',
+    updatedAt: '2026-07-06',
+    metaDescription:
+      'Renting a claw machine in the San Francisco Bay Area: the counties and cities California Claw delivers to, how far ahead to book, venue and setup notes, and why local delivery beats DIY.',
+    content: [
+      {
+        type: 'p',
+        text: "If you're searching for a claw machine rental in the San Francisco Bay Area, the first thing you actually want to know is simple: do they deliver to me, and how soon do I need to book? This guide answers both, plus the local details — venues, parking, power, and lead times — that make the difference between a smooth event and a scramble.",
+      },
+      { type: 'h2', text: 'Where we deliver in the San Francisco Bay Area' },
+      {
+        type: 'p',
+        text: "California Claw delivers, sets up, and picks up across the San Francisco Bay Area. That covers the city itself and the surrounding counties, so most events from the Peninsula to the East Bay to the South Bay are well within range:",
+      },
+      {
+        type: 'list',
+        items: [
+          'San Francisco County — the city proper, from the Marina to the Mission.',
+          'San Mateo County — Peninsula towns like San Mateo, Burlingame, and Redwood City.',
+          'Santa Clara County — the South Bay, including San Jose, Santa Clara, and Sunnyvale.',
+          'Marin County — north of the Golden Gate, from Sausalito to San Rafael.',
+          'Alameda County — the East Bay, including Oakland, Berkeley, and Fremont.',
+          'Contra Costa County — from Richmond out to Walnut Creek and Concord.',
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'See delivery details and availability for San Francisco and the surrounding cities.',
+        cta: { label: 'Browse rentals by city', href: '/rent-a-claw-machine' },
+      },
+      { type: 'h2', text: 'How local delivery works' },
+      {
+        type: 'p',
+        text: "Every rental is fully handled by our team. We bring the machine, get it running in free-play mode, keep it stocked with plushie prizes throughout your event, and come back to collect it afterward. You never touch a dolly, and there's no separate delivery fee based on distance within our San Francisco Bay Area service area — it's folded into the flat package price.",
+      },
+      {
+        type: 'list',
+        items: [
+          'Delivery, setup, and pickup are included in every package.',
+          'The machine runs on free-play — no coins or tokens for your guests.',
+          'Prizes are unlimited and restocked all event long, at no extra charge.',
+          'A trained operator is on call if anything needs adjusting mid-event.',
+        ],
+      },
+      { type: 'h2', text: 'How far ahead to book' },
+      {
+        type: 'p',
+        text: "Weekend dates across the San Francisco Bay Area fill up fastest, especially in summer and around the holidays. Two to three weeks of lead time is the comfortable window for a Friday or Saturday. Weekday events and last-minute requests are often doable too — it's always worth asking.",
+      },
+      { type: 'h2', text: 'A few local logistics worth flagging' },
+      {
+        type: 'p',
+        text: "Bay Area venues range from downtown high-rises to backyard patios, and a couple of details help us plan the setup:",
+      },
+      {
+        type: 'list',
+        items: [
+          'Access — let us know about stairs, elevators, or a loading dock. The machine moves on a dolly, so ground-floor or elevator access makes setup quick.',
+          'Parking — a spot to unload near the entrance saves time, which matters for tight downtown San Francisco addresses.',
+          'Power — the machine needs a standard outlet within reach. Outdoor events just need cover and access to power.',
+          'Space — one machine fits comfortably in most rooms; for a compact venue like a tasting room or small backyard, ask about our mini machine.',
+        ],
+      },
+      { type: 'h2', text: 'Why local delivery beats doing it yourself' },
+      {
+        type: 'p',
+        text: "You can find machines to buy or ship, but a claw machine is heavy, awkward to move, and no fun to troubleshoot the morning of your event. A local San Francisco Bay Area rental means someone else handles the lifting, the setup, the restocking, and the teardown — and if the machine hiccups, a real person is a phone call away, not a shipping label.",
+      },
+      {
+        type: 'callout',
+        text: 'Tell us your date, city, and rough guest count — we confirm availability within 24 hours.',
+        cta: { label: 'Check pricing and book', href: '/rent-a-claw-machine#pricing' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'What areas of the San Francisco Bay Area do you deliver to?',
+        a: 'We deliver, set up, and pick up across San Francisco County, San Mateo County, Santa Clara County, Marin County, Alameda County, and Contra Costa County — covering the city, the Peninsula, the South Bay, the East Bay, and Marin.',
+      },
+      {
+        q: 'Is there a delivery fee for events outside San Francisco proper?',
+        a: 'No. Delivery, setup, and pickup are included in the flat package price throughout our San Francisco Bay Area service area — the price is not adjusted by distance.',
+      },
+      {
+        q: 'How far in advance should I book in the San Francisco Bay Area?',
+        a: 'Two to three weeks ahead is ideal for weekend dates, which fill up fastest in summer and around the holidays. Weekday and last-minute requests are often still possible — just ask.',
+      },
+      {
+        q: 'Do you deliver to San Jose and the South Bay?',
+        a: 'Yes. Santa Clara County — including San Jose, Santa Clara, and Sunnyvale — is part of our regular delivery area.',
+      },
+      {
+        q: 'What do I need to provide at the venue?',
+        a: 'Just a standard power outlet within reach and a clear path to move the machine in on a dolly. Let us know about stairs, elevators, or parking so we can plan the setup.',
+      },
+    ],
+  },
+  {
+    slug: 'claw-machines-for-trade-shows-and-brand-activations',
+    title: 'Claw Machines for Trade Shows & Brand Activations: A Booth Traffic Guide',
+    excerpt:
+      'A claw machine is one of the most reliable ways to stop foot traffic at a booth. Here is how to use one to draw a crowd, hand out branded prizes, and turn plays into leads.',
+    category: 'Corporate Events',
+    readTime: '7 min read',
+    publishedAt: '2026-07-13',
+    updatedAt: '2026-07-13',
+    metaDescription:
+      'How to use a claw machine at a trade show or brand activation: drawing booth traffic, filling it with branded prizes, capturing leads, and setup for expo halls and pop-ups in the San Francisco Bay Area and San Diego.',
+    content: [
+      {
+        type: 'p',
+        text: "At a crowded expo hall, attention is the whole game. A claw machine solves the hardest part of any booth: getting people to stop, step in, and stay long enough to talk. It works because it's interactive and a little nostalgic — and unlike a bowl of candy, every play is a reason to strike up a conversation.",
+      },
+      { type: 'h2', text: 'Why a claw machine pulls booth traffic' },
+      {
+        type: 'list',
+        items: [
+          'It creates a small crowd — and crowds draw more crowds. A machine mid-aisle is a natural gathering point.',
+          "It's a reason to linger. A 30-second play gives your team a natural opening to start a conversation.",
+          'Every guest leaves with something branded in hand — a walking billboard for the rest of the show.',
+          'It levels the playing field against bigger booths. Experience beats square footage.',
+        ],
+      },
+      { type: 'h2', text: 'Fill it with branded prizes' },
+      {
+        type: 'p',
+        text: "The machine is only half the activation — what comes out of it is the other half. We can stock it with your own branded swag or co-branded plushies so every win reinforces your brand and every prize travels home with an attendee.",
+      },
+      {
+        type: 'list',
+        items: [
+          'Branded plushies or custom swag that match your booth and colors.',
+          "A mix of tiers — a stack of easy-win items plus a few premium prizes people actually chase.",
+          'Prizes sized to travel — attendees will carry them around the floor and pack them home.',
+        ],
+      },
+      { type: 'h2', text: 'Turn plays into leads' },
+      {
+        type: 'p',
+        text: "The play itself is the hook; the lead capture is what makes it pay off. Because the machine runs on free-play, you control the small ask that comes before or after a turn:",
+      },
+      {
+        type: 'list',
+        items: [
+          'Play to win — scan a QR code to enter, badge-scan at the booth, or drop a card to unlock a play.',
+          'Use a grand-prize tier as the reason to leave contact details for a follow-up drawing.',
+          'Pair each win with a quick demo or a one-line pitch while the prize is fresh in hand.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Set the ask to match your goals — a light touch for pure brand awareness, or a badge scan when the priority is a qualified list.",
+      },
+      { type: 'h2', text: 'ROI versus a giveaway table' },
+      {
+        type: 'p',
+        text: "Compare it to the usual booth spend — a bowl of pens, a raffle, a swag pile that empties in an hour. Those get taken, not remembered. A claw machine converts the same prize budget into an experience: people wait in line for it, talk to your team to earn it, and remember the booth where they won something. The prize does double duty as both the draw and the takeaway.",
+      },
+      { type: 'h2', text: 'Setup for expo halls and pop-ups' },
+      {
+        type: 'p',
+        text: "We deliver, set up, and staff-support activations across the San Francisco Bay Area and San Diego. A few things help us plan a show floor:",
+      },
+      {
+        type: 'list',
+        items: [
+          'Footprint — one machine fits a standard 10x10 booth with room to gather; a mini machine works for tighter spaces.',
+          'Power — the machine needs a standard outlet, so confirm your booth has electrical ordered from the venue.',
+          'Load-in — expo halls have set move-in windows and dock access; share the schedule and we work around it.',
+          'Multi-day shows — we can keep it stocked across the run so it never sits empty.',
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Planning a trade show booth or brand activation? Tell us the dates and we will build a quote.',
+        cta: { label: 'Get an activation quote', href: '/rent-a-claw-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you fill the machine with our own branded prizes?',
+        a: 'Yes. We can stock the machine with your branded swag or co-branded plushies so every win reinforces your brand. Share what you have in mind and we will help plan the prize mix.',
+      },
+      {
+        q: 'How does a claw machine help capture leads at a booth?',
+        a: 'Because it runs on free-play, you control the small ask around each turn — a QR scan to enter, a badge scan, or a card drop to unlock a play. That turns the crowd it draws into contact details and conversations.',
+      },
+      {
+        q: 'Will a claw machine fit in a standard trade show booth?',
+        a: 'One machine fits comfortably in a standard 10x10 booth with room for a small crowd. For tighter spaces, our compact mini machine is a good alternative.',
+      },
+      {
+        q: 'Do you handle multi-day trade shows?',
+        a: 'Yes. We keep the machine stocked across the full run so it never sits empty, and we work around the hall’s move-in and move-out windows.',
+      },
+      {
+        q: 'Where do you deliver for corporate activations?',
+        a: 'We deliver and set up across the San Francisco Bay Area and San Diego. Share your venue and show schedule and we will confirm availability.',
+      },
+    ],
+  },
+  {
+    slug: 'before-your-claw-machine-arrives-space-power-setup-checklist',
+    title: 'Before Your Claw Machine Arrives: Space, Power & Setup Checklist',
+    excerpt:
+      'Everything to check before your rental shows up — how much space the machine needs, what power it requires, and how delivery and teardown actually work, so there are no surprises on event day.',
+    category: 'Rentals',
+    readTime: '6 min read',
+    publishedAt: '2026-07-20',
+    updatedAt: '2026-07-20',
+    metaDescription:
+      'A pre-rental checklist for your claw machine: how much space and clearance it needs, power requirements, indoor vs. outdoor setup, venue access, and how delivery and teardown work.',
+    content: [
+      {
+        type: 'p',
+        text: "Booking a claw machine is the easy part. This is the short checklist that makes event day effortless — the space, power, and access details worth confirming before our team pulls up, so setup takes minutes and nothing catches you off guard.",
+      },
+      { type: 'h2', text: 'How much space it needs' },
+      {
+        type: 'p',
+        text: "A standard machine takes up about the footprint of a large fridge, plus a bit of breathing room so guests can gather and play. You don't need a lot — just a clear, level spot that isn't blocking a walkway or a fire exit.",
+      },
+      {
+        type: 'list',
+        items: [
+          'Plan for roughly a 3-by-3-foot footprint, plus a few feet in front for players to stand.',
+          'A level surface is ideal — the machine plays best when it sits flat.',
+          'Tight venue like a tasting room or small backyard? Ask about our compact mini machine.',
+        ],
+      },
+      { type: 'h2', text: 'Power requirements' },
+      {
+        type: 'p',
+        text: "The machine plugs into a standard wall outlet — the same kind you'd use for a lamp or a phone charger. No special wiring, no generator for a typical indoor event.",
+      },
+      {
+        type: 'list',
+        items: [
+          'One standard 110V outlet within reach of the setup spot.',
+          "If the nearest outlet is far, an extension cord bridges the gap — just let us know so we bring one.",
+          'For outdoor events, you\'ll need access to power plus some cover from sun or weather.',
+        ],
+      },
+      { type: 'h2', text: 'Indoor vs. outdoor' },
+      {
+        type: 'p',
+        text: "Indoor setups are the simplest — climate-controlled and out of the elements. Outdoor events work well too, with two things in mind: the machine needs shade or a tent so it isn't sitting in direct sun or rain, and it still needs a power source nearby.",
+      },
+      { type: 'h2', text: 'Venue access and timing' },
+      {
+        type: 'p',
+        text: "The machine rolls in on a dolly, so the smoother the path from our vehicle to the setup spot, the faster we're done. A few details to confirm with your venue ahead of time:",
+      },
+      {
+        type: 'list',
+        items: [
+          'Stairs or elevator — ground-floor or elevator access keeps setup quick; flag any stairs in advance.',
+          'Parking or a loading zone near the entrance for unloading.',
+          'Door and hallway width wide enough for the machine to pass through.',
+          'A setup window before guests arrive — we typically need a short slot to get it running.',
+        ],
+      },
+      { type: 'h2', text: 'How delivery and teardown work' },
+      {
+        type: 'p',
+        text: "Our team handles the whole cycle. We deliver the machine, set it up in free-play mode, and get it stocked before your event starts. Throughout the event we keep an eye on the prizes so it never runs dry. When it's over, we come back to break it down and haul it out — you never lift a thing.",
+      },
+      {
+        type: 'list',
+        items: [
+          'We arrive ahead of your start time to set up and test the machine.',
+          'It runs on free-play — no coins or tokens — and stays stocked all event long.',
+          'We return at the agreed time for teardown and pickup.',
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Have your date and venue? Send them over and we will confirm the setup details with you.',
+        cta: { label: 'Book your rental', href: '/rent-a-claw-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much space does a claw machine need?',
+        a: 'Plan for about a 3-by-3-foot footprint on a level surface, plus a few feet in front for guests to gather and play. For tight spaces, our compact mini machine needs even less room.',
+      },
+      {
+        q: 'What are the power requirements?',
+        a: 'The machine plugs into a single standard 110V wall outlet — no special wiring or generator needed for a typical indoor event. If the nearest outlet is far, let us know and we will bring an extension cord.',
+      },
+      {
+        q: 'Can the machine be set up outdoors?',
+        a: 'Yes. Outdoor setups work well as long as there is shade or a tent to keep the machine out of direct sun and rain, plus access to a power source nearby.',
+      },
+      {
+        q: 'Do I need to help move or set up the machine?',
+        a: 'No. Our team handles delivery, setup, restocking, and teardown. The machine rolls in on a dolly, so we just need a clear path and a short setup window before guests arrive.',
+      },
+      {
+        q: 'What if my venue is up a flight of stairs?',
+        a: 'Let us know in advance. Ground-floor or elevator access makes setup quickest, but flag any stairs when you book so we can plan the load-in accordingly.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {
