@@ -1,10 +1,10 @@
 'use client'
 
-import { useActionState, useState } from 'react'
-import { submitRequestForm, type FormState } from '@/app/actions'
+import { useState } from 'react'
 import { CheckCircle2, AlertCircle } from 'lucide-react'
 
-const initialState: FormState = {}
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 
 const inputStyles =
   'w-full px-4 py-3 rounded-2xl border-2 border-brand-navy/15 bg-brand-cream/50 focus:border-brand-navy focus:bg-white outline-none transition-all text-sm text-brand-navy placeholder:text-brand-navy/30'
@@ -38,13 +38,81 @@ export default function RequestForm({
   defaultType?: RequestType
   defaultCity?: string
 }) {
-  const [state, action, pending] = useActionState(submitRequestForm, initialState)
   const [requestType, setRequestType] = useState<RequestType>(defaultType)
+  const [pending, setPending] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const c = copy[requestType]
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setError(null)
+
+    if (!ACCESS_KEY) {
+      console.error('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is not set')
+      setError('Form is not configured. Please call us directly.')
+      return
+    }
+
+    const formData = new FormData(event.currentTarget)
+    const name = (formData.get('name') as string)?.trim()
+    const email = (formData.get('email') as string)?.trim()
+    const phone = (formData.get('phone') as string)?.trim()
+    const city = (formData.get('city') as string)?.trim()
+    const notes = (formData.get('notes') as string)?.trim()
+
+    if (!name || !email) {
+      setError('Please fill in your name and email.')
+      return
+    }
+
+    const isEvent = requestType === 'event'
+    setPending(true)
+
+    try {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          subject: isEvent
+            ? `New Event Rental Request from ${name}`
+            : `New Free Machine Request from ${name}`,
+          from_name: 'California Claw Website',
+          replyto: email,
+          botcheck: formData.get('botcheck') ? 'true' : '',
+          Type: isEvent ? 'Event rental' : 'Free machine for business',
+          Name: name,
+          Email: email,
+          Phone: phone || 'Not provided',
+          City: city || 'Not provided',
+          Notes: notes || 'No notes',
+        }),
+      })
+
+      const result = await res.json()
+
+      if (!res.ok || !result.success) {
+        console.error('Web3Forms error:', res.status, result)
+        setError('Failed to send your request. Please try again or call us directly.')
+        return
+      }
+
+      setSuccess(true)
+    } catch (err) {
+      console.error('Web3Forms request failed:', err)
+      setError('Failed to send your request. Please try again or call us directly.')
+    } finally {
+      setPending(false)
+    }
+  }
 
   return (
     <div className="bg-white rounded-3xl border-2 border-brand-navy shadow-[8px_8px_0_#FDB515] p-8">
-      {state.success ? (
+      {success ? (
         <div className="flex flex-col items-center text-center py-8">
           <div className="w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center mb-4">
             <CheckCircle2 className="w-8 h-8 text-brand-navy" />
@@ -53,15 +121,24 @@ export default function RequestForm({
           <p className="text-brand-navy/60">{c.success}</p>
         </div>
       ) : (
-        <form action={action} className="space-y-5">
-          <input type="hidden" name="requestType" value={requestType} />
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Honeypot — hidden from users, bots that tick it get rejected by Web3Forms */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            style={{ display: 'none' }}
+            aria-hidden="true"
+          />
 
           <h3 className="font-display text-xl font-bold text-brand-navy mb-2">{c.title}</h3>
 
-          {state.error && (
+          {error && (
             <div className="flex items-start gap-2 bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-700 text-sm">
               <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-              {state.error}
+              {error}
             </div>
           )}
 
