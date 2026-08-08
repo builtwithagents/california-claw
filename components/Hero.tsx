@@ -1,7 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Store, PartyPopper } from 'lucide-react'
 import joyCatcher from '@/public/joy-catcher.jpg'
+
+const paths = [
+  {
+    icon: Store,
+    tag: 'For your business',
+    title: 'Get a free machine',
+    points: ['$0 cost, ever', 'We handle everything', 'No contracts'],
+    cta: 'Get a Free Machine',
+    href: '#contact',
+    featured: true,
+  },
+  {
+    icon: PartyPopper,
+    tag: 'For your event',
+    title: 'Rent one for a party',
+    points: ['From $200', 'Unlimited prizes', 'Delivery & setup included'],
+    cta: 'See Rental Pricing',
+    href: '/rent-a-claw-machine',
+    featured: false,
+  },
+]
 
 export default function Hero() {
   return (
@@ -12,84 +33,96 @@ export default function Hero() {
       {/* Sun blob */}
       <div className="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-brand-gold/20 blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center mb-10">
           {/* Left: Copy */}
           <div>
-            <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">
+            <div className="sticker text-sm px-4 py-1.5 mb-4 -rotate-1">
               <Sparkles className="w-4 h-4 text-brand-gold" />
               100% free for your business
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-900 leading-[1.05] mb-4 tracking-tight">
               A claw machine.
               <br />
               For <span className="font-bold">free</span>. Really.
             </h1>
 
-            <p className="text-xl text-brand-navy/70 leading-relaxed mb-8 max-w-lg">
+            <p className="text-lg text-brand-navy/70 leading-relaxed max-w-lg">
               We place, stock, and maintain premium claw machines at cafés,
               restaurants, and campuses across the San Francisco Bay Area and San
-              Diego. Your
-              customers get the fun — you pay nothing, ever.
+              Diego — or rent one for your next event. Pick your path below.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-4">
-              <a href="#contact" className="btn-gold px-8 py-4 text-lg">
-                Get a Free Machine
-                <span className="opacity-70 font-normal">— Business</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <Link href="/rent-a-claw-machine" className="btn-outline px-8 py-4 text-lg">
-                🎉 Rent for an Event
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-
-            <a
-              href="#benefits"
-              className="inline-flex items-center gap-1.5 text-brand-navy/60 hover:text-brand-navy font-semibold mb-10 text-sm underline decoration-brand-navy/20 underline-offset-4"
-            >
-              See how it works
-            </a>
-
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-3">
-              {['No contracts', 'No upfront costs', 'We handle everything'].map((badge) => (
-                <span
-                  key={badge}
-                  className="text-sm font-semibold text-brand-navy/60 bg-white border-2 border-brand-navy/10 px-3 py-1.5 rounded-full"
-                >
-                  ✓ {badge}
-                </span>
-              ))}
-            </div>
           </div>
 
-          {/* Right: Real machine photo */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative animate-float w-full max-w-[300px] sm:max-w-[380px] lg:max-w-[440px]">
-              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-brand-navy shadow-[10px_10px_0_rgba(0,50,98,0.12)]">
+          {/* Right: Real machine photo, smaller */}
+          <div className="hidden sm:flex justify-center lg:justify-end">
+            <div className="relative animate-float w-[180px] lg:w-[220px]">
+              <div className="relative aspect-[3/4] rounded-[1.5rem] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_rgba(0,50,98,0.12)]">
                 <Image
                   src={joyCatcher}
                   alt="Joy Catcher claw machine filled with plush prizes"
                   fill
-                  sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 440px"
+                  sizes="(max-width: 1024px) 180px, 220px"
                   placeholder="blur"
                   className="object-cover"
                   priority
                 />
               </div>
 
-              {/* Floating stickers */}
-              <div className="absolute -top-4 -right-6 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
+              {/* Floating sticker */}
+              <div className="absolute -top-3 -right-4 sticker bg-brand-gold px-3 py-1.5 text-xs rotate-6">
                 FREE!
-              </div>
-              <div className="absolute -bottom-4 -left-6 sticker px-4 py-2 text-sm -rotate-3">
-                🔧 Fully maintained
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Two paths — the main choice, above the fold */}
+        <div className="grid md:grid-cols-2 gap-5">
+          {paths.map((path) => {
+            const Icon = path.icon
+            return (
+              <div
+                key={path.title}
+                className={`card-fun p-6 flex flex-col bg-white ${
+                  path.featured ? 'border-brand-navy shadow-[6px_6px_0_#FDB515]' : ''
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-11 h-11 shrink-0 rounded-xl bg-brand-gold/20 border-2 border-brand-navy/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-brand-navy" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-navy/50">
+                    {path.tag}
+                  </span>
+                </div>
+
+                <h2 className="font-display text-xl font-extrabold text-brand-navy mb-3">
+                  {path.title}
+                </h2>
+
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {path.points.map((point) => (
+                    <span
+                      key={point}
+                      className="text-xs font-semibold text-brand-navy/70 bg-brand-cream border-2 border-brand-navy/10 px-2.5 py-1 rounded-full"
+                    >
+                      ✓ {point}
+                    </span>
+                  ))}
+                </div>
+
+                <Link
+                  href={path.href}
+                  className={`${path.featured ? 'btn-gold' : 'btn-outline'} mt-auto px-6 py-3`}
+                >
+                  {path.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            )
+          })}
         </div>
       </div>
 
