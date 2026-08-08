@@ -7,7 +7,6 @@ import { Menu, X } from 'lucide-react'
 import logo from '@/public/california-claw-logo.jpg'
 
 const navLinks = [
-  { label: 'Rent for Events', href: '/rent-a-claw-machine' },
   { label: 'About Us', href: '/#about' },
   { label: 'Service Areas', href: '/#service-areas' },
   { label: 'Blog', href: '/blog' },
@@ -61,9 +60,12 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden md:block">
-            <a href="/#contact" className="btn-gold px-5 py-2 text-sm">
+          {/* CTAs */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link href="/rent-a-claw-machine" className="btn-outline px-4 py-2 text-sm">
+              Rent for an Event
+            </Link>
+            <a href="/#contact" className="btn-gold px-4 py-2 text-sm">
               Get a Free Machine
             </a>
           </div>
@@ -93,13 +95,22 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/#contact"
-              className="btn-gold block px-5 py-3 text-sm text-center mt-2"
-              onClick={() => setMobileOpen(false)}
-            >
-              Get a Free Machine
-            </a>
+            <div className="flex flex-col gap-2 mt-2">
+              <Link
+                href="/rent-a-claw-machine"
+                className="btn-outline block px-5 py-3 text-sm text-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                Rent for an Event
+              </Link>
+              <a
+                href="/#contact"
+                className="btn-gold block px-5 py-3 text-sm text-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                Get a Free Machine
+              </a>
+            </div>
           </div>
         </div>
       )}
