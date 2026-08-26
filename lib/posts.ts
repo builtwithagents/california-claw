@@ -957,6 +957,655 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: 'you-dont-need-to-buy-a-claw-machine',
+    title: "You Don't Need to Buy a Claw Machine: Placement vs. Buying vs. Renting",
+    excerpt:
+      "Three ways to get a claw machine into your business — buy one, rent one for an event, or have an operator place one for free. Here's the honest math on each, including when buying really is the right call.",
+    category: 'Business Placement',
+    readTime: '9 min read',
+    publishedAt: '2026-08-26',
+    updatedAt: '2026-08-26',
+    metaDescription:
+      "A commercial claw machine costs roughly $2,000-$5,000 to buy, plus prizes, repairs, and your time. Operator placement costs nothing. Here's how buying, renting, and free placement actually compare for a business.",
+    content: [
+      {
+        type: 'p',
+        text: 'If you want a claw machine in your business, you have three options: buy one outright, rent one for a single event, or have an operator place one at no cost. Most business owners assume the first one is the only one. For a permanent machine, it is usually the wrong choice — and the reasons have less to do with the price of the machine than with everything that comes after it.',
+      },
+      { type: 'h2', text: 'The short version' },
+      {
+        type: 'list',
+        items: [
+          'Buy a machine if you want full control of the prizes and the revenue, and you are willing to own the maintenance, the restocking, and the cash handling yourself.',
+          'Rent a machine if you need it for a specific date — a party, a company event, a grand opening — and then you want it gone.',
+          'Have one placed if you want a permanent machine in your space without buying equipment, learning to repair it, or spending your own hours on it.',
+        ],
+      },
+      { type: 'h2', text: 'What buying actually costs' },
+      {
+        type: 'p',
+        text: 'A commercial-grade claw machine generally runs somewhere between $2,000 and $5,000 new, with premium cabinets and multi-payment systems going past $7,000. Used units turn up cheaper. That number is the one everybody quotes, and it is also the least important number in the decision.',
+      },
+      { type: 'h3', text: 'The machine is the cheapest part' },
+      {
+        type: 'p',
+        text: 'The ongoing costs are what actually decide whether owning a machine is worth it, and they are the ones nobody puts in the sales listing:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Prizes, forever. A machine that pays out is a machine that keeps getting played. You are now sourcing plush, tracking what moves, and reordering — and a machine full of stale prizes stops earning within weeks.',
+          'Repairs. Claw mechanisms, coin mechs, and payout sensors are the failure points. When one goes down, you are either fixing it yourself or waiting on a technician who does not work for you.',
+          'Tuning. Claw strength and payout rate have to be set so the machine is winnable but sustainable. Set it too tight and customers stop playing; too loose and you empty the prize bin at a loss.',
+          'Cash handling. If it is coin-play, someone is emptying the hopper, counting it, and getting it to the bank. That is your time or your staff’s.',
+          'Your attention. This is the real cost. Every hour spent thinking about a claw machine is an hour not spent on the business the machine is supposed to support.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The pattern we see most often with owner-bought machines is not that they lose money. It is that they quietly stop being maintained. The prizes get old, the claw stays broken for a month, nobody plays it, and a $3,000 cabinet turns into furniture.',
+      },
+      { type: 'h2', text: 'When buying is actually the right call' },
+      {
+        type: 'p',
+        text: 'It genuinely is the right answer for some businesses, and we would rather say so than pretend otherwise:',
+      },
+      {
+        type: 'list',
+        items: [
+          'You run an arcade, an FEC, or a bowling alley. Amusement is your core business, you already have a tech, and machine revenue is a real line on your P&L rather than a side effect.',
+          'You want total control of the prizes. If the machine is a branded merchandising vehicle — your own plush, your own product, a specific promotion — you need to own it.',
+          'You already run a route. If you have multiple locations and someone on staff who services equipment, the economics flip in your favor.',
+          'You have very high, very predictable traffic. At real volume, keeping all of the revenue outweighs the cost of servicing it yourself.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If none of those describe you, owning the machine mostly means owning the problems.',
+      },
+      { type: 'h2', text: 'When renting is the right call' },
+      {
+        type: 'p',
+        text: 'Renting is for a date on a calendar, not for a space in your floor plan. It makes sense when the machine is part of an event rather than part of the business:',
+      },
+      {
+        type: 'list',
+        items: [
+          'A grand opening, an anniversary, or a promotional weekend where you want a draw for two days and then your floor space back.',
+          'A company party, a wedding, or a private event where the machine is entertainment for a fixed guest list.',
+          'A trade show or brand activation, where the machine is doing a specific job at a booth and then going home.',
+        ],
+      },
+      {
+        type: 'callout',
+        text: 'Looking for a machine for one specific date rather than a permanent placement?',
+        cta: { label: 'See rental pricing', href: '/rent-a-claw-machine' },
+      },
+      { type: 'h2', text: 'When free placement is the right call' },
+      {
+        type: 'p',
+        text: 'Placement is the option most business owners have never heard of, which is why so many of them start by pricing out machines to buy. An operator owns the machine, delivers it, services it, restocks it, and handles everything mechanical. You provide floor space and an outlet.',
+      },
+      {
+        type: 'p',
+        text: 'It fits when the machine is an amenity rather than a business line:',
+      },
+      {
+        type: 'list',
+        items: [
+          'You have customers who wait — for a wash cycle, for a table, for a drink, for a haircut — and you want that wait to feel shorter.',
+          'You want the upside without the capital outlay or the ongoing labor.',
+          'You are not sure it will even work in your space, and you want to find out without spending thousands to run the experiment.',
+          'You would rather someone else own the risk that the machine breaks, the prizes go stale, or the whole idea turns out to be a dud in your location.',
+        ],
+      },
+      { type: 'h2', text: 'Side by side' },
+      {
+        type: 'list',
+        items: [
+          'Upfront cost — Buying: $2,000-$5,000+. Renting: a per-event package fee. Placement: nothing.',
+          'Who maintains it — Buying: you. Renting: the rental company, for the duration. Placement: the operator, ongoing.',
+          'Who restocks prizes — Buying: you, indefinitely. Renting: included for the event. Placement: the operator.',
+          'Who keeps the revenue — Buying: you keep all of it. Renting: not applicable. Placement: depends on the arrangement — free-play means no revenue for anyone, coin-play is discussed up front.',
+          'Commitment — Buying: you own an asset. Renting: hours or a day. Placement: none; the machine can be removed.',
+          'Best for — Buying: amusement-first businesses. Renting: one-time events. Placement: businesses where people wait.',
+        ],
+      },
+      { type: 'h2', text: 'The question that settles it' },
+      {
+        type: 'p',
+        text: 'Ask yourself whether you want to be in the claw machine business or whether you want a claw machine in your business. Those are completely different commitments. If the answer is the second one, buying equipment is solving a problem you do not have.',
+      },
+      {
+        type: 'p',
+        text: 'We place and service machines across the San Francisco Bay Area and San Diego. If your space is a fit, there is no cost to find out — and if it is not a fit, we will tell you that instead of installing a machine that sits idle.',
+      },
+      {
+        type: 'callout',
+        text: 'Not sure which of the three makes sense for your space? Tell us about it and we will give you a straight answer.',
+        cta: { label: 'Request a free machine', href: '/#contact' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to buy a claw machine for a business?',
+        a: 'A commercial-grade claw machine typically costs $2,000 to $5,000 new, with premium cabinets and multi-payment systems exceeding $7,000. Used machines cost less. Beyond the purchase price you also take on prizes, repairs, tuning, and cash handling indefinitely.',
+      },
+      {
+        q: 'Can I get a claw machine for my business without buying one?',
+        a: 'Yes. Operators place machines in qualifying businesses at no cost — they own the machine, handle delivery, maintenance, and restocking, and you provide floor space and a power outlet. There is no purchase, no rental fee, and no long-term contract.',
+      },
+      {
+        q: 'Is buying a claw machine ever a better option than free placement?',
+        a: 'Yes, in specific cases. If amusement is your core business, if you need full control of the prizes for branding or merchandising, if you already run an equipment route, or if you have very high predictable traffic, owning the machine and keeping all the revenue can outweigh the servicing burden.',
+      },
+      {
+        q: 'What is the difference between renting a claw machine and having one placed?',
+        a: 'A rental covers a specific date — a party, a grand opening, a trade show — and runs on an hourly or daily package. A placement is permanent: the machine stays in your business, the operator services it, and there is no fee to the business.',
+      },
+      {
+        q: 'What are the hidden costs of owning a claw machine?',
+        a: 'Prize sourcing and restocking, mechanical repairs to the claw and coin mechanism, payout tuning so the machine stays winnable but sustainable, cash collection and banking, and your own time managing all of it. These recurring costs usually matter more than the purchase price.',
+      },
+      {
+        q: 'Do I need a contract for a free claw machine placement?',
+        a: 'Not with us. There is no lock-in period. If the machine is not working in your space we remove it, with no penalty and no notice period required.',
+      },
+      {
+        q: 'How much space does a claw machine need?',
+        a: 'Plan for roughly a 3-by-3-foot footprint on a level surface, plus a few feet of clearance in front for people to play. Compact mini machines fit tighter spots like a counter end or a narrow corner.',
+      },
+      {
+        q: 'Where do you place machines?',
+        a: 'We place and service machines throughout the San Francisco Bay Area and greater San Diego. If you are outside those areas, reach out anyway — we are always evaluating where to expand.',
+      },
+    ],
+  },
+  {
+    slug: 'claw-machine-in-your-laundromat',
+    title: 'Claw Machines in Laundromats: What They Earn and How They Work With Card Systems',
+    excerpt:
+      'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. Here is what a machine earns, and the card-system question nobody answers.',
+    category: 'Business Placement',
+    readTime: '10 min read',
+    publishedAt: '2026-08-26',
+    updatedAt: '2026-08-26',
+    metaDescription:
+      'What a claw machine earns in a laundromat, how it works alongside CCI, ESD, PayRange and other cashless systems, plus space, power, and supervision — from an operator who places machines in the San Francisco Bay Area and San Diego.',
+    content: [
+      {
+        type: 'p',
+        text: 'Laundromats are the best-performing place to put a claw machine, and it is not close. The reason is simple: your customers cannot leave. A wash-and-dry cycle is 30 to 90 minutes of waiting that nobody chose, it repeats every week, and it very often involves kids who are bored out of their minds. No other type of business hands a machine that much captive attention.',
+      },
+      { type: 'h2', text: 'Why laundromats outperform every other placement' },
+      {
+        type: 'p',
+        text: 'Most host businesses give a machine a few minutes of a customer’s attention. A laundromat gives it an hour, and then does it again next week. Three things stack up here that do not stack anywhere else:',
+      },
+      {
+        type: 'list',
+        items: [
+          'The wait is forced, not optional. In a cafe, a customer who is bored leaves. In a laundromat, their clothes are in the machine. They are staying either way, so the only question is what they do with the time.',
+          'The visit repeats on a schedule. Laundry is weekly for most people. That turns a one-time novelty into a recurring habit, which is the difference between a machine that spikes and a machine that earns steadily.',
+          'Kids come along. Parents doing laundry with children in tow are the single most reliable source of play. The machine is not competing for attention — it is rescuing a parent from forty minutes of "I am bored."',
+        ],
+      },
+      { type: 'h2', text: 'What a machine actually earns' },
+      {
+        type: 'p',
+        text: 'Machine vendors and route operators commonly cite $150 to $600 per month in gross play for a laundromat placement. That range is wide because it is doing a lot of work — the difference between the bottom and the top of it is almost entirely about the store, not the machine.',
+      },
+      {
+        type: 'p',
+        text: 'What moves a location up or down that range:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Daily foot traffic. The number of separate customers matters more than total loads. Twenty people doing one load each beats five people doing four.',
+          'How family-heavy the customer base is. A store in a neighborhood with young families will outperform a store serving mostly single adults, by a wide margin.',
+          'Attended versus unattended hours. Machines in attended stores get played more, get damaged less, and stay in service longer.',
+          'Prize quality. This is the one people underestimate. A machine stocked with recognizable, current plush gets played several times more than the same machine full of generic filler.',
+          'Payment friction. If a customer has to leave the store or hunt for quarters to play, most of them will not. More on that below, because in a modern laundromat this is the whole ballgame.',
+        ],
+      },
+      { type: 'h3', text: 'What the laundromat actually keeps' },
+      {
+        type: 'p',
+        text: 'That depends on how the machine is set up, and it is worth being clear about, because "free machine" and "extra revenue" are two different promises:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Free-play. Guests play at no charge. There is no coin revenue for anyone — the machine is purely an amenity that makes your store the one families choose. Some owners prefer this because there is nothing to split, count, or discuss.',
+          'Coin-play. Guests pay per turn. This is where a revenue conversation happens, and we have it up front rather than after installation. Splits in this industry commonly run somewhere in the 10 to 30 percent range to the location, or a flat arrangement, depending on traffic and who handles what.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Either way, the machine costs the laundromat nothing. We own it, deliver it, service it, and restock it.',
+      },
+      { type: 'h2', text: 'The card system question' },
+      {
+        type: 'p',
+        text: 'This is the question every laundromat owner asks and almost nobody answers publicly: if my store has gone cashless, what happens to a coin-operated claw machine?',
+      },
+      {
+        type: 'p',
+        text: 'It is a real problem. If your washers and dryers run on CCI, ESD, KioSoft, SpyderWash, LaundroWorks, or a similar system, your customers have stopped carrying quarters. A coin-only amusement machine in a coinless store is a machine nobody plays — you have introduced exactly the payment friction that kills play rates.',
+      },
+      { type: 'h3', text: 'The four ways this gets solved' },
+      {
+        type: 'list',
+        items: [
+          'Hybrid stores. If you run something like CCI FasCard, which accepts both coins and cards alongside your existing equipment, a coin-op machine still works for the portion of customers carrying change — but you are leaving the cashless majority out.',
+          'A bolt-on mobile reader. Devices like PayRange attach to a machine with a standard coin mech and let customers pay from their phone. This is usually the cleanest fix for an amusement machine in a cashless store, because it does not require the machine to be part of your laundry payment platform.',
+          'Free-play. This sidesteps the entire problem. No payment, no reader, no integration, no friction — the machine is simply an amenity. In a fully coinless store this is often the most sensible setup, and it is the one we suggest most often.',
+          'Your changer, if you still have one. Some coinless stores keep a bill changer for vending and amusement. If yours does, a coin-op machine is viable, though play rates will still trail a store where paying is frictionless.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The honest summary: if your store is fully cashless, do not put in a coin-only machine and hope. Either add a mobile payment reader or run it free-play. Tell us which payment system you run when you reach out and we will tell you which of these actually applies to your store rather than guessing.',
+      },
+      { type: 'h2', text: 'Space and power' },
+      {
+        type: 'p',
+        text: 'A standard machine needs roughly a 3-by-3-foot footprint on a level floor, plus a few feet of clearance in front so a player is not standing in a walkway. It plugs into a standard 110V wall outlet — no dedicated circuit, no special wiring, nothing that involves an electrician. If your only free wall is across the store from an outlet, tell us and we will plan for it.',
+      },
+      {
+        type: 'p',
+        text: 'For tight stores, a compact mini machine fits places a full cabinet will not — the end of a folding table run, a narrow entry wall, the gap beside a vending bank. If you are short on floor, that is a layout question, not a disqualifier.',
+      },
+      { type: 'h3', text: 'Where to put it' },
+      {
+        type: 'list',
+        items: [
+          'In sightline of the seating area, so waiting customers see it without going looking for it.',
+          'Not in a path between the washers and the dryers, where people are carrying full baskets.',
+          'Under existing light and, where you have them, in view of your cameras.',
+          'Away from the folding tables, so a crowd around the machine does not crowd the people working.',
+        ],
+      },
+      { type: 'h2', text: 'Loitering, supervision, and unattended hours' },
+      {
+        type: 'p',
+        text: 'Worth addressing directly, because it is the most common hesitation we hear from laundromat owners and it is a fair one.',
+      },
+      {
+        type: 'p',
+        text: 'A claw machine does draw people toward it, and in an unattended store at 11pm that can mean kids hanging around the machine rather than doing laundry. In practice this looks a lot like the concern owners already have about vending and arcade equipment, and the same things address it: put the machine where your cameras cover it, keep it in a well-lit part of the floor, and if your store has unattended overnight hours, know that machines in attended stores hold up better. If loitering is already a problem in your store, adding an attraction near the entrance is not the fix, and we will say so.',
+      },
+      { type: 'h2', text: 'What happens if it does not work out' },
+      {
+        type: 'p',
+        text: 'We remove it. There is no contract, no penalty, and no notice period — you tell us, we schedule a pickup, and you have your floor space back. That is deliberate: we would rather earn the spot by having the machine actually perform than lock a store into keeping something that is not working.',
+      },
+      {
+        type: 'callout',
+        text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us your store size and payment system and we will tell you if it is a fit.',
+        cta: { label: 'Request a free machine', href: '/#contact' },
+      },
+      {
+        type: 'p',
+        text: 'And if you are weighing whether to just buy a machine outright instead, that comparison is worth reading before you spend anything.',
+      },
+      {
+        type: 'callout',
+        text: 'Buying, renting, or free placement — the real math on all three.',
+        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does a claw machine make in a laundromat?',
+        a: 'Machine vendors and route operators commonly cite $150 to $600 per month in gross play for a laundromat placement. Where a specific store lands depends mostly on daily foot traffic, how many customers bring children, attended versus unattended hours, prize quality, and how easy it is to pay.',
+      },
+      {
+        q: 'Does a claw machine work if my laundromat is cashless?',
+        a: 'Not as a coin-only machine — in a coinless store, customers no longer carry quarters and play rates collapse. The usual fixes are a bolt-on mobile payment reader such as PayRange, or running the machine free-play as a pure amenity, which removes payment friction entirely.',
+      },
+      {
+        q: 'Does the claw machine integrate with my CCI, ESD, or KioSoft system?',
+        a: 'Amusement machines generally sit outside your laundry payment platform rather than integrating with it. In hybrid stores that still accept coins the machine runs on its own coin mech; in fully cashless stores the practical options are a mobile payment reader on the machine or free-play. Tell us which system you run and we will confirm what applies to your store.',
+      },
+      {
+        q: 'How much space does a claw machine need in a laundromat?',
+        a: 'About a 3-by-3-foot footprint on level floor, plus a few feet of clearance in front so players are not standing in a walkway. A compact mini machine fits tighter spots such as a narrow entry wall or the end of a folding table run.',
+      },
+      {
+        q: 'What are the power requirements?',
+        a: 'A standard 110V wall outlet. No dedicated circuit, no special wiring, and no electrician needed. If the nearest outlet is far from the spot you have in mind, mention it and we will plan the placement around it.',
+      },
+      {
+        q: 'Will a claw machine cause loitering in my laundromat?',
+        a: 'It draws attention, which is the point, but it can mean people gathering near the machine during unattended hours. Placing it under good lighting and camera coverage addresses most of it. If your store already has a loitering problem, an attraction near the entrance is not the right fix and we will tell you so.',
+      },
+      {
+        q: 'Who restocks the prizes and fixes the machine?',
+        a: 'We do, on our own schedule. We monitor prize levels and mechanical health and come by proactively rather than waiting for a complaint. Your staff never needs to open the machine, order plush, or call a repair line.',
+      },
+      {
+        q: 'Does the laundromat make money from the machine?',
+        a: 'It depends on the setup. Free-play produces no coin revenue for anyone and serves purely as an amenity that keeps families choosing your store. Coin-play generates play revenue, and how that is handled is agreed up front during onboarding rather than after installation.',
+      },
+      {
+        q: 'Can I have the machine removed later?',
+        a: 'Yes, at any time. There is no contract, no penalty, and no notice period required — just let us know and we will coordinate a pickup.',
+      },
+    ],
+  },
+  {
+    slug: 'claw-machine-for-your-restaurant',
+    title: 'Claw Machines in Restaurants: What They Actually Do for a Dining Room',
+    excerpt:
+      'In a restaurant the machine is not a revenue line — it is a wait-management tool. Here is the case for one, where it goes, and the honest answer on whether it cheapens your room.',
+    category: 'Business Placement',
+    readTime: '9 min read',
+    publishedAt: '2026-08-26',
+    updatedAt: '2026-08-26',
+    metaDescription:
+      'Why restaurants put in claw machines: fewer walkouts at the host stand, calmer tables with kids, and longer visits. Placement, free-play versus coin-play, and which restaurant segments it fits.',
+    content: [
+      {
+        type: 'p',
+        text: 'If you run a restaurant and someone pitches you a claw machine on the quarters it collects, ignore them. The coin drop is not the point and it never will be — in a restaurant, the machine is a wait-management tool. It exists to keep a party from walking out of your lobby and to keep a table from turning into a meltdown. Both of those are worth more than a jar of change.',
+      },
+      { type: 'h2', text: 'Two different waits, one machine' },
+      {
+        type: 'p',
+        text: 'A restaurant has two waits, and they are nothing alike. The machine helps with both, but for different reasons.',
+      },
+      { type: 'h3', text: 'The host stand wait' },
+      {
+        type: 'p',
+        text: 'This is the expensive one. A party of four is quoted twenty-five minutes, stands in a crowded entryway with nothing to do, and after eight minutes somebody says "let us just go somewhere else." That walkout is not a lost jar of quarters. It is a lost check, and on a Friday night it is a lost check you cannot backfill because the table stays empty through your peak.',
+      },
+      {
+        type: 'p',
+        text: 'The value of anything in your waiting area is measured in how much longer a party will tolerate standing there. A machine gives the kids something to do and gives the adults something to watch, and a wait that people are participating in feels shorter than a wait they are enduring.',
+      },
+      { type: 'h3', text: 'The wait at the table' },
+      {
+        type: 'p',
+        text: 'The second wait is the gap between ordering and food arriving, with restless children at the table. This is where families cut visits short — the check gets asked for early, dessert never gets ordered, and the party leaves at minute twenty-five instead of minute forty.',
+      },
+      {
+        type: 'p',
+        text: 'A machine in sightline of the dining room gives parents a release valve. One adult walks a kid over for two minutes, the table resets, and the meal continues at a normal pace. That is the mechanism — not more revenue per guest, but the visit reaching its natural length instead of getting cut short.',
+      },
+      { type: 'h2', text: 'Why the coin drop is the wrong number' },
+      {
+        type: 'p',
+        text: 'Do the comparison honestly. A claw machine in a restaurant might take a modest amount in play across a month. One party of four that stays for dessert instead of leaving early, or one party that waits out a Friday rush instead of walking, is worth a meaningful fraction of that on a single night.',
+      },
+      {
+        type: 'p',
+        text: 'Which is why we generally do not recommend that restaurants think about this as a revenue stream at all. If a machine in your lobby earns you nothing in coins and reduces your walkouts, it did its job.',
+      },
+      { type: 'h2', text: 'Free-play or coin-play?' },
+      {
+        type: 'p',
+        text: 'In restaurants we lean toward free-play more than in any other type of business, and the reasoning is about the room rather than the money:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Free-play reads as hospitality. A machine your guests can play while they wait is a perk you are extending. A machine that asks a waiting guest for money reads as an upsell in the one moment they are already mildly annoyed with you.',
+          'It removes friction entirely. No change, no card, no app, no guest asking your host for quarters during a rush.',
+          'It fits how restaurants already think about waiting areas. Nobody charges for the bowl of mints.',
+          'Coin-play still makes sense in some rooms — family-casual restaurants with a dedicated game corner, or places where an arcade element is already part of the concept.',
+        ],
+      },
+      { type: 'h2', text: 'Where the machine goes' },
+      {
+        type: 'p',
+        text: 'Placement matters more in a restaurant than anywhere else we work, because your floor is already doing several jobs at once:',
+      },
+      {
+        type: 'list',
+        items: [
+          'In or beside the waiting area, visible from the host stand, so the host can keep an eye on kids without leaving the podium.',
+          'Never in an egress path. Your exits, aisles, and accessible routes have to stay clear — this is a code question before it is a design question, and it is the first thing we check on a walkthrough.',
+          'Out of server paths. Anywhere a runner carries hot plates is not a place for a crowd of children to gather.',
+          'Not blocking the point of sale or the door. A machine that creates a knot of people at your entrance during a rush is a problem, not an amenity.',
+          'Against a wall with an outlet, on a level floor, with a few feet of clearance in front.',
+        ],
+      },
+      { type: 'h2', text: 'Does it cheapen the room?' },
+      {
+        type: 'p',
+        text: 'Sometimes, yes. We would rather say that plainly than install a machine that fights your concept.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Family casual, pizza, diners, breakfast spots, taquerias, counter-service — a good fit. Your guests already expect a relaxed room, and the machine reads as part of the hospitality.',
+          'Brewpubs, sports bars, and casual neighborhood spots — usually a good fit, especially where there is already a dartboard, a pinball cabinet, or a jukebox. The machine is not out of place in a room that already has games in it.',
+          'Fine dining and upscale rooms — no. A claw machine in a room with white tablecloths is working against everything else you have spent money on. We will not pretend otherwise to place a machine.',
+          'Small dining rooms with no waiting area — usually no. If nobody waits, the machine has no job to do, and it is just taking up covers.',
+        ],
+      },
+      { type: 'h2', text: 'The practical objections' },
+      { type: 'h3', text: 'Noise during service' },
+      {
+        type: 'p',
+        text: 'A claw machine has attract sounds and play sounds. Volume is adjustable, and in restaurants we set it low or off by default — the visual draw does the work in a room where people are already looking around. If your dining room is quiet enough that this matters, tell us and we will set it accordingly on install.',
+      },
+      { type: 'h3', text: 'Cleanliness' },
+      {
+        type: 'p',
+        text: 'It is a glass box in a room where people eat, and it will get handprints. We clean it on every service visit, and your staff can wipe it down with whatever they already use on the front-of-house glass. It is not a food-contact surface and it does not add anything to your health inspection that a jukebox or a vending machine would not.',
+      },
+      { type: 'h3', text: 'Kids playing unsupervised' },
+      {
+        type: 'p',
+        text: 'This is why sightline from the host stand matters. A machine tucked around a corner becomes a place where children are out of view of both their parents and your staff. Put it where it can be seen from the podium and the problem mostly disappears.',
+      },
+      { type: 'h2', text: 'What it costs you' },
+      {
+        type: 'p',
+        text: 'Nothing. We own the machine, deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it.',
+      },
+      {
+        type: 'callout',
+        text: 'Run a restaurant in the San Francisco Bay Area or San Diego? Tell us about your waiting area and we will tell you honestly whether it fits.',
+        cta: { label: 'Request a free machine', href: '/#contact' },
+      },
+      {
+        type: 'callout',
+        text: 'Weighing buying a machine outright instead? Here is the real math.',
+        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why would a restaurant put in a claw machine?',
+        a: 'To manage two waits: the wait at the host stand, where bored parties walk out and cost you a full check, and the wait at the table with restless kids, which cuts family visits short. The machine gives waiting guests something to do so visits reach their natural length.',
+      },
+      {
+        q: 'Should a restaurant run the machine free-play or coin-play?',
+        a: 'Free-play usually fits better. It reads as hospitality rather than an upsell to a guest who is already waiting, and it removes any friction around change or apps during a rush. Coin-play makes more sense in family-casual rooms that already have a dedicated game area.',
+      },
+      {
+        q: 'Where should a claw machine go in a restaurant?',
+        a: 'In or beside the waiting area, visible from the host stand, out of server paths, and never in an egress route. It needs a level spot against a wall with an outlet and a few feet of clearance in front so players are not standing in a walkway.',
+      },
+      {
+        q: 'Will a claw machine cheapen my dining room?',
+        a: 'In a fine dining or upscale room, yes — we will tell you not to do it. In family casual, pizza, diners, breakfast spots, counter service, brewpubs, and sports bars it reads as part of the hospitality and fits the room.',
+      },
+      {
+        q: 'Is a claw machine noisy in a dining room?',
+        a: 'The attract and play sounds are adjustable, and in restaurants we set the volume low or off by default. The machine draws attention visually in a room where guests are already looking around, so it does not need to be audible to work.',
+      },
+      {
+        q: 'Is there a health code problem with a claw machine in a restaurant?',
+        a: 'It is not a food-contact surface and generally raises no more of an issue than a vending machine or a jukebox. The real code consideration is egress — the machine cannot sit in an exit path or block an accessible route, which we check during the walkthrough.',
+      },
+      {
+        q: 'What does it cost the restaurant?',
+        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. The restaurant provides floor space and a power outlet, with no rental fee and no long-term contract.',
+      },
+      {
+        q: 'What if it does not work in my restaurant?',
+        a: 'We remove it. There is no penalty and no notice period — you tell us, we schedule a pickup, and you get the floor space back.',
+      },
+    ],
+  },
+  {
+    slug: 'claw-machine-for-your-boba-shop',
+    title: 'Claw Machines in Boba Shops: Why the Prize Mix Decides Everything',
+    excerpt:
+      'Your customers are young, social, and choosing between four near-identical shops. A claw machine is a reason to pick yours — but only if the prizes are right and the machine is tuned fairly.',
+    category: 'Business Placement',
+    readTime: '9 min read',
+    publishedAt: '2026-08-26',
+    updatedAt: '2026-08-26',
+    metaDescription:
+      'How a claw machine works in a boba shop: differentiation against nearby competitors, prize curation for a young crowd, mini machines for tight footprints, and where to put it without blocking the register.',
+    content: [
+      {
+        type: 'p',
+        text: 'A boba shop has a different problem than a laundromat or a restaurant. Your wait is short — five to ten minutes — so you are not solving boredom. Your problem is that there are three other shops within walking distance selling a very similar drink at a very similar price, and your customers are deciding between them on feel. A claw machine is one of the cheapest ways to be the one they pick.',
+      },
+      { type: 'h2', text: 'The real problem is choice, not waiting' },
+      {
+        type: 'p',
+        text: 'Boba is a category where the product differences are small and the customer is loyal to a vibe rather than a recipe. Your customers are largely teenagers and young adults, they come in groups, they come often, and where they go is a group decision made in about four seconds.',
+      },
+      {
+        type: 'p',
+        text: 'That decision gets made on things like: which shop has the seating, which one has the better music, which one is more fun to be in. A claw machine is a concrete, visible answer to "why here instead of there" — and unlike a loyalty app or a discount, it does not cost you margin on every drink.',
+      },
+      { type: 'h2', text: 'Your customers know claw machines' },
+      {
+        type: 'p',
+        text: 'This is the part that makes boba shops different from every other placement, and it is worth taking seriously.',
+      },
+      {
+        type: 'p',
+        text: 'This demographic has played a lot of claw machines. They have been to the arcades, they have seen the machines in the Asian supermarkets and the mall, and a meaningful number of them have watched videos about how the claw strength settings work. They will know within two plays whether your machine is tuned to be winnable or tuned to be a coin trap.',
+      },
+      {
+        type: 'p',
+        text: 'A machine that never pays out does not just fail to earn — it actively costs you. Word gets around a group of regulars fast, and "that shop has the rigged claw machine" is a worse reputation than having no machine at all. We tune for a real win rate for exactly this reason, and it is the main thing we would tell any shop owner buying their own machine to get right.',
+      },
+      { type: 'h2', text: 'Prize mix decides everything' },
+      {
+        type: 'p',
+        text: 'In a laundromat, a machine full of generic plush still gets played, because the alternative is staring at a dryer. In a boba shop there is no captive wait to fall back on. The prizes have to be worth wanting on their own, or the machine gets ignored.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Character and licensed-style plush strongly outperforms generic filler with this crowd. Recognizable beats cute.',
+          'Current matters. This demographic tracks what is popular closely, and a prize mix that was right eighteen months ago reads as stale.',
+          'Size variety helps. A mix of small easy grabs and one or two larger centerpiece prizes gives the machine a reason to be looked at and a reason to be attempted.',
+          'Presentation counts. A well-packed machine looks abundant. A half-empty one looks abandoned, and nobody plays a machine that looks abandoned.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'We restock and rotate on our own schedule, and prize mix is something we will actively adjust for a shop based on what is moving. If your customers are skewing younger or older than we assumed, tell us — that is a two-minute conversation that changes what goes in the machine.',
+      },
+      { type: 'h2', text: 'Footprint: why the mini machine matters here' },
+      {
+        type: 'p',
+        text: 'Boba shops are small and the rent per square foot is brutal. A full-size cabinet at roughly three by three feet is real estate you may not want to give up, and we are not going to pretend that is nothing.',
+      },
+      {
+        type: 'p',
+        text: 'This is where the compact mini machine earns its place. It fits spots a full cabinet cannot: the end of a counter, a narrow wall by the pickup area, the dead corner next to the door that currently holds nothing. If floor space is your hesitation, the honest answer is usually that we are talking about a much smaller commitment than you are picturing.',
+      },
+      { type: 'h2', text: 'Where it goes without wrecking your queue' },
+      {
+        type: 'p',
+        text: 'The one way a machine genuinely hurts a boba shop is by getting in the way of the line. Your ordering queue and your pickup crowd already collide during a rush, and adding a third cluster of people in the wrong spot makes the room feel chaotic rather than fun.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Put it past the pickup counter, not before the register. People should encounter it after they have ordered, in the space where they are already standing around waiting for a name to be called.',
+          'Keep it off the queue wall. Whichever wall your line forms along is the one wall the machine should not be on.',
+          'Near the seating, if you have seating. Groups who sit down are the ones most likely to get up and play.',
+          'Not in the doorway. A machine visible from outside is good; a machine that creates a bottleneck at the entrance is not.',
+        ],
+      },
+      { type: 'h2', text: 'Coin-play or free-play?' },
+      {
+        type: 'p',
+        text: 'Either works here, and it depends on what you want the machine to do:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Coin-play suits shops with steady walk-in volume and a crowd that lingers. This group is used to paying to play — it is a normal part of how they already spend time — and it does not read as an upsell the way it might in a restaurant lobby.',
+          'Free-play suits shops using the machine purely as a draw, or running it as a promotion — a free play with a drink purchase, for example, which turns the machine into a reason to buy rather than a separate transaction.',
+          'You can switch. If the first choice is not working, we change it. This is not a decision you are locked into.',
+        ],
+      },
+      { type: 'h2', text: 'The social media effect, honestly' },
+      {
+        type: 'p',
+        text: 'Claw machines get filmed. A win is a small, self-contained moment with a satisfying ending, which is close to the ideal shape for a short video, and this customer base posts constantly.',
+      },
+      {
+        type: 'p',
+        text: 'What we will not do is promise you a viral moment. Most placements produce a steady trickle of tagged posts and stories rather than one big spike, and the value is cumulative — your shop shows up in your customers’ feeds attached to something fun, repeatedly, without you running an ad. That is worth having. It is not a marketing strategy on its own.',
+      },
+      { type: 'h2', text: 'What it costs you' },
+      {
+        type: 'p',
+        text: 'Nothing. We own the machine, deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. No contract, and if it is not working for your shop we take it back out.',
+      },
+      {
+        type: 'callout',
+        text: 'Run a boba shop or cafe in the San Francisco Bay Area or San Diego? Tell us your footprint and we will tell you which machine fits.',
+        cta: { label: 'Request a free machine', href: '/#contact' },
+      },
+      {
+        type: 'callout',
+        text: 'Thinking about buying your own machine instead? Read this first.',
+        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why would a boba shop want a claw machine?',
+        a: 'Because the problem in boba is not waiting, it is choice. Customers pick between several near-identical shops within walking distance, largely on atmosphere. A claw machine is a visible, concrete reason to choose your shop, and unlike a discount or a loyalty program it does not cost you margin on every drink.',
+      },
+      {
+        q: 'Will a claw machine fit in a small boba shop?',
+        a: 'Usually yes. A full-size cabinet needs roughly three by three feet, but the compact mini machine fits spots a full cabinet cannot — the end of a counter, a narrow wall by the pickup area, or a dead corner near the door. Tell us your footprint and we will match a machine to it.',
+      },
+      {
+        q: 'What prizes work best in a boba shop?',
+        a: 'Character and licensed-style plush strongly outperforms generic filler with a young crowd, and the mix has to stay current — this demographic tracks what is popular closely. A range of small grabs plus one or two larger centerpiece prizes works best, and the machine should always look well stocked.',
+      },
+      {
+        q: 'Where should the machine go so it does not block the line?',
+        a: 'Past the pickup counter rather than before the register, and off whichever wall your ordering queue forms along. Customers should encounter it after ordering, in the space where they are already waiting for their name to be called, ideally near seating if you have it.',
+      },
+      {
+        q: 'Should a boba shop run the machine coin-play or free-play?',
+        a: 'Coin-play suits shops with steady walk-in volume and customers who linger, since this crowd is used to paying to play. Free-play suits shops using the machine as a pure draw, or as a promotion such as a free play with a drink purchase. You can switch between them later.',
+      },
+      {
+        q: 'Are your machines tuned to be winnable?',
+        a: 'Yes, and it matters more in boba shops than anywhere else. This customer base has played a lot of claw machines and will recognize a coin trap within two plays. A machine with a reputation for never paying out is worse for a shop than having no machine at all.',
+      },
+      {
+        q: 'What does it cost the shop?',
+        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. You provide floor space and a standard 110V outlet, with no rental fee and no long-term contract.',
+      },
+      {
+        q: 'Do you place machines in cafes too?',
+        a: 'Yes. Cafes, boba shops, juice bars, and dessert shops all work on the same logic — a short wait, a young or family-heavy crowd, and nearby competition selling something similar. We place and service machines across the San Francisco Bay Area and San Diego.',
+      },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {
