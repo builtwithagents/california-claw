@@ -2,14 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, Phone, Clock } from 'lucide-react'
 import logo from '@/public/california-claw-logo.jpg'
+import { counties } from '@/lib/counties'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Benefits', href: '/#benefits' },
-  { label: 'Machines', href: '/#machines' },
+  { label: 'How Placement Works', href: '/blog/free-claw-machine-for-your-business-how-it-works' },
+  { label: 'Placement vs. Buying', href: '/blog/free-claw-machine-vs-buying-vs-renting' },
   { label: 'Rent for Events', href: '/rent-a-claw-machine' },
   { label: 'About Us', href: '/#about' },
-  { label: 'Service Areas', href: '/#service-areas' },
   { label: 'Blog', href: '/blog' },
 ]
 
@@ -22,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
@@ -74,6 +75,23 @@ export default function Footer() {
                     className="text-white/60 hover:text-brand-gold text-sm transition-colors"
                   >
                     {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h3 className="font-display text-white font-bold mb-4">Service Areas</h3>
+            <ul className="space-y-2">
+              {counties.map((county) => (
+                <li key={county.slug}>
+                  <Link
+                    href={`/${county.slug}`}
+                    className="text-white/60 hover:text-brand-gold text-sm transition-colors"
+                  >
+                    {county.name}
                   </Link>
                 </li>
               ))}

@@ -18,11 +18,18 @@ export type Post = {
   metaDescription: string
   content: PostBlock[]
   faqs: PostFaq[]
+  /** Hand-picked related slugs, most relevant first. Falls back to same-category. */
+  related?: string[]
 }
 
 export const posts: Post[] = [
   {
     slug: 'how-much-does-it-cost-to-rent-a-claw-machine',
+    related: [
+      'where-to-rent-a-claw-machine-san-francisco-bay-area',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+      'claw-machine-rental-for-a-birthday-party',
+    ],
     title: 'How Much Does It Cost to Rent a Claw Machine for a Party?',
     excerpt:
       'A straight answer on claw machine rental pricing — what our packages include, what other companies quietly charge extra for, and how to pick the right package for your event.',
@@ -66,7 +73,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What some rental companies charge extra for' },
       {
         type: 'p',
-        text: "Claw machine rental pricing across the industry is inconsistent, and a lot of the sting is in the fine print. Before you book anywhere, it's worth asking about:",
+        text: "Claw machine rental pricing across the industry is inconsistent, and a lot of the sting is in the fine print. Once you have booked, the [space and power checklist](/blog/before-your-claw-machine-arrives-space-power-setup-checklist) covers what your venue needs to have ready. Before you book anywhere, it's worth asking about:",
       },
       {
         type: 'list',
@@ -182,6 +189,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'free-claw-machine-for-your-business-how-it-works',
+    related: [
+      'free-claw-machine-vs-buying-vs-renting',
+      'free-claw-machine-in-your-laundromat',
+      'free-claw-machine-for-your-restaurant',
+    ],
     title: 'Free Claw Machine for Your Business: How It Actually Works',
     excerpt:
       "\"Free\" makes people suspicious, and that's fair. Here's exactly what happens when you request a claw machine placement — no contract, no catch, just the honest process.",
@@ -261,9 +273,9 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          'Cafes and boba shops — gives customers something to do while they wait for an order.',
-          'Restaurants — a photo-op and a way to keep waiting parties (and kids) entertained.',
-          'Laundromats — turns dead time on a wash cycle into something fun.',
+          'Cafes and [boba shops](/blog/free-claw-machine-for-your-boba-shop) — gives customers something to do while they wait for an order.',
+          '[Restaurants](/blog/free-claw-machine-for-your-restaurant) — a photo-op and a way to keep waiting parties (and kids) entertained.',
+          '[Laundromats](/blog/free-claw-machine-in-your-laundromat) — turns dead time on a wash cycle into something fun.',
           'Campuses and offices — a break-room perk that people genuinely talk about.',
           'Shopping centers and retail — an extra reason for foot traffic to linger.',
         ],
@@ -271,7 +283,7 @@ export const posts: Post[] = [
       { type: 'h2', text: "Why we do it this way" },
       {
         type: 'p',
-        text: "We'd rather earn a spot in your business by proving the machine adds value than lock you into a contract that assumes it will. Most of our placements come from word of mouth between businesses in the same neighborhood — that only works if the first machine actually delivers.",
+        text: "We'd rather earn a spot in your business by proving the machine adds value than lock you into a contract that assumes it will. Most of our placements come from word of mouth between businesses in the same neighborhood — that only works if the first machine actually delivers. If you are still weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison lays out the real costs.",
       },
       {
         type: 'callout',
@@ -316,6 +328,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'renting-a-claw-machine-for-a-wedding',
+    related: [
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+      'claw-machine-rental-for-a-birthday-party',
+    ],
     title: 'Renting a Claw Machine for Your Wedding: A Planning Guide',
     excerpt:
       "Claw machines are showing up at weddings as a playful surprise during cocktail hour or the reception. Here's how to plan one in — timing, setup, and what a rental includes.",
@@ -352,7 +369,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What a rental includes' },
       {
         type: 'p',
-        text: "Our packages are flat-rate: $200 for one hour, $350 for two hours, $475 for three, $575 for four, and $700 for six. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 6-hour package, which covers cocktail hour through the reception, since unlimited prizes and a flat price mean there's nothing to negotiate mid-event.",
+        text: "Our packages are flat-rate: $200 for one hour, $350 for two hours, $475 for three, $575 for four, and $700 for six — the [full pricing breakdown](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers what each tier includes. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 6-hour package, which covers cocktail hour through the reception, since unlimited prizes and a flat price mean there's nothing to negotiate mid-event.",
       },
       { type: 'h2', text: 'Setup details your venue will ask about' },
       {
@@ -426,6 +443,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'claw-machine-rental-for-a-birthday-party',
+    related: [
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+      'renting-a-claw-machine-for-a-wedding',
+    ],
     title: 'Claw Machine Rental for a Birthday Party (or Any Party)',
     excerpt:
       "A claw machine turns a birthday party into a full arcade moment. Here's how to plan one for kids, adults, or a mixed-age crowd.",
@@ -463,7 +485,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'Backyard, home, or venue setups' },
       {
         type: 'p',
-        text: "We deliver and set up wherever the party is — a backyard, a rented venue, or a community clubhouse. It needs about a 3-by-3-foot footprint and a nearby outlet, and we're happy to work outdoors as long as there's some cover in case of weather.",
+        text: "We deliver and set up wherever the party is — a backyard, a rented venue, or a community clubhouse. It needs about a 3-by-3-foot footprint and a nearby outlet — the [setup checklist](/blog/before-your-claw-machine-arrives-space-power-setup-checklist) has the full list — and we're happy to work outdoors as long as there's some cover in case of weather.",
       },
       { type: 'h2', text: 'Kids\' parties vs. milestone birthdays' },
       {
@@ -528,6 +550,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'renting-a-claw-machine-for-the-office',
+    related: [
+      'claw-machines-for-trade-shows-and-brand-activations',
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+    ],
     title: 'Renting a Claw Machine for the Office: A Guide for Team Events',
     excerpt:
       "Holiday party, team offsite, or just a Friday pick-me-up — a rented claw machine is an easy way to add energy to an office event. Here's how it works, and how it's different from our free placement program.",
@@ -540,7 +567,7 @@ export const posts: Post[] = [
     content: [
       {
         type: 'p',
-        text: "Offices reach out to us in two very different situations: some want a claw machine for a single event, others want one permanently in the break room. Both are things we do — this guide is about the first one.",
+        text: "Offices reach out to us in two very different situations: some want a claw machine for a single event, others want one permanently in the break room. Both are things we do — the [pricing guide](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers rental packages in detail — this guide is about the first one.",
       },
       { type: 'h2', text: 'Rental vs. a free permanent machine' },
       {
@@ -648,6 +675,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'where-to-rent-a-claw-machine-san-francisco-bay-area',
+    related: [
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'claw-machine-rental-for-a-birthday-party',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+    ],
     title: 'Where to Rent a Claw Machine in the San Francisco Bay Area',
     excerpt:
       'A local guide to renting a claw machine across the San Francisco Bay Area — the counties and cities we deliver to, how much lead time to give us, and why local delivery-and-setup beats hauling a machine yourself.',
@@ -705,7 +737,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'A few local logistics worth flagging' },
       {
         type: 'p',
-        text: "Bay Area venues range from downtown high-rises to backyard patios, and a couple of details help us plan the setup:",
+        text: "San Francisco Bay Area venues range from downtown high-rises to backyard patios, and a couple of details help us plan the setup — the [full setup checklist](/blog/before-your-claw-machine-arrives-space-power-setup-checklist) goes through all of it, and the [pricing guide](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers what each package costs:",
       },
       {
         type: 'list',
@@ -752,6 +784,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'claw-machines-for-trade-shows-and-brand-activations',
+    related: [
+      'renting-a-claw-machine-for-the-office',
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'before-your-claw-machine-arrives-space-power-setup-checklist',
+    ],
     title: 'Claw Machines for Trade Shows & Brand Activations: A Booth Traffic Guide',
     excerpt:
       'A claw machine is one of the most reliable ways to stop foot traffic at a booth. Here is how to use one to draw a crowd, hand out branded prizes, and turn plays into leads.',
@@ -814,7 +851,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'Setup for expo halls and pop-ups' },
       {
         type: 'p',
-        text: "We deliver, set up, and staff-support activations across the San Francisco Bay Area and San Diego. A few things help us plan a show floor:",
+        text: "We deliver, set up, and staff-support activations across the San Francisco Bay Area and San Diego — the [space and power checklist](/blog/before-your-claw-machine-arrives-space-power-setup-checklist) covers what to confirm with your venue, and if this is an internal team event rather than a public one, the [office guide](/blog/renting-a-claw-machine-for-the-office) is a closer fit. A few things help us plan a show floor:",
       },
       {
         type: 'list',
@@ -856,6 +893,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'before-your-claw-machine-arrives-space-power-setup-checklist',
+    related: [
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+      'claw-machine-rental-for-a-birthday-party',
+      'where-to-rent-a-claw-machine-san-francisco-bay-area',
+    ],
     title: 'Before Your Claw Machine Arrives: Space, Power & Setup Checklist',
     excerpt:
       'Everything to check before your rental shows up — how much space the machine needs, what power it requires, and how delivery and teardown actually work, so there are no surprises on event day.',
@@ -868,7 +910,7 @@ export const posts: Post[] = [
     content: [
       {
         type: 'p',
-        text: "Booking a claw machine is the easy part. This is the short checklist that makes event day effortless — the space, power, and access details worth confirming before our team pulls up, so setup takes minutes and nothing catches you off guard.",
+        text: "Booking a claw machine is the easy part — the [pricing guide](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers the packages. This is the short checklist that makes event day effortless — the space, power, and access details worth confirming before our team pulls up, so setup takes minutes and nothing catches you off guard.",
       },
       { type: 'h2', text: 'How much space it needs' },
       {
@@ -959,6 +1001,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'free-claw-machine-vs-buying-vs-renting',
+    related: [
+      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-in-your-laundromat',
+      'how-much-does-it-cost-to-rent-a-claw-machine',
+    ],
     title: "You Don't Need to Buy a Claw Machine: Free Placement vs. Buying vs. Renting",
     excerpt:
       "Three ways to get a claw machine into your business — buy one, rent one for an event, or have an operator place one for free. Here's the honest math on each, including when buying really is the right call.",
@@ -1045,7 +1092,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'When free placement is the right call' },
       {
         type: 'p',
-        text: 'Placement is the option most business owners have never heard of, which is why so many of them start by pricing out machines to buy. An operator owns the machine, delivers it, services it, restocks it, and handles everything mechanical. You provide floor space and an outlet.',
+        text: 'Placement is the option most business owners have never heard of, which is why so many of them start by pricing out machines to buy. An operator owns the machine, delivers it, services it, restocks it, and handles everything mechanical. You provide floor space and an outlet — [here is what that process looks like end to end](/blog/free-claw-machine-for-your-business-how-it-works).',
       },
       {
         type: 'p',
@@ -1054,7 +1101,7 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          'You have customers who wait — for a wash cycle, for a table, for a drink, for a haircut — and you want that wait to feel shorter.',
+          'You have customers who wait — for [a wash cycle](/blog/free-claw-machine-in-your-laundromat), for [a table](/blog/free-claw-machine-for-your-restaurant), for [a drink](/blog/free-claw-machine-for-your-boba-shop), for a haircut — and you want that wait to feel shorter.',
           'You want the upside without the capital outlay or the ongoing labor.',
           'You are not sure it will even work in your space, and you want to find out without spending thousands to run the experiment.',
           'You would rather someone else own the risk that the machine breaks, the prizes go stale, or the whole idea turns out to be a dud in your location.',
@@ -1124,6 +1171,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'free-claw-machine-in-your-laundromat',
+    related: [
+      'free-claw-machine-vs-buying-vs-renting',
+      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-for-your-boba-shop',
+    ],
     title: 'Free Claw Machines in Laundromats: What They Earn and What They Need',
     excerpt:
       'Laundromats are a great place for a claw machine — customers are waiting 30 to 90 minutes, every week, often with kids. A machine here generally brings in $200 to $1,000 a month. Here is what drives that.',
@@ -1184,7 +1236,7 @@ export const posts: Post[] = [
       },
       {
         type: 'p',
-        text: 'Either way, the machine costs the laundromat nothing. We own it, deliver it, service it, and restock it.',
+        text: 'Either way, the machine costs the laundromat nothing — [we own it, deliver it, service it, and restock it](/blog/free-claw-machine-for-your-business-how-it-works).',
       },
       { type: 'h2', text: 'How customers pay' },
       {
@@ -1226,7 +1278,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What happens if it does not work out' },
       {
         type: 'p',
-        text: 'We remove it. There is no contract, no penalty, and no notice period — you tell us, we schedule a pickup, and you have your floor space back. That is deliberate: we would rather earn the spot by having the machine actually perform than lock a store into keeping something that is not working.',
+        text: 'We remove it. There is no contract, no penalty, and no notice period — you tell us, we schedule a pickup, and you have your floor space back. That is deliberate: we would rather earn the spot by having the machine actually perform than lock a store into keeping something that is not working. If you are weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison is worth reading first.',
       },
       {
         type: 'callout',
@@ -1271,6 +1323,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'free-claw-machine-for-your-restaurant',
+    related: [
+      'free-claw-machine-vs-buying-vs-renting',
+      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-for-your-boba-shop',
+    ],
     title: 'Free Claw Machines in Restaurants: What They Actually Do for a Dining Room',
     excerpt:
       'In a restaurant the machine is not a revenue line — it is a wait-management tool. Here is the case for one, where it goes, and the honest answer on whether it cheapens your room.',
@@ -1379,7 +1436,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What it costs you' },
       {
         type: 'p',
-        text: 'Nothing. We own the machine, deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it.',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
       },
       {
         type: 'callout',
@@ -1424,6 +1481,11 @@ export const posts: Post[] = [
   },
   {
     slug: 'free-claw-machine-for-your-boba-shop',
+    related: [
+      'free-claw-machine-vs-buying-vs-renting',
+      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-for-your-restaurant',
+    ],
     title: 'Free Claw Machines in Boba Shops: Why the Prize Mix Decides Everything',
     excerpt:
       'Your customers are young, social, and choosing between four near-identical shops. A claw machine is a reason to pick yours — but only if the prizes are right and the machine is tuned fairly.',
@@ -1526,7 +1588,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What it costs you' },
       {
         type: 'p',
-        text: 'Nothing. We own the machine, deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. No contract, and if it is not working for your shop we take it back out.',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. No contract, and if it is not working for your shop we take it back out. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
       },
       {
         type: 'callout',
@@ -1571,6 +1633,64 @@ export const posts: Post[] = [
   },
 ]
 
+export type Audience = 'business' | 'event'
+
+function byRecency(list: Post[]): Post[] {
+  return [...list].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  )
+}
+
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug)
+}
+
+export const BUSINESS_CATEGORY = 'Business Placement'
+
+/** Posts about getting a machine placed for free in a business. */
+export function getBusinessPosts(): Post[] {
+  return byRecency(posts.filter((p) => p.category === BUSINESS_CATEGORY))
+}
+
+/**
+ * Everything else — rentals, parties, weddings, corporate events. Defined as
+ * "not business placement" so a new category label can never silently drop a
+ * post out of the blog index or the guide lists.
+ */
+export function getEventPosts(): Post[] {
+  return byRecency(posts.filter((p) => p.category !== BUSINESS_CATEGORY))
+}
+
+export function getPostsForAudience(audience: Audience): Post[] {
+  return audience === 'business' ? getBusinessPosts() : getEventPosts()
+}
+
+export function audienceOf(post: Post): Audience {
+  return post.category === BUSINESS_CATEGORY ? 'business' : 'event'
+}
+
+/**
+ * Related posts for a given post: hand-picked first, then others aimed at the
+ * same audience by recency, then anything else. Capped so a post links to a
+ * few genuinely relevant guides rather than every other post on the site.
+ */
+export function getRelatedPosts(slug: string, limit = 3): Post[] {
+  const post = getPostBySlug(slug)
+  if (!post) return []
+
+  const picked: Post[] = []
+  const add = (p?: Post) => {
+    if (p && p.slug !== slug && !picked.some((x) => x.slug === p.slug)) picked.push(p)
+  }
+
+  post.related?.forEach((s) => add(getPostBySlug(s)))
+  getPostsForAudience(audienceOf(post)).forEach(add)
+  byRecency(posts).forEach(add)
+
+  return picked.slice(0, limit)
+}
+
+/** Guides to surface on a page that is not a blog post (home, county, rental). */
+export function getGuidesForAudience(audience: Audience, limit = 4): Post[] {
+  return getPostsForAudience(audience).slice(0, limit)
 }

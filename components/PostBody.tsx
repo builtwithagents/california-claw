@@ -2,6 +2,33 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import type { PostBlock } from '@/lib/posts'
 
+const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g
+
+// Renders `[label](/href)` inside body copy as an internal link.
+function withLinks(text: string) {
+  const parts: React.ReactNode[] = []
+  let last = 0
+  let match: RegExpExecArray | null
+
+  INLINE_LINK.lastIndex = 0
+  while ((match = INLINE_LINK.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index))
+    parts.push(
+      <Link
+        key={`${match.index}-${match[2]}`}
+        href={match[2]}
+        className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-2 hover:decoration-4 transition-all"
+      >
+        {match[1]}
+      </Link>
+    )
+    last = match.index + match[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+
+  return parts.length > 0 ? parts : text
+}
+
 export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
   return (
     <div className="space-y-6">
@@ -10,7 +37,7 @@ export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
           case 'p':
             return (
               <p key={i} className="text-lg text-brand-navy/75 leading-relaxed">
-                {block.text}
+                {withLinks(block.text)}
               </p>
             )
           case 'h2':
@@ -34,7 +61,9 @@ export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
                 {block.items.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
-                    <span className="text-lg text-brand-navy/75 leading-relaxed">{item}</span>
+                    <span className="text-lg text-brand-navy/75 leading-relaxed">
+                      {withLinks(item)}
+                    </span>
                   </li>
                 ))}
               </ul>

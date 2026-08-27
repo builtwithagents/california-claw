@@ -168,6 +168,23 @@ export default function RentPage() {
       {/* Planning guides */}
       <RelatedGuides />
 
+      {/* Cross-link: the other side of the business */}
+      <section className="bg-white pb-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-brand-navy/60">
+            Running a business rather than planning an event? We also place machines permanently at
+            no cost —{' '}
+            <Link
+              href="/blog/free-claw-machine-for-your-business-how-it-works"
+              className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-4"
+            >
+              see how free placement works
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* Rentals by city */}
       <section className="section-padding bg-brand-cream relative overflow-hidden">
         <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
