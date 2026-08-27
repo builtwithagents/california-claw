@@ -1126,13 +1126,13 @@ export const posts: Post[] = [
     slug: 'claw-machine-in-your-laundromat',
     title: 'Claw Machines in Laundromats: What They Earn and What They Need',
     excerpt:
-      'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. Here is what a machine earns and what it takes to put one in.',
+      'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. A machine here generally brings in $200 to $1,000 a month. Here is what drives that.',
     category: 'Business Placement',
     readTime: '10 min read',
     publishedAt: '2026-08-26',
     updatedAt: '2026-08-26',
     metaDescription:
-      'What a claw machine earns in a laundromat, how customers pay, and what it needs for space, power, and supervision — from an operator who places and services machines across the San Francisco Bay Area and San Diego.',
+      'A claw machine in a laundromat generally brings in $200 to $1,000 a month in gross play. What drives that range, how customers pay, and what the machine needs for space, power, and supervision.',
     content: [
       {
         type: 'p',
@@ -1154,7 +1154,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What a machine actually earns' },
       {
         type: 'p',
-        text: 'Machine vendors and route operators commonly cite $150 to $600 per month in gross play for a laundromat placement. That range is wide because it is doing a lot of work — the difference between the bottom and the top of it is almost entirely about the store, not the machine.',
+        text: 'A claw machine in a laundromat generally brings in $200 to $1,000 a month in gross play. That range is wide because it is doing a lot of work — the difference between the bottom and the top of it is almost entirely about the store, not the machine.',
       },
       {
         type: 'p',
@@ -1246,7 +1246,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'How much does a claw machine make in a laundromat?',
-        a: 'Machine vendors and route operators commonly cite $150 to $600 per month in gross play for a laundromat placement. Where a specific store lands depends mostly on daily foot traffic, how many customers bring children, attended versus unattended hours, prize quality, and how easy it is to pay.',
+        a: 'A claw machine in a laundromat generally brings in $200 to $1,000 a month in gross play. Where a specific store lands in that range depends mostly on daily foot traffic, how many customers bring children, attended versus unattended hours, prize quality, and how easy it is to pay.',
       },
       {
         q: 'Does a claw machine work if my laundromat is cashless?',
