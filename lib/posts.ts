@@ -958,8 +958,8 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: 'you-dont-need-to-buy-a-claw-machine',
-    title: "You Don't Need to Buy a Claw Machine: Placement vs. Buying vs. Renting",
+    slug: 'free-claw-machine-vs-buying-vs-renting',
+    title: "You Don't Need to Buy a Claw Machine: Free Placement vs. Buying vs. Renting",
     excerpt:
       "Three ways to get a claw machine into your business — buy one, rent one for an event, or have an operator place one for free. Here's the honest math on each, including when buying really is the right call.",
     category: 'Business Placement',
@@ -1123,8 +1123,8 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: 'claw-machine-in-your-laundromat',
-    title: 'Claw Machines in Laundromats: What They Earn and What They Need',
+    slug: 'free-claw-machine-in-your-laundromat',
+    title: 'Free Claw Machines in Laundromats: What They Earn and What They Need',
     excerpt:
       'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. A machine here generally brings in $200 to $1,000 a month. Here is what drives that.',
     category: 'Business Placement',
@@ -1233,15 +1233,6 @@ export const posts: Post[] = [
         text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us about your store and we will tell you if it is a fit.',
         cta: { label: 'Request a free machine', href: '/#contact' },
       },
-      {
-        type: 'p',
-        text: 'And if you are weighing whether to just buy a machine outright instead, that comparison is worth reading before you spend anything.',
-      },
-      {
-        type: 'callout',
-        text: 'Buying, renting, or free placement — the real math on all three.',
-        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
-      },
     ],
     faqs: [
       {
@@ -1279,8 +1270,8 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: 'claw-machine-for-your-restaurant',
-    title: 'Claw Machines in Restaurants: What They Actually Do for a Dining Room',
+    slug: 'free-claw-machine-for-your-restaurant',
+    title: 'Free Claw Machines in Restaurants: What They Actually Do for a Dining Room',
     excerpt:
       'In a restaurant the machine is not a revenue line — it is a wait-management tool. Here is the case for one, where it goes, and the honest answer on whether it cheapens your room.',
     category: 'Business Placement',
@@ -1395,11 +1386,6 @@ export const posts: Post[] = [
         text: 'Run a restaurant in the San Francisco Bay Area or San Diego? Tell us about your waiting area and we will tell you honestly whether it fits.',
         cta: { label: 'Request a free machine', href: '/#contact' },
       },
-      {
-        type: 'callout',
-        text: 'Weighing buying a machine outright instead? Here is the real math.',
-        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
-      },
     ],
     faqs: [
       {
@@ -1437,8 +1423,8 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: 'claw-machine-for-your-boba-shop',
-    title: 'Claw Machines in Boba Shops: Why the Prize Mix Decides Everything',
+    slug: 'free-claw-machine-for-your-boba-shop',
+    title: 'Free Claw Machines in Boba Shops: Why the Prize Mix Decides Everything',
     excerpt:
       'Your customers are young, social, and choosing between four near-identical shops. A claw machine is a reason to pick yours — but only if the prizes are right and the machine is tuned fairly.',
     category: 'Business Placement',
@@ -1546,11 +1532,6 @@ export const posts: Post[] = [
         type: 'callout',
         text: 'Run a boba shop or cafe in the San Francisco Bay Area or San Diego? Tell us your footprint and we will tell you which machine fits.',
         cta: { label: 'Request a free machine', href: '/#contact' },
-      },
-      {
-        type: 'callout',
-        text: 'Thinking about buying your own machine instead? Read this first.',
-        cta: { label: 'Compare your options', href: '/blog/you-dont-need-to-buy-a-claw-machine' },
       },
     ],
     faqs: [
