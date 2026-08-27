@@ -45,6 +45,7 @@ const steps = [
 export default async function RentalCityPage({ params }: Props) {
   const { city: slug } = await params
   const city = getRentalCityBySlug(slug)
+  const otherCities = rentalCities.filter((c) => c.slug !== slug)
 
   if (!city) notFound()
 
@@ -170,6 +171,46 @@ export default async function RentalCityPage({ params }: Props) {
 
       {/* Planning guides */}
       <RelatedGuides />
+
+      {/* Other rental cities */}
+      {otherCities.length > 0 && (
+        <section className="bg-white pt-12">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-brand-navy/60">
+              We also rent in{' '}
+              {otherCities.map((c, i) => (
+                <span key={c.slug}>
+                  {i > 0 && ', '}
+                  <Link
+                    href={`/rent-a-claw-machine/${c.slug}`}
+                    className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-4"
+                  >
+                    {c.city}
+                  </Link>
+                </span>
+              ))}
+              .
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Cross-link: the other side of the business */}
+      <section className="bg-white pb-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-brand-navy/60">
+            Running a business rather than planning an event? We also place machines permanently at
+            no cost —{' '}
+            <Link
+              href="/blog/free-claw-machine-for-your-business-how-it-works"
+              className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-4"
+            >
+              see how free placement works
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* How it works */}
       <section className="section-padding bg-brand-cream relative overflow-hidden">

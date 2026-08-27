@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Clock } from 'lucide-react'
-import { posts, getPostBySlug } from '@/lib/posts'
+import { posts, getPostBySlug, getRelatedPosts } from '@/lib/posts'
 import PostBody from '@/components/PostBody'
 
 type Props = {
@@ -46,7 +46,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound()
 
-  const otherPosts = posts.filter((p) => p.slug !== post.slug)
+  const relatedPosts = getRelatedPosts(post.slug, 3)
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -135,12 +135,12 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
-      {otherPosts.length > 0 && (
+      {relatedPosts.length > 0 && (
         <section className="section-padding bg-white">
           <div className="max-w-3xl mx-auto">
             <div className="sticker text-xs px-4 py-1.5 mb-6 -rotate-1">KEEP READING</div>
             <div className="grid gap-4">
-              {otherPosts.map((p) => (
+              {relatedPosts.map((p) => (
                 <Link key={p.slug} href={`/blog/${p.slug}`} className="card-fun bg-brand-cream p-6 block">
                   <h3 className="font-display text-lg font-bold text-brand-navy mb-1">{p.title}</h3>
                   <p className="text-brand-navy/60 text-sm">{p.excerpt}</p>

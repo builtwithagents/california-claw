@@ -6,6 +6,7 @@ import { MapPin, CheckCircle2, Phone, Mail } from 'lucide-react'
 import { counties, getCountyBySlug } from '@/lib/counties'
 import CountyScene from '@/components/CountyScene'
 import ContactSection from '@/components/ContactSection'
+import RelatedGuides from '@/components/RelatedGuides'
 import joyCatcher from '@/public/joy-catcher.jpg'
 
 type Props = {
@@ -46,6 +47,12 @@ export default async function CountyPage({ params }: Props) {
   const county = getCountyBySlug(slug)
 
   if (!county) notFound()
+
+  // Same region first, so a San Francisco Bay Area page links its neighbours.
+  const otherCounties = [
+    ...counties.filter((c) => c.slug !== county.slug && c.region === county.region),
+    ...counties.filter((c) => c.slug !== county.slug && c.region !== county.region),
+  ].slice(0, 6)
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -213,6 +220,49 @@ export default async function CountyPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Guides for business owners */}
+      <RelatedGuides
+        audience="business"
+        eyebrow="FOR BUSINESS OWNERS"
+        heading="How free placement works"
+      />
+
+      {/* Other service areas */}
+      {otherCounties.length > 0 && (
+        <section className="section-padding bg-brand-cream">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">NEARBY</div>
+              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
+                We also serve {county.region === 'the San Francisco Bay Area' ? 'the rest of the San Francisco Bay Area' : 'these nearby areas'}
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {otherCounties.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/${c.slug}`}
+                  className="card-fun bg-white p-5 flex items-center justify-between gap-3 group"
+                >
+                  <span className="font-semibold text-brand-navy text-sm">{c.name}</span>
+                  <MapPin className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                </Link>
+              ))}
+            </div>
+            <p className="text-center text-brand-navy/60 text-sm mt-8">
+              Renting for a one-time event instead?{' '}
+              <Link
+                href="/rent-a-claw-machine"
+                className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-4"
+              >
+                See rental pricing and packages
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* CTA / Contact */}
       <div id="contact">
