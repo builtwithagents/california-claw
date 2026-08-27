@@ -985,7 +985,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What buying actually costs' },
       {
         type: 'p',
-        text: 'A commercial-grade claw machine generally runs somewhere between $2,000 and $5,000 new, with premium cabinets and multi-payment systems going past $7,000. Used units turn up cheaper. That number is the one everybody quotes, and it is also the least important number in the decision.',
+        text: 'A commercial-grade claw machine generally runs somewhere between $2,000 and $5,000 new, and premium cabinets go past $7,000. Used units turn up cheaper. That number is the one everybody quotes, and it is also the least important number in the decision.',
       },
       { type: 'h3', text: 'The machine is the cheapest part' },
       {
@@ -1090,7 +1090,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'How much does it cost to buy a claw machine for a business?',
-        a: 'A commercial-grade claw machine typically costs $2,000 to $5,000 new, with premium cabinets and multi-payment systems exceeding $7,000. Used machines cost less. Beyond the purchase price you also take on prizes, repairs, tuning, and cash handling indefinitely.',
+        a: 'A commercial-grade claw machine typically costs $2,000 to $5,000 new, and premium cabinets go past $7,000. Used machines cost less. Beyond the purchase price you also take on prizes, repairs, tuning, and cash handling indefinitely.',
       },
       {
         q: 'Can I get a claw machine for my business without buying one?',
@@ -1124,15 +1124,15 @@ export const posts: Post[] = [
   },
   {
     slug: 'claw-machine-in-your-laundromat',
-    title: 'Claw Machines in Laundromats: What They Earn and How They Work With Card Systems',
+    title: 'Claw Machines in Laundromats: What They Earn and What They Need',
     excerpt:
-      'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. Here is what a machine earns, and the card-system question nobody answers.',
+      'Laundromats are the strongest claw machine placement there is — customers are stuck for 30 to 90 minutes, every week, often with kids. Here is what a machine earns and what it takes to put one in.',
     category: 'Business Placement',
     readTime: '10 min read',
     publishedAt: '2026-08-26',
     updatedAt: '2026-08-26',
     metaDescription:
-      'What a claw machine earns in a laundromat, how it works alongside CCI, ESD, PayRange and other cashless systems, plus space, power, and supervision — from an operator who places machines in the San Francisco Bay Area and San Diego.',
+      'What a claw machine earns in a laundromat, how customers pay, and what it needs for space, power, and supervision — from an operator who places and services machines across the San Francisco Bay Area and San Diego.',
     content: [
       {
         type: 'p',
@@ -1167,7 +1167,7 @@ export const posts: Post[] = [
           'How family-heavy the customer base is. A store in a neighborhood with young families will outperform a store serving mostly single adults, by a wide margin.',
           'Attended versus unattended hours. Machines in attended stores get played more, get damaged less, and stay in service longer.',
           'Prize quality. This is the one people underestimate. A machine stocked with recognizable, current plush gets played several times more than the same machine full of generic filler.',
-          'Payment friction. If a customer has to leave the store or hunt for quarters to play, most of them will not. More on that below, because in a modern laundromat this is the whole ballgame.',
+          'How easy it is to pay. Our machines take cards, cash, and coins, so nobody has to go hunting for quarters to play — which matters more than it sounds, because most people will simply walk away rather than go looking for change.',
         ],
       },
       { type: 'h3', text: 'What the laundromat actually keeps' },
@@ -1186,28 +1186,14 @@ export const posts: Post[] = [
         type: 'p',
         text: 'Either way, the machine costs the laundromat nothing. We own it, deliver it, service it, and restock it.',
       },
-      { type: 'h2', text: 'The card system question' },
+      { type: 'h2', text: 'How customers pay' },
       {
         type: 'p',
-        text: 'This is the question every laundromat owner asks and almost nobody answers publicly: if my store has gone cashless, what happens to a coin-operated claw machine?',
+        text: 'Our machines take cards, cash, and coins. That means it does not matter whether your store still runs on quarters, has gone fully cashless, or sits somewhere in between — the machine handles payment on its own and does not need to be tied into whatever system your washers and dryers use.',
       },
       {
         type: 'p',
-        text: 'It is a real problem. If your washers and dryers run on CCI, ESD, KioSoft, SpyderWash, LaundroWorks, or a similar system, your customers have stopped carrying quarters. A coin-only amusement machine in a coinless store is a machine nobody plays — you have introduced exactly the payment friction that kills play rates.',
-      },
-      { type: 'h3', text: 'The four ways this gets solved' },
-      {
-        type: 'list',
-        items: [
-          'Hybrid stores. If you run something like CCI FasCard, which accepts both coins and cards alongside your existing equipment, a coin-op machine still works for the portion of customers carrying change — but you are leaving the cashless majority out.',
-          'A bolt-on mobile reader. Devices like PayRange attach to a machine with a standard coin mech and let customers pay from their phone. This is usually the cleanest fix for an amusement machine in a cashless store, because it does not require the machine to be part of your laundry payment platform.',
-          'Free-play. This sidesteps the entire problem. No payment, no reader, no integration, no friction — the machine is simply an amenity. In a fully coinless store this is often the most sensible setup, and it is the one we suggest most often.',
-          'Your changer, if you still have one. Some coinless stores keep a bill changer for vending and amusement. If yours does, a coin-op machine is viable, though play rates will still trail a store where paying is frictionless.',
-        ],
-      },
-      {
-        type: 'p',
-        text: 'The honest summary: if your store is fully cashless, do not put in a coin-only machine and hope. Either add a mobile payment reader or run it free-play. Tell us which payment system you run when you reach out and we will tell you which of these actually applies to your store rather than guessing.',
+        text: 'This matters more than it sounds. A customer who has to go find change to play is a customer who does not play, and in a store where people have stopped carrying quarters that is most of them. Taking cards removes the step entirely.',
       },
       { type: 'h2', text: 'Space and power' },
       {
@@ -1244,7 +1230,7 @@ export const posts: Post[] = [
       },
       {
         type: 'callout',
-        text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us your store size and payment system and we will tell you if it is a fit.',
+        text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us about your store and we will tell you if it is a fit.',
         cta: { label: 'Request a free machine', href: '/#contact' },
       },
       {
@@ -1264,11 +1250,7 @@ export const posts: Post[] = [
       },
       {
         q: 'Does a claw machine work if my laundromat is cashless?',
-        a: 'Not as a coin-only machine — in a coinless store, customers no longer carry quarters and play rates collapse. The usual fixes are a bolt-on mobile payment reader such as PayRange, or running the machine free-play as a pure amenity, which removes payment friction entirely.',
-      },
-      {
-        q: 'Does the claw machine integrate with my CCI, ESD, or KioSoft system?',
-        a: 'Amusement machines generally sit outside your laundry payment platform rather than integrating with it. In hybrid stores that still accept coins the machine runs on its own coin mech; in fully cashless stores the practical options are a mobile payment reader on the machine or free-play. Tell us which system you run and we will confirm what applies to your store.',
+        a: 'Yes. Our machines take cards, cash, and coins, so customers can play whether or not they are carrying quarters. The machine handles payment on its own and does not need to be connected to the system your washers and dryers run on.',
       },
       {
         q: 'How much space does a claw machine need in a laundromat?',
