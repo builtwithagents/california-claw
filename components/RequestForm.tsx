@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { CheckCircle2, AlertCircle } from 'lucide-react'
+import { sendGAEvent } from '@next/third-parties/google'
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
@@ -100,6 +101,13 @@ export default function RequestForm({
         setError('Failed to send your request. Please try again or call us directly.')
         return
       }
+
+      // GA4 key event — only fires once Web3Forms confirms the lead was delivered
+      sendGAEvent('event', 'generate_lead', {
+        form_name: 'request_form',
+        lead_type: isEvent ? 'event_rental' : 'free_placement',
+        city: city || '(not provided)',
+      })
 
       setSuccess(true)
     } catch (err) {
