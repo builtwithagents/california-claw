@@ -16,8 +16,14 @@ export type County = {
   region: string
   description: string
   tagline: string
-  /** Real county photo for the hero. Falls back to the claw machine photo. */
+  /**
+   * Real county photo for the hero, with its alt text. Falls back to the claw
+   * machine photo when a county has none. Sourced from Unsplash under the
+   * Unsplash License (free commercial use, no attribution required); each was
+   * checked against the photographer's stated location before use.
+   */
   heroImage?: string
+  heroAlt?: string
   intro: string
   localAngle: string
   neighborhoods: string[]
@@ -34,6 +40,8 @@ export const counties: County[] = [
     description: 'Serving cafes, co-working spaces, and university campuses across San Francisco.',
     tagline: 'From the Mission to the Marina, we bring the claw.',
     heroImage: '/rental-hero-san-francisco.jpg',
+    heroAlt:
+      'The Golden Gate Bridge with the San Francisco skyline across the bay',
     intro:
       "San Francisco runs on foot traffic — and there's no better way to turn a line at the register into a moment of fun than a claw machine glowing in the corner. We place, stock, and maintain premium machines at cafes, boba shops, laundromats, and campuses across all seven-by-seven miles of the city.",
     localAngle:
@@ -76,6 +84,9 @@ export const counties: County[] = [
     region: 'the San Francisco Bay Area',
     description: 'Bringing arcade fun to restaurants and businesses throughout the Peninsula.',
     tagline: 'A little joy for every stop down the Peninsula.',
+    heroImage: '/county-hero-san-mateo.jpg',
+    heroAlt:
+      'Surf, sand and bluffs on the San Mateo County coast near Half Moon Bay',
     intro:
       'The Peninsula is where the city meets the suburbs — family restaurants, bustling downtowns, and corporate campuses all packed between the bay and the hills. A California Claw machine fits right in, giving Peninsula businesses an easy way to stand out and keep customers smiling.',
     localAngle:
@@ -118,6 +129,9 @@ export const counties: County[] = [
     region: 'the San Francisco Bay Area',
     description: 'Energizing tech campuses, food courts, and entertainment venues in Silicon Valley.',
     tagline: 'Silicon Valley works hard. We make it fun.',
+    heroImage: '/county-hero-san-jose.jpg',
+    heroAlt:
+      'San Jose rooftops and the Santa Clara Valley seen from Communications Hill',
     intro:
       "Santa Clara County is the beating heart of Silicon Valley — sprawling tech campuses, buzzing food halls, and some of the best Asian dining in the country. A California Claw machine brings a jolt of playful energy to any of them, whether it's a startup break room in Sunnyvale or a busy restaurant on Santana Row.",
     localAngle:
@@ -160,6 +174,9 @@ export const counties: County[] = [
     region: 'the San Francisco Bay Area',
     description: "Adding a touch of fun to Marin's boutique shops, restaurants, and campuses.",
     tagline: 'Where the redwoods meet the waterfront — and a little fun.',
+    heroImage: '/county-hero-marin.jpg',
+    heroAlt:
+      'Hillside homes above the waterfront in Sausalito, Marin County',
     intro:
       'Just across the Golden Gate, Marin blends laid-back waterfront towns with boutique shopping and family-friendly downtowns. A California Claw machine is a charming fit for the county\'s relaxed, family-first vibe — from the shops of Mill Valley to the marinas of Sausalito.',
     localAngle:
@@ -202,6 +219,9 @@ export const counties: County[] = [
     region: 'the San Francisco Bay Area',
     description: 'Serving Oakland, Berkeley, and surrounding East Bay communities.',
     tagline: 'The East Bay has flavor. We bring the fun.',
+    heroImage: '/county-hero-oakland.jpg',
+    heroAlt:
+      'The downtown Oakland skyline seen across Lake Merritt',
     intro:
       'From the taquerias of Fruitvale to the barcades of Uptown and the campus energy of Berkeley, the East Bay has a creative, community-first spirit unlike anywhere else. A California Claw machine fits right in — a fun, local touch for the independent spots that give Alameda County its character.',
     localAngle:
@@ -244,6 +264,9 @@ export const counties: County[] = [
     region: 'the San Francisco Bay Area',
     description: 'Covering Walnut Creek, Concord, and communities throughout Contra Costa.',
     tagline: 'Family fun in the shadow of Mount Diablo.',
+    heroImage: '/county-hero-contra-costa.jpg',
+    heroAlt:
+      'The view over the East Bay hills and valley from Mount Diablo',
     intro:
       'Spread across the rolling hills beneath Mount Diablo, Contra Costa is Bay Area suburbia at its best — walkable downtowns, big family restaurants, and shopping centers made for a weekend outing. A California Claw machine is a natural fit for the county\'s family-friendly rhythm.',
     localAngle:
@@ -287,6 +310,8 @@ export const counties: County[] = [
     description: "Bringing the claw machine experience to San Diego's vibrant venue scene.",
     tagline: 'Sun, surf, tacos — and a claw machine to match.',
     heroImage: '/rental-hero-san-diego.jpg',
+    heroAlt:
+      'A lifeguard tower on the beach at Carlsbad in San Diego County',
     intro:
       "San Diego's laid-back beach-town energy runs from the boardwalks of Pacific Beach to the breweries of North Park and the taco shops of Barrio Logan. A California Claw machine is a perfect match for that easygoing, always-out-and-about vibe — a fun, free way for local spots to stand out.",
     localAngle:

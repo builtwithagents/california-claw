@@ -108,9 +108,8 @@ export default async function CountyPage({ params }: Props) {
                 <Image
                   src={heroPhoto ?? joyCatcher}
                   alt={
-                    heroPhoto
-                      ? `${county.city}, ${county.name}`
-                      : `A California Claw machine stocked with plush prizes, ready for ${county.city}`
+                    county.heroAlt ??
+                    `A California Claw machine stocked with plush prizes, ready for ${county.city}`
                   }
                   fill
                   priority
