@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { MapPin, CheckCircle2, Phone, Mail, ArrowRight } from 'lucide-react'
 import { counties, getCountyBySlug } from '@/lib/counties'
 import { getVenueGuide } from '@/lib/venueLinks'
-import CountyScene from '@/components/CountyScene'
 import ContactSection from '@/components/ContactSection'
 import RelatedGuides from '@/components/RelatedGuides'
 import joyCatcher from '@/public/joy-catcher.jpg'
@@ -48,6 +47,11 @@ export default async function CountyPage({ params }: Props) {
   const county = getCountyBySlug(slug)
 
   if (!county) notFound()
+
+  // Counties we have real local photography for lead with it; the rest lead
+  // with the machine itself, which beats a generic illustration either way.
+  const heroPhoto = county.heroImage
+  const clawInHero = !heroPhoto
 
   // Same region first, so a San Francisco Bay Area page links its neighbours.
   const otherCounties = [
@@ -95,8 +99,31 @@ export default async function CountyPage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="max-w-md mx-auto lg:mx-0 w-full animate-float">
-              <CountyScene scene={county.scene} />
+            <div className="relative max-w-md mx-auto lg:mx-0 w-full animate-float">
+              <div
+                className={`relative ${
+                  clawInHero ? 'aspect-[3/4] max-w-[380px] mx-auto' : 'aspect-[4/3]'
+                } w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]`}
+              >
+                <Image
+                  src={heroPhoto ?? joyCatcher}
+                  alt={
+                    heroPhoto
+                      ? `${county.city}, ${county.name}`
+                      : `A California Claw machine stocked with plush prizes, ready for ${county.city}`
+                  }
+                  fill
+                  priority
+                  sizes={clawInHero ? '(min-width: 1024px) 380px, 90vw' : '(min-width: 1024px) 448px, 90vw'}
+                  placeholder={heroPhoto ? undefined : 'blur'}
+                  className="object-cover"
+                />
+              </div>
+              {clawInHero && (
+                <div className="absolute -top-4 -right-4 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
+                  FREE!
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -130,29 +157,39 @@ export default async function CountyPage({ params }: Props) {
       <section className="section-padding bg-brand-cream relative overflow-hidden">
         <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative max-w-[420px] mx-auto lg:mx-0 w-full animate-float">
-              <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-brand-navy shadow-[10px_10px_0_rgba(0,50,98,0.12)]">
-                <Image
-                  src={joyCatcher}
-                  alt={`A California Claw machine stocked with plush prizes, ready for ${county.city}`}
-                  fill
-                  sizes="(max-width: 1024px) 420px, 420px"
-                  placeholder="blur"
-                  className="object-cover"
-                />
+          <div
+            className={
+              clawInHero
+                ? 'max-w-2xl mx-auto text-center'
+                : 'grid lg:grid-cols-2 gap-12 items-center'
+            }
+          >
+            {/* The claw photo only appears here when the hero led with a
+                county photo, so no page shows the same image twice. */}
+            {!clawInHero && (
+              <div className="order-2 lg:order-1 relative max-w-[420px] mx-auto lg:mx-0 w-full animate-float">
+                <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-brand-navy shadow-[10px_10px_0_rgba(0,50,98,0.12)]">
+                  <Image
+                    src={joyCatcher}
+                    alt={`A California Claw machine stocked with plush prizes, ready for ${county.city}`}
+                    fill
+                    sizes="(max-width: 1024px) 420px, 420px"
+                    placeholder="blur"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute -top-4 -right-5 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
+                  FREE!
+                </div>
               </div>
-              <div className="absolute -top-4 -right-5 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
-                FREE!
-              </div>
-            </div>
+            )}
             <div className="order-1 lg:order-2">
               <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">LOCAL FLAVOR</div>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-5 leading-tight">
                 Made for {county.city} &amp; beyond
               </h2>
               <p className="text-lg text-brand-navy/70 leading-relaxed mb-6">{county.localAngle}</p>
-              <div className="flex items-center gap-3 bg-white border-2 border-brand-navy/10 rounded-2xl p-4">
+              <div className={`flex items-center gap-3 bg-white border-2 border-brand-navy/10 rounded-2xl p-4 ${clawInHero ? 'text-left' : ''}`}>
                 <span className="text-2xl">🎁</span>
                 <p className="text-sm text-brand-navy/70">
                   Every machine comes stocked with fresh, high-quality plush and novelty prizes —

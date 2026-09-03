@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { Check, MapPin, ClipboardList, Truck, PartyPopper } from 'lucide-react'
 import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
-import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
 import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
+import joyCatcher from '@/public/joy-catcher.jpg'
 
 type Props = {
   params: Promise<{ city: string }>
@@ -93,20 +93,17 @@ export default async function RentalCityPage({ params }: Props) {
               </div>
             </div>
             <div className="max-w-md mx-auto lg:mx-0 w-full animate-float">
-              {city.heroImage ? (
-                <div className="relative aspect-[4/3] w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]">
-                  <Image
-                    src={city.heroImage}
-                    alt={`${city.city} skyline`}
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 448px, 90vw"
-                    className="object-cover"
-                  />
-                </div>
-              ) : (
-                <CountyScene scene={city.scene} />
-              )}
+              <div className="relative aspect-[4/3] w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]">
+                <Image
+                  src={city.heroImage ?? joyCatcher}
+                  alt={city.heroImage ? `${city.city}, California` : `A California Claw machine stocked with plush prizes, ready for ${city.city}`}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 448px, 90vw"
+                  placeholder={city.heroImage ? undefined : 'blur'}
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

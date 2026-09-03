@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Check, Sparkles, MapPin, ArrowRight } from 'lucide-react'
 import { rentalCities } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
-import CountyScene from '@/components/CountyScene'
 import RentalPricing from '@/components/RentalPricing'
 import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
+import joyCatcher from '@/public/joy-catcher.jpg'
 
 export const metadata: Metadata = {
   title: 'Rent a Claw Machine — Event Rental Prices & Packages | California Claw',
@@ -201,8 +202,14 @@ export default function RentPage() {
           <div className="grid sm:grid-cols-2 gap-6">
             {rentalCities.map((c) => (
               <Link key={c.slug} href={`/rent-a-claw-machine/${c.slug}`} className="card-fun p-6 flex items-center gap-5 group">
-                <div className="w-28 flex-shrink-0">
-                  <CountyScene scene={c.scene} />
+                <div className="relative w-28 h-28 flex-shrink-0 rounded-2xl overflow-hidden border-4 border-brand-navy">
+                  <Image
+                    src={c.heroImage ?? joyCatcher}
+                    alt={c.heroImage ? `${c.city}, California` : 'A California Claw machine stocked with plush prizes'}
+                    fill
+                    sizes="112px"
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold text-brand-navy mb-1">
