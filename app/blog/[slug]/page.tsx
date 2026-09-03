@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Clock } from 'lucide-react'
-import { posts, getPostBySlug, getRelatedPosts } from '@/lib/posts'
+import { posts, getPostBySlug, getRelatedPosts, audienceOf } from '@/lib/posts'
 import PostBody from '@/components/PostBody'
+import PlacementAreas from '@/components/PlacementAreas'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -47,6 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound()
 
   const relatedPosts = getRelatedPosts(post.slug, 3)
+  const isBusinessGuide = audienceOf(post) === 'business'
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -150,6 +152,8 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {isBusinessGuide && <PlacementAreas />}
     </>
   )
 }

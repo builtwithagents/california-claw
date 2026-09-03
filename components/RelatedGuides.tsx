@@ -8,6 +8,7 @@ type Props = {
   audience?: Audience
   eyebrow?: string
   heading?: string
+  /** Omit to show every guide for the audience. */
   limit?: number
 }
 
@@ -15,10 +16,13 @@ export default function RelatedGuides({
   audience = 'event',
   eyebrow = 'PLANNING GUIDES',
   heading = 'Planning for a specific occasion?',
-  limit = 4,
+  limit,
 }: Props) {
   const guides = getGuidesForAudience(audience, limit)
   if (guides.length === 0) return null
+
+  // Keep the last row full rather than stranding a single card on its own.
+  const columns = guides.length % 4 === 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
 
   return (
     <section className="section-padding bg-white">
@@ -29,7 +33,7 @@ export default function RelatedGuides({
             {heading}
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className={`grid sm:grid-cols-2 ${columns} gap-4`}>
           {guides.map((guide) => (
             <Link
               key={guide.slug}

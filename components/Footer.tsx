@@ -7,11 +7,17 @@ import { counties } from '@/lib/counties'
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Benefits', href: '/#benefits' },
-  { label: 'How Placement Works', href: '/blog/free-claw-machine-for-your-business-how-it-works' },
-  { label: 'Placement vs. Buying', href: '/blog/free-claw-machine-vs-buying-vs-renting' },
   { label: 'Rent for Events', href: '/rent-a-claw-machine' },
   { label: 'About Us', href: '/#about' },
   { label: 'Blog', href: '/blog' },
+]
+
+const placementLinks = [
+  { label: 'How Placement Works', href: '/blog/free-claw-machine-for-your-business-how-it-works' },
+  { label: 'Placement vs. Buying', href: '/blog/free-claw-machine-vs-buying-vs-renting' },
+  { label: 'For Laundromats', href: '/blog/free-claw-machine-in-your-laundromat' },
+  { label: 'For Restaurants', href: '/blog/free-claw-machine-for-your-restaurant' },
+  { label: 'For Boba Shops', href: '/blog/free-claw-machine-for-your-boba-shop' },
 ]
 
 const legalLinks = [
@@ -23,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
@@ -69,6 +75,23 @@ export default function Footer() {
             <h3 className="font-display text-white font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 hover:text-brand-gold text-sm transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Placement guides, by business type */}
+          <div>
+            <h3 className="font-display text-white font-bold mb-4">Free Placement</h3>
+            <ul className="space-y-2">
+              {placementLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
