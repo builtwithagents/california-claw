@@ -170,7 +170,7 @@ export default async function RentalCityPage({ params }: Props) {
       </section>
 
       {/* Planning guides */}
-      <RelatedGuides />
+      <RelatedGuides limit={4} />
 
       {/* Other rental cities */}
       {otherCities.length > 0 && (

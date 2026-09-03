@@ -190,9 +190,9 @@ export const posts: Post[] = [
   {
     slug: 'free-claw-machine-for-your-business-how-it-works',
     related: [
-      'free-claw-machine-vs-buying-vs-renting',
       'free-claw-machine-in-your-laundromat',
       'free-claw-machine-for-your-restaurant',
+      'free-claw-machine-for-your-boba-shop',
     ],
     title: 'Free Claw Machine for Your Business: How It Actually Works',
     excerpt:
@@ -1172,9 +1172,9 @@ export const posts: Post[] = [
   {
     slug: 'free-claw-machine-in-your-laundromat',
     related: [
-      'free-claw-machine-vs-buying-vs-renting',
-      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-for-your-restaurant',
       'free-claw-machine-for-your-boba-shop',
+      'free-claw-machine-for-your-business-how-it-works',
     ],
     title: 'Free Claw Machines in Laundromats: What They Earn and What They Need',
     excerpt:
@@ -1198,7 +1198,7 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          'The wait is forced, not optional. In a cafe, a customer who is bored leaves. In a laundromat, their clothes are in the machine. They are staying either way, so the only question is what they do with the time.',
+          'The wait is forced, not optional. In a [boba shop or cafe](/blog/free-claw-machine-for-your-boba-shop), a customer who is bored leaves. In a laundromat, their clothes are in the machine. They are staying either way, so the only question is what they do with the time.',
           'The visit repeats on a schedule. Laundry is weekly for most people. That turns a one-time novelty into a recurring habit, which is the difference between a machine that spikes and a machine that earns steadily.',
           'Kids come along. Parents doing laundry with children in tow are a reliable source of play. The machine is not competing for attention — it is rescuing a parent from forty minutes of "I am bored."',
         ],
@@ -1280,6 +1280,11 @@ export const posts: Post[] = [
         type: 'p',
         text: 'We remove it. There is no contract, no penalty, and no notice period — you tell us, we schedule a pickup, and you have your floor space back. That is deliberate: we would rather earn the spot by having the machine actually perform than lock a store into keeping something that is not working. If you are weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison is worth reading first.',
       },
+      { type: 'h2', text: 'Where we place laundromat machines' },
+      {
+        type: 'p',
+        text: 'We service laundromats across [San Francisco](/san-francisco-county), [Oakland and the East Bay](/oakland-county), [San Jose](/san-jose-county), [San Mateo County](/san-mateo-county), and [San Diego](/san-diego-county). If your store is in one of those areas, a walkthrough is a short conversation — we look at your floor, your outlet, and your busiest hours, and tell you whether it is worth doing.',
+      },
       {
         type: 'callout',
         text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us about your store and we will tell you if it is a fit.',
@@ -1324,9 +1329,9 @@ export const posts: Post[] = [
   {
     slug: 'free-claw-machine-for-your-restaurant',
     related: [
-      'free-claw-machine-vs-buying-vs-renting',
-      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-in-your-laundromat',
       'free-claw-machine-for-your-boba-shop',
+      'free-claw-machine-for-your-business-how-it-works',
     ],
     title: 'Free Claw Machines in Restaurants: What They Actually Do for a Dining Room',
     excerpt:
@@ -1368,7 +1373,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'Why the coin drop is the wrong number' },
       {
         type: 'p',
-        text: 'Do the comparison honestly. A claw machine in a restaurant might take a modest amount in play across a month. One party of four that stays for dessert instead of leaving early, or one party that waits out a Friday rush instead of walking, is worth a meaningful fraction of that on a single night.',
+        text: 'Do the comparison honestly. A claw machine in a restaurant might take a modest amount in play across a month — nothing like [the coin drop in a laundromat](/blog/free-claw-machine-in-your-laundromat), where a captive weekly wait does the earning. One party of four that stays for dessert instead of leaving early, or one party that waits out a Friday rush instead of walking, is worth a meaningful fraction of that on a single night.',
       },
       {
         type: 'p',
@@ -1411,7 +1416,7 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          'Family casual, pizza, diners, breakfast spots, taquerias, counter-service — a good fit. Your guests already expect a relaxed room, and the machine reads as part of the hospitality.',
+          'Family casual, pizza, diners, breakfast spots, taquerias, counter-service — a good fit. Your guests already expect a relaxed room, and the machine reads as part of the hospitality. If you run a [boba or dessert counter](/blog/free-claw-machine-for-your-boba-shop), the calculation is different again — there the machine competes on prize mix rather than on wait times.',
           'Brewpubs, sports bars, and casual neighborhood spots — usually a good fit, especially where there is already a dartboard, a pinball cabinet, or a jukebox. The machine is not out of place in a room that already has games in it.',
           'Fine dining and upscale rooms — no. A claw machine in a room with white tablecloths is working against everything else you have spent money on. We will not pretend otherwise to place a machine.',
           'Small dining rooms with no waiting area — usually no. If nobody waits, the machine has no job to do, and it is just taking up covers.',
@@ -1436,7 +1441,12 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What it costs you' },
       {
         type: 'p',
-        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math. And if you only want a machine for a single night — a buyout, an anniversary party, a private event in your back room — we [rent machines by the hour](/rent-a-claw-machine) instead.',
+      },
+      { type: 'h2', text: 'Where we place restaurant machines' },
+      {
+        type: 'p',
+        text: 'We work with dining rooms across [San Francisco](/san-francisco-county), [Oakland and the East Bay](/oakland-county), [San Jose](/san-jose-county), [Marin County](/marin-county), [Contra Costa County](/contra-costa-county), and [San Diego](/san-diego-county). The walkthrough is quick: we look at your waiting area, your egress paths, and your sightline from the host stand, and tell you whether there is a spot worth using.',
       },
       {
         type: 'callout',
@@ -1482,9 +1492,9 @@ export const posts: Post[] = [
   {
     slug: 'free-claw-machine-for-your-boba-shop',
     related: [
-      'free-claw-machine-vs-buying-vs-renting',
-      'free-claw-machine-for-your-business-how-it-works',
+      'free-claw-machine-in-your-laundromat',
       'free-claw-machine-for-your-restaurant',
+      'free-claw-machine-for-your-business-how-it-works',
     ],
     title: 'Free Claw Machines in Boba Shops: Why the Prize Mix Decides Everything',
     excerpt:
@@ -1498,7 +1508,7 @@ export const posts: Post[] = [
     content: [
       {
         type: 'p',
-        text: 'A boba shop has a different problem than a laundromat or a restaurant. Your wait is short — five to ten minutes — so you are not solving boredom. Your problem is that there are three other shops within walking distance selling a very similar drink at a very similar price, and your customers are deciding between them on feel. A claw machine is one of the cheapest ways to be the one they pick.',
+        text: 'A boba shop has a different problem than [a laundromat](/blog/free-claw-machine-in-your-laundromat) or [a restaurant](/blog/free-claw-machine-for-your-restaurant). Your wait is short — five to ten minutes — so you are not solving boredom. Your problem is that there are three other shops within walking distance selling a very similar drink at a very similar price, and your customers are deciding between them on feel. A claw machine is one of the cheapest ways to be the one they pick.',
       },
       { type: 'h2', text: 'The real problem is choice, not waiting' },
       {
@@ -1589,6 +1599,11 @@ export const posts: Post[] = [
       {
         type: 'p',
         text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. No contract, and if it is not working for your shop we take it back out. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
+      },
+      { type: 'h2', text: 'Where we place boba shop machines' },
+      {
+        type: 'p',
+        text: 'We place machines in boba and dessert shops across [San Francisco](/san-francisco-county), [San Mateo County](/san-mateo-county), [San Jose](/san-jose-county), [Oakland and the East Bay](/oakland-county), and [San Diego](/san-diego-county) — the same neighborhoods where four shops compete on the same block, which is exactly where a machine earns its floor space.',
       },
       {
         type: 'callout',
@@ -1690,7 +1705,12 @@ export function getRelatedPosts(slug: string, limit = 3): Post[] {
   return picked.slice(0, limit)
 }
 
-/** Guides to surface on a page that is not a blog post (home, county, rental). */
-export function getGuidesForAudience(audience: Audience, limit = 4): Post[] {
-  return getPostsForAudience(audience).slice(0, limit)
+/**
+ * Guides to surface on a page that is not a blog post (home, county, rental).
+ * An omitted limit returns every guide for the audience, so a newly published
+ * guide shows up without anyone remembering to bump a number.
+ */
+export function getGuidesForAudience(audience: Audience, limit?: number): Post[] {
+  const guides = getPostsForAudience(audience)
+  return limit === undefined ? guides : guides.slice(0, limit)
 }

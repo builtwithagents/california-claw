@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, CheckCircle2, Phone, Mail } from 'lucide-react'
+import { MapPin, CheckCircle2, Phone, Mail, ArrowRight } from 'lucide-react'
 import { counties, getCountyBySlug } from '@/lib/counties'
+import { getVenueGuide } from '@/lib/venueLinks'
 import CountyScene from '@/components/CountyScene'
 import ContactSection from '@/components/ContactSection'
 import RelatedGuides from '@/components/RelatedGuides'
@@ -173,13 +174,37 @@ export default async function CountyPage({ params }: Props) {
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {county.venues.map((venue) => (
-              <div key={venue.title} className="card-fun p-6">
-                <div className="text-4xl mb-4">{venue.emoji}</div>
-                <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{venue.title}</h3>
-                <p className="text-brand-navy/60 text-sm leading-relaxed">{venue.blurb}</p>
-              </div>
-            ))}
+            {county.venues.map((venue) => {
+              const guide = getVenueGuide(venue.title)
+              const body = (
+                <>
+                  <div className="text-4xl mb-4">{venue.emoji}</div>
+                  <h3 className="font-display text-lg font-bold text-brand-navy mb-2">
+                    {venue.title}
+                  </h3>
+                  <p className="text-brand-navy/60 text-sm leading-relaxed">{venue.blurb}</p>
+                </>
+              )
+
+              // Venue types we have a dedicated placement guide for become links.
+              return guide ? (
+                <Link
+                  key={venue.title}
+                  href={guide.href}
+                  className="card-fun p-6 flex flex-col group"
+                >
+                  <div className="flex-1">{body}</div>
+                  <span className="mt-4 pt-4 border-t-2 border-brand-navy/5 inline-flex items-center gap-1.5 text-brand-navy font-semibold text-sm">
+                    {guide.label}
+                    <ArrowRight className="w-4 h-4 text-brand-gold group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </Link>
+              ) : (
+                <div key={venue.title} className="card-fun p-6">
+                  {body}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
