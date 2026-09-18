@@ -26,7 +26,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md shadow-brand-navy/5 border-b-2 border-brand-navy/5'
+          ? 'bg-white/95 backdrop-blur-md shadow-md shadow-brand-navy/5 border-b border-brand-navy/5'
           : 'bg-transparent'
       }`}
     >
@@ -83,7 +83,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t-2 border-brand-navy/5 shadow-lg">
+        <div className="md:hidden bg-white border-t border-brand-navy/5 shadow-lg">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <a

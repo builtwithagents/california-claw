@@ -2,12 +2,23 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, CheckCircle2, Phone, Mail, ArrowRight } from 'lucide-react'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { counties, getCountyBySlug } from '@/lib/counties'
+import SectionHeading from '@/components/SectionHeading'
 import { getVenueGuide } from '@/lib/venueLinks'
 import ContactSection from '@/components/ContactSection'
 import RelatedGuides from '@/components/RelatedGuides'
 import joyCatcher from '@/public/joy-catcher.jpg'
+import machinePizzeria from '@/public/machine-pizzeria.jpg'
+import machineLobbyPalms from '@/public/machine-lobby-palms.jpg'
+
+/**
+ * Machines we actually run, rotated by county so no two neighbouring county
+ * pages lead with the same cabinet. Keyed off the county's index in `counties`
+ * so the pick is stable across builds.
+ */
+
+const machinePhotos = [joyCatcher, machinePizzeria, machineLobbyPalms]
 
 type Props = {
   params: Promise<{ county: string }>
@@ -38,7 +49,7 @@ const benefits = [
   'Professional installation included',
   'All repairs and maintenance handled',
   'Regular prize restocking on schedule',
-  '24/7 customer support',
+  'Direct line to a real person, not a ticket queue',
   'No long-term contracts required',
 ]
 
@@ -51,6 +62,8 @@ export default async function CountyPage({ params }: Props) {
   // Counties we have real local photography for lead with it; the rest lead
   // with the machine itself, which beats a generic illustration either way.
   const heroPhoto = county.heroImage
+  const machinePhoto =
+    machinePhotos[counties.findIndex((c) => c.slug === county.slug) % machinePhotos.length]
   const clawInHero = !heroPhoto
 
   // Same region first, so a San Francisco Bay Area page links its neighbours.
@@ -77,15 +90,11 @@ export default async function CountyPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative bg-brand-cream overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
+      <section className="bg-brand-cream border-b border-brand-navy/10">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">
-                <MapPin className="w-4 h-4 text-brand-gold" />
-                Now serving {county.city}
-              </div>
+              <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Now serving {county.city}</span></p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-5 leading-[1.05]">
                 Free Claw Machines in <span className="highlight-gold">{county.name}</span>
               </h1>
@@ -99,14 +108,14 @@ export default async function CountyPage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="relative max-w-md mx-auto lg:mx-0 w-full animate-float">
+            <div className="relative max-w-md mx-auto lg:mx-0 w-full">
               <div
                 className={`relative ${
                   clawInHero ? 'aspect-[3/4] max-w-[380px] mx-auto' : 'aspect-[4/3]'
-                } w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]`}
+                } w-full photo-frame`}
               >
                 <Image
-                  src={heroPhoto ?? joyCatcher}
+                  src={heroPhoto ?? machinePhoto}
                   alt={
                     county.heroAlt ??
                     `A California Claw machine stocked with plush prizes, ready for ${county.city}`
@@ -119,7 +128,7 @@ export default async function CountyPage({ params }: Props) {
                 />
               </div>
               {clawInHero && (
-                <div className="absolute -top-4 -right-4 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
+                <div className="absolute top-4 right-4 sticker bg-brand-gold/95 px-3.5 py-1.5 text-xs">
                   FREE!
                 </div>
               )}
@@ -130,21 +139,23 @@ export default async function CountyPage({ params }: Props) {
 
       {/* Where we serve */}
       <section className="section-padding bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHERE WE SERVE</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-4">
-            Placements across <span className="highlight-gold">{county.name}</span>
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-2xl mx-auto mb-8">
-            We deliver, install, and service machines throughout the county — including these areas:
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-5xl mx-auto">
+          <SectionHeading
+            label="Where we serve"
+            title={
+              <>
+                Placements across <span className="highlight-gold">{county.name}</span>
+              </>
+            }
+            lede="We deliver, install, and service machines throughout the county — including these areas:"
+            className="mb-8"
+          />
+          <div className="flex flex-wrap gap-3">
             {county.neighborhoods.map((n) => (
               <span
                 key={n}
-                className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
               >
-                <MapPin className="w-4 h-4 text-brand-gold" />
                 {n}
               </span>
             ))}
@@ -153,8 +164,7 @@ export default async function CountyPage({ params }: Props) {
       </section>
 
       {/* Local flavor + photo */}
-      <section className="section-padding bg-brand-cream relative overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
+      <section className="section-padding bg-brand-cream">
         <div className="relative max-w-7xl mx-auto">
           <div
             className={
@@ -166,10 +176,10 @@ export default async function CountyPage({ params }: Props) {
             {/* The claw photo only appears here when the hero led with a
                 county photo, so no page shows the same image twice. */}
             {!clawInHero && (
-              <div className="order-2 lg:order-1 relative max-w-[420px] mx-auto lg:mx-0 w-full animate-float">
-                <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-brand-navy shadow-[10px_10px_0_rgba(0,50,98,0.12)]">
+              <div className="order-2 lg:order-1 relative max-w-[420px] mx-auto lg:mx-0 w-full">
+                <div className="photo-frame aspect-[3/4]">
                   <Image
-                    src={joyCatcher}
+                    src={machinePhoto}
                     alt={`A California Claw machine stocked with plush prizes, ready for ${county.city}`}
                     fill
                     sizes="(max-width: 1024px) 420px, 420px"
@@ -177,19 +187,19 @@ export default async function CountyPage({ params }: Props) {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -top-4 -right-5 sticker bg-brand-gold px-4 py-2 text-sm rotate-6">
+                <div className="absolute top-4 right-4 sticker bg-brand-gold/95 px-3.5 py-1.5 text-xs">
                   FREE!
                 </div>
               </div>
             )}
             <div className="order-1 lg:order-2">
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">LOCAL FLAVOR</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-5 leading-tight">
-                Made for {county.city} &amp; beyond
-              </h2>
+              <SectionHeading
+                label="Local flavor"
+                title={`Made for ${county.city} & beyond`}
+                className="mb-5"
+              />
               <p className="text-lg text-brand-navy/70 leading-relaxed mb-6">{county.localAngle}</p>
-              <div className={`flex items-center gap-3 bg-white border-2 border-brand-navy/10 rounded-2xl p-4 ${clawInHero ? 'text-left' : ''}`}>
-                <span className="text-2xl">🎁</span>
+              <div className={`border-l-4 border-brand-gold pl-5 ${clawInHero ? 'text-left' : ''}`}>
                 <p className="text-sm text-brand-navy/70">
                   Every machine comes stocked with fresh, high-quality plush and novelty prizes —
                   restocked on a schedule that matches your foot traffic.
@@ -203,18 +213,16 @@ export default async function CountyPage({ params }: Props) {
       {/* Venue types */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">PERFECT FOR</div>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-4">
-              {county.city} spots that shine with a claw machine
-            </h2>
-          </div>
+          <SectionHeading
+            label="Perfect for"
+            title={`${county.city} spots that shine with a claw machine`}
+            className="mb-10"
+          />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {county.venues.map((venue) => {
               const guide = getVenueGuide(venue.title)
               const body = (
                 <>
-                  <div className="text-4xl mb-4">{venue.emoji}</div>
                   <h3 className="font-display text-lg font-bold text-brand-navy mb-2">
                     {venue.title}
                   </h3>
@@ -230,7 +238,7 @@ export default async function CountyPage({ params }: Props) {
                   className="card-fun p-6 flex flex-col group"
                 >
                   <div className="flex-1">{body}</div>
-                  <span className="mt-4 pt-4 border-t-2 border-brand-navy/5 inline-flex items-center gap-1.5 text-brand-navy font-semibold text-sm">
+                  <span className="mt-4 pt-4 border-t border-brand-navy/5 inline-flex items-center gap-1.5 text-brand-navy font-semibold text-sm">
                     {guide.label}
                     <ArrowRight className="w-4 h-4 text-brand-gold group-hover:translate-x-0.5 transition-transform" />
                   </span>
@@ -248,29 +256,37 @@ export default async function CountyPage({ params }: Props) {
       {/* Benefits */}
       <section className="section-padding bg-brand-cream">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy text-center mb-12">
-            Everything included, <span className="highlight-gold">nothing to pay</span>
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <SectionHeading
+            label="What's included"
+            title={
+              <>
+                Everything included, <span className="highlight-gold">nothing to pay</span>
+              </>
+            }
+            className="mb-10"
+          />
+          <ul className="grid sm:grid-cols-2 gap-x-10">
             {benefits.map((benefit) => (
-              <div key={benefit} className="card-fun flex items-start gap-3 p-5 bg-white">
+              <li
+                key={benefit}
+                className="flex items-start gap-3 py-4 border-b border-brand-navy/10"
+              >
                 <CheckCircle2 className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
                 <span className="text-brand-navy/80">{benefit}</span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="section-padding bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-              {county.city} claw machine questions
-            </h2>
-          </div>
+          <SectionHeading
+            label="Good to know"
+            title={`${county.city} claw machine questions`}
+            className="mb-10"
+          />
           <div className="space-y-4">
             {county.faqs.map((faq) => (
               <div key={faq.q} className="card-fun p-6">
@@ -285,7 +301,7 @@ export default async function CountyPage({ params }: Props) {
       {/* Guides for business owners */}
       <RelatedGuides
         audience="business"
-        eyebrow="FOR BUSINESS OWNERS"
+        eyebrow="For business owners"
         heading="How free placement works"
       />
 
@@ -293,12 +309,15 @@ export default async function CountyPage({ params }: Props) {
       {otherCounties.length > 0 && (
         <section className="section-padding bg-brand-cream">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">NEARBY</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-                We also serve {county.region === 'the San Francisco Bay Area' ? 'the rest of the San Francisco Bay Area' : 'these nearby areas'}
-              </h2>
-            </div>
+            <SectionHeading
+              label="Nearby"
+              title={`We also serve ${
+                county.region === 'the San Francisco Bay Area'
+                  ? 'the rest of the San Francisco Bay Area'
+                  : 'these nearby areas'
+              }`}
+              className="mb-8"
+            />
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {otherCounties.map((c) => (
                 <Link
@@ -307,7 +326,6 @@ export default async function CountyPage({ params }: Props) {
                   className="card-fun bg-white p-5 flex items-center justify-between gap-3 group"
                 >
                   <span className="font-semibold text-brand-navy text-sm">{c.name}</span>
-                  <MapPin className="w-4 h-4 text-brand-gold flex-shrink-0" />
                 </Link>
               ))}
             </div>
@@ -334,13 +352,11 @@ export default async function CountyPage({ params }: Props) {
       <section className="bg-brand-navy py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left">
           <div className="flex items-center gap-3 text-white">
-            <Phone className="w-5 h-5 text-brand-gold" />
             <a href="tel:+15105064159" className="hover:text-brand-gold transition-colors">
               (510) 506-4159
             </a>
           </div>
           <div className="flex items-center gap-3 text-white">
-            <Mail className="w-5 h-5 text-brand-gold" />
             <a href="mailto:team@californiaclaw.com" className="hover:text-brand-gold transition-colors">
               team@californiaclaw.com
             </a>

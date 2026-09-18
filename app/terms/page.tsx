@@ -43,7 +43,6 @@ export default function TermsPage() {
   return (
     <>
       <section className="relative bg-brand-cream pt-32 pb-14 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { MapPin } from 'lucide-react'
 import { counties } from '@/lib/counties'
+import SectionHeading from '@/components/SectionHeading'
 
 /**
  * Geo links for the placement guides. The business-placement articles rank on
@@ -8,34 +8,29 @@ import { counties } from '@/lib/counties'
  * so this hands both the reader and a crawler the route from the topic page to
  * the county page that actually serves them.
  */
+
 export default function PlacementAreas() {
   return (
     <section className="section-padding bg-brand-cream">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-8">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHERE WE PLACE</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-3">
-            Free placement across your county
-          </h2>
-          <p className="text-brand-navy/60">
-            We place, service, and restock machines throughout the San Francisco Bay Area and San
-            Diego. Find the details for your area:
-          </p>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-3">
+        <SectionHeading
+          label="Where we place"
+          title="Free placement across your county"
+          lede="We place, service, and restock machines throughout the San Francisco Bay Area and San Diego."
+          className="mb-8"
+        />
+        <ul className="flex flex-wrap gap-2">
           {counties.map((county) => (
-            <Link
-              key={county.slug}
-              href={`/${county.slug}`}
-              className="card-fun bg-white p-4 flex items-center gap-3 group"
-            >
-              <MapPin className="w-4 h-4 text-brand-gold flex-shrink-0" />
-              <span className="font-semibold text-brand-navy text-sm">
-                Claw machines in {county.name}
-              </span>
-            </Link>
+            <li key={county.slug}>
+              <Link
+                href={`/${county.slug}`}
+                className="inline-block bg-white border border-brand-navy/10 hover:border-brand-navy px-4 py-2 rounded-full text-sm font-semibold text-brand-navy transition-colors"
+              >
+                {county.name}
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

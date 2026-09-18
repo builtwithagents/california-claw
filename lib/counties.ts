@@ -1,5 +1,4 @@
 export type Venue = {
-  emoji: string
   title: string
   blurb: string
 }
@@ -57,10 +56,10 @@ export const counties: County[] = [
       'Financial District',
     ],
     venues: [
-      { emoji: '☕', title: 'Cafes & boba shops', blurb: 'Turn the wait for a latte or milk tea into a game worth staying for.' },
-      { emoji: '🎓', title: 'Campuses', blurb: 'USF, SF State, and UCSF study spots that students actually want to hang around.' },
-      { emoji: '🧺', title: 'Laundromats', blurb: 'Thirty minutes on the spin cycle just got a whole lot better.' },
-      { emoji: '🍜', title: 'Restaurants & bars', blurb: 'A photo-op centerpiece for waiting parties and late-night crowds.' },
+      { title: 'Cafes & boba shops', blurb: 'Turn the wait for a latte or milk tea into a game worth staying for.' },
+      { title: 'Campuses', blurb: 'USF, SF State, and UCSF study spots that students actually want to hang around.' },
+      { title: 'Laundromats', blurb: 'Thirty minutes on the spin cycle just got a whole lot better.' },
+      { title: 'Restaurants & bars', blurb: 'A photo-op centerpiece for waiting parties and late-night crowds.' },
     ],
     faqs: [
       {
@@ -102,10 +101,10 @@ export const counties: County[] = [
       'San Bruno',
     ],
     venues: [
-      { emoji: '🍝', title: 'Family restaurants', blurb: 'Keep the little ones happy while the table waits for a booth.' },
-      { emoji: '🧋', title: 'Boba & dessert shops', blurb: 'The perfect pairing for a Peninsula sweet-tooth crowd.' },
-      { emoji: '🏢', title: 'Corporate campuses', blurb: 'A break-room upgrade employees actually get excited about.' },
-      { emoji: '🛍️', title: 'Shopping centers', blurb: 'Draw foot traffic and give shoppers a reason to stick around.' },
+      { title: 'Family restaurants', blurb: 'Keep the little ones happy while the table waits for a booth.' },
+      { title: 'Boba & dessert shops', blurb: 'The perfect pairing for a Peninsula sweet-tooth crowd.' },
+      { title: 'Corporate campuses', blurb: 'A break-room upgrade employees actually get excited about.' },
+      { title: 'Shopping centers', blurb: 'Draw foot traffic and give shoppers a reason to stick around.' },
     ],
     faqs: [
       {
@@ -147,10 +146,10 @@ export const counties: County[] = [
       'Milpitas',
     ],
     venues: [
-      { emoji: '💻', title: 'Tech campuses', blurb: 'A break-room centerpiece that gives teams a reason to step away and recharge.' },
-      { emoji: '🍜', title: 'Restaurants & food halls', blurb: 'From pho spots to poke bars, a draw for families and waiting parties.' },
-      { emoji: '🧋', title: 'Boba shops', blurb: 'The Valley loves its milk tea — pair it with a game worth the wait.' },
-      { emoji: '🎳', title: 'Entertainment venues', blurb: 'Arcades, bowling alleys, and lounges that thrive on more to do.' },
+      { title: 'Tech campuses', blurb: 'A break-room centerpiece that gives teams a reason to step away and recharge.' },
+      { title: 'Restaurants & food halls', blurb: 'From pho spots to poke bars, a draw for families and waiting parties.' },
+      { title: 'Boba shops', blurb: 'The Valley loves its milk tea — pair it with a game worth the wait.' },
+      { title: 'Entertainment venues', blurb: 'Arcades, bowling alleys, and lounges that thrive on more to do.' },
     ],
     faqs: [
       {
@@ -192,10 +191,10 @@ export const counties: County[] = [
       'Fairfax',
     ],
     venues: [
-      { emoji: '🛍️', title: 'Boutique shops', blurb: 'A playful surprise that turns browsers into repeat visitors.' },
-      { emoji: '🦀', title: 'Waterfront restaurants', blurb: 'Keep waiting parties entertained with a view and a game.' },
-      { emoji: '🍦', title: 'Ice cream & cafes', blurb: 'The perfect after-treat treat for Marin families.' },
-      { emoji: '🎓', title: 'Campuses & rec centers', blurb: 'A welcome bit of fun for students and community spaces.' },
+      { title: 'Boutique shops', blurb: 'A playful surprise that turns browsers into repeat visitors.' },
+      { title: 'Waterfront restaurants', blurb: 'Keep waiting parties entertained with a view and a game.' },
+      { title: 'Ice cream & cafes', blurb: 'The perfect after-treat treat for Marin families.' },
+      { title: 'Campuses & rec centers', blurb: 'A welcome bit of fun for students and community spaces.' },
     ],
     faqs: [
       {
@@ -237,10 +236,10 @@ export const counties: County[] = [
       'Temescal',
     ],
     venues: [
-      { emoji: '🌮', title: 'Taquerias & restaurants', blurb: 'A crowd-pleaser for the East Bay\'s legendary food scene.' },
-      { emoji: '🍺', title: 'Barcades & breweries', blurb: 'More to do means longer visits and bigger tabs.' },
-      { emoji: '🎓', title: 'Campus hangouts', blurb: 'Cal and Cal State students love a spot with something extra.' },
-      { emoji: '☕', title: 'Cafes', blurb: 'Turn the Temescal coffee crowd into lingering regulars.' },
+      { title: 'Taquerias & restaurants', blurb: 'A crowd-pleaser for the East Bay\'s legendary food scene.' },
+      { title: 'Barcades & breweries', blurb: 'More to do means longer visits and bigger tabs.' },
+      { title: 'Campus hangouts', blurb: 'Cal and Cal State students love a spot with something extra.' },
+      { title: 'Cafes', blurb: 'Turn the Temescal coffee crowd into lingering regulars.' },
     ],
     faqs: [
       {
@@ -282,10 +281,10 @@ export const counties: County[] = [
       'Martinez & Brentwood',
     ],
     venues: [
-      { emoji: '🍕', title: 'Family restaurants', blurb: 'The easiest way to keep the kids happy before the food arrives.' },
-      { emoji: '🛍️', title: 'Shopping centers', blurb: 'A destination draw from Broadway Plaza to the Sunvalley mall.' },
-      { emoji: '🏓', title: 'Rec centers', blurb: 'Extra fun for community spaces and after-school crowds.' },
-      { emoji: '🍺', title: 'Breweries & taprooms', blurb: 'Give the grown-ups a game while they relax with a pint.' },
+      { title: 'Family restaurants', blurb: 'The easiest way to keep the kids happy before the food arrives.' },
+      { title: 'Shopping centers', blurb: 'A destination draw from Broadway Plaza to the Sunvalley mall.' },
+      { title: 'Rec centers', blurb: 'Extra fun for community spaces and after-school crowds.' },
+      { title: 'Breweries & taprooms', blurb: 'Give the grown-ups a game while they relax with a pint.' },
     ],
     faqs: [
       {
@@ -327,10 +326,10 @@ export const counties: County[] = [
       'El Cajon',
     ],
     venues: [
-      { emoji: '🌮', title: 'Taco shops & eateries', blurb: 'A playful draw for San Diego\'s world-famous food scene.' },
-      { emoji: '🏖️', title: 'Beach-town cafes', blurb: 'Turn a post-surf coffee stop into a spot worth lingering.' },
-      { emoji: '🍺', title: 'Breweries & taprooms', blurb: 'More to do in America\'s craft-beer capital.' },
-      { emoji: '🎓', title: 'Campus hangouts', blurb: 'SDSU and UCSD students love a spot with a little extra.' },
+      { title: 'Taco shops & eateries', blurb: 'A playful draw for San Diego\'s world-famous food scene.' },
+      { title: 'Beach-town cafes', blurb: 'Turn a post-surf coffee stop into a spot worth lingering.' },
+      { title: 'Breweries & taprooms', blurb: 'More to do in America\'s craft-beer capital.' },
+      { title: 'Campus hangouts', blurb: 'SDSU and UCSD students love a spot with a little extra.' },
     ],
     faqs: [
       {

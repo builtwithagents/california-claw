@@ -1,3 +1,5 @@
+import SectionHeading from '@/components/SectionHeading'
+
 const primaryTiers = [
   { duration: '2 Hours', price: '350', blurb: 'Our most-booked party package', popular: false },
   { duration: '3 Hours', price: '475', blurb: 'Keep the fun going all evening', popular: false },
@@ -18,27 +20,29 @@ export default function RentalPricing({ cityLabel }: { cityLabel?: string }) {
   return (
     <section id="pricing" className="section-padding bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">SIMPLE PRICING</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-            Pick your <span className="highlight-gold">party</span> package
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
-            Flat pricing, no hidden fees{cityLabel ? ` for ${cityLabel} events` : ''}. Every package
-            includes unlimited prizes, delivery, and setup — no per-play or per-prize charges, ever.
-          </p>
-        </div>
+        <SectionHeading
+          label="Simple pricing"
+          title={
+            <>
+              Pick your <span className="highlight-gold">party</span> package
+            </>
+          }
+          lede={`Flat pricing, no hidden fees${
+            cityLabel ? ` for ${cityLabel} events` : ''
+          }. Every package includes unlimited prizes, delivery, and setup — no per-play or per-prize charges, ever.`}
+          className="mb-12"
+        />
 
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {primaryTiers.map((tier) => (
             <div
               key={tier.duration}
               className={`card-fun p-8 text-center relative ${
-                tier.popular ? 'border-brand-navy shadow-[6px_6px_0_#FDB515]' : ''
+                tier.popular ? 'border-brand-navy' : ''
               }`}
             >
               {tier.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-3 py-1 rounded-full bg-brand-gold text-brand-navy border-2 border-brand-navy whitespace-nowrap">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-3 py-1 rounded-full bg-brand-gold text-brand-navy border border-brand-navy/70 whitespace-nowrap">
                   Most Popular
                 </span>
               )}

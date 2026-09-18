@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { Audience } from '@/lib/posts'
 import { getGuidesForAudience } from '@/lib/posts'
+import SectionHeading from '@/components/SectionHeading'
 
 type Props = {
   /** Which side of the business these guides are for. */
@@ -14,7 +15,7 @@ type Props = {
 
 export default function RelatedGuides({
   audience = 'event',
-  eyebrow = 'PLANNING GUIDES',
+  eyebrow = 'Planning guides',
   heading = 'Planning for a specific occasion?',
   limit,
 }: Props) {
@@ -27,12 +28,7 @@ export default function RelatedGuides({
   return (
     <section className="section-padding bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">{eyebrow}</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-            {heading}
-          </h2>
-        </div>
+        <SectionHeading label={eyebrow} title={heading} className="mb-8" />
         <div className={`grid sm:grid-cols-2 ${columns} gap-4`}>
           {guides.map((guide) => (
             <Link

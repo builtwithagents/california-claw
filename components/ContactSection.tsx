@@ -1,70 +1,75 @@
-import { Mail, Phone, Clock } from 'lucide-react'
 import RequestForm from '@/components/RequestForm'
+import SectionHeading from '@/components/SectionHeading'
+
+const details = [
+  { label: 'Call or text', value: '(510) 506-4159', href: 'tel:+15105064159' },
+  { label: 'Email', value: 'team@californiaclaw.com', href: 'mailto:team@californiaclaw.com' },
+  { label: 'Hours', value: 'Open daily, 9am–9pm' },
+]
+
+const next = [
+  'We review your request within 24 hours.',
+  'Quick call to go over the details.',
+  'We get you set up — placement or event delivery.',
+]
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-brand-cream">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left: Info */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left: how to reach us */}
           <div>
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GET STARTED</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-6 leading-tight">
-              Ready to get the <span className="highlight-gold">claws</span>
-              <br />
-              out?
-            </h2>
-            <p className="text-lg text-brand-navy/60 mb-8 leading-relaxed">
-              Whether it&apos;s a free machine for your business or a rental for your next
-              event, tell us what you need and we&apos;ll get back to you within 24 hours.
-            </p>
+            <SectionHeading
+              label="Get started"
+              title={
+                <>
+                  Ready to get the <span className="highlight-gold">claws</span> out?
+                </>
+              }
+              lede="Whether it's a free machine for your business or a rental for your next event, tell us what you need and we'll get back to you within 24 hours."
+              className="mb-10"
+            />
 
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-2xl bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-brand-navy" />
+            {/* Contact details as a plain definition list, not icon tiles. */}
+            <dl className="border-t border-brand-navy/10 mb-10">
+              {details.map((d) => (
+                <div
+                  key={d.label}
+                  className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4 border-b border-brand-navy/10"
+                >
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/45 w-28 flex-shrink-0">
+                    {d.label}
+                  </dt>
+                  <dd className="font-display text-lg font-bold text-brand-navy">
+                    {d.href ? (
+                      <a
+                        href={d.href}
+                        className="underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
+                      >
+                        {d.value}
+                      </a>
+                    ) : (
+                      d.value
+                    )}
+                  </dd>
                 </div>
-                <div>
-                  <p className="text-xs text-brand-navy/50 mb-0.5">Call or text us</p>
-                  <a
-                    href="tel:+15105064159"
-                    className="font-bold text-brand-navy hover:text-brand-gold-dark transition-colors"
-                  >
-                    (510) 506-4159
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-2xl bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-brand-navy" />
-                </div>
-                <div>
-                  <p className="text-xs text-brand-navy/50 mb-0.5">Email us directly</p>
-                  <a
-                    href="mailto:team@californiaclaw.com"
-                    className="font-bold text-brand-navy hover:text-brand-gold-dark transition-colors"
-                  >
-                    team@californiaclaw.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-2xl bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-brand-navy" />
-                </div>
-                <div>
-                  <p className="text-xs text-brand-navy/50 mb-0.5">Hours</p>
-                  <p className="font-bold text-brand-navy">Open daily, 9am–9pm</p>
-                </div>
-              </div>
-            </div>
+              ))}
+            </dl>
 
-            <div className="bg-brand-cream border-2 border-brand-navy/10 rounded-3xl p-5">
-              <p className="text-sm text-brand-navy font-bold mb-2">What happens next?</p>
-              <ol className="space-y-1.5 text-sm text-brand-navy/70">
-                <li>1. We review your request within 24 hours</li>
-                <li>2. Quick call to go over the details</li>
-                <li>3. We get you set up — placement or event delivery</li>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/45 mb-4">
+                What happens next
+              </p>
+              <ol className="space-y-3">
+                {next.map((step, i) => (
+                  <li key={step} className="flex gap-4 text-brand-navy/70">
+                    <span className="font-display font-extrabold text-brand-gold-dark flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    {step}
+                  </li>
+                ))}
               </ol>
             </div>
           </div>

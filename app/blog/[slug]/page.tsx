@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Clock } from 'lucide-react'
+import SectionHeading from '@/components/SectionHeading'
+import { ArrowLeft } from 'lucide-react'
 import { posts, getPostBySlug, getRelatedPosts, audienceOf } from '@/lib/posts'
 import PostBody from '@/components/PostBody'
 import PlacementAreas from '@/components/PlacementAreas'
@@ -84,8 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
         />
       )}
 
-      <section className="relative bg-brand-cream overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
+      <section className="bg-brand-cream border-b border-brand-navy/10">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <Link
             href="/blog"
@@ -99,7 +99,6 @@ export default async function BlogPostPage({ params }: Props) {
               {post.category}
             </span>
             <span className="inline-flex items-center gap-1 text-xs text-brand-navy/50">
-              <Clock className="w-3.5 h-3.5" />
               {post.readTime}
             </span>
             <span className="text-xs text-brand-navy/50">{formatDate(post.publishedAt)}</span>
@@ -119,12 +118,11 @@ export default async function BlogPostPage({ params }: Props) {
       {post.faqs.length > 0 && (
         <section className="section-padding bg-brand-cream">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-                Frequently asked questions
-              </h2>
-            </div>
+            <SectionHeading
+              label="Good to know"
+              title="Frequently asked questions"
+              className="mb-10"
+            />
             <div className="space-y-4">
               {post.faqs.map((faq) => (
                 <div key={faq.q} className="card-fun p-6 bg-white">
@@ -140,7 +138,7 @@ export default async function BlogPostPage({ params }: Props) {
       {relatedPosts.length > 0 && (
         <section className="section-padding bg-white">
           <div className="max-w-3xl mx-auto">
-            <div className="sticker text-xs px-4 py-1.5 mb-6 -rotate-1">KEEP READING</div>
+            <SectionHeading label="Keep reading" title="More guides" className="mb-8" />
             <div className="grid gap-4">
               {relatedPosts.map((p) => (
                 <Link key={p.slug} href={`/blog/${p.slug}`} className="card-fun bg-brand-cream p-6 block">

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone, Clock } from 'lucide-react'
 import logo from '@/public/california-claw-logo.jpg'
 import { counties } from '@/lib/counties'
 
@@ -53,18 +52,15 @@ export default function Footer() {
                 href="mailto:team@californiaclaw.com"
                 className="flex items-center gap-2 text-white/60 hover:text-brand-gold text-sm transition-colors"
               >
-                <Mail className="w-4 h-4 text-brand-gold" />
                 team@californiaclaw.com
               </a>
               <a
                 href="tel:+15105064159"
                 className="flex items-center gap-2 text-white/60 hover:text-brand-gold text-sm transition-colors"
               >
-                <Phone className="w-4 h-4 text-brand-gold" />
                 (510) 506-4159
               </a>
               <div className="flex items-center gap-2 text-white/60 text-sm">
-                <Clock className="w-4 h-4 text-brand-gold" />
                 Open daily, 9am–9pm
               </div>
             </div>

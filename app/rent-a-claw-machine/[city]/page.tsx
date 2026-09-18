@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Check, MapPin, ClipboardList, Truck, PartyPopper } from 'lucide-react'
 import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
 import RentalPricing from '@/components/RentalPricing'
@@ -10,6 +9,7 @@ import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
+import SectionHeading from '@/components/SectionHeading'
 import joyCatcher from '@/public/joy-catcher.jpg'
 
 type Props = {
@@ -37,9 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const steps = [
-  { icon: ClipboardList, title: 'Book your date', description: 'Tell us your event date, package, and venue. We confirm availability within 24 hours.' },
-  { icon: Truck, title: 'We deliver & set up', description: 'Our team brings the machine, sets it to free-play, and stocks it with prizes.' },
-  { icon: PartyPopper, title: 'Enjoy the fun', description: 'Guests play all event long. When it wraps, we come back and pack it away.' },
+  { title: 'Book your date', description: 'Tell us your event date, package, and venue. We confirm availability within 24 hours.' },
+  { title: 'We deliver & set up', description: 'Our team brings the machine, sets it to free-play, and stocks it with prizes.' },
+  { title: 'Enjoy the fun', description: 'Guests play all event long. When it wraps, we come back and pack it away.' },
 ]
 
 export default async function RentalCityPage({ params }: Props) {
@@ -67,16 +67,11 @@ export default async function RentalCityPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative bg-brand-cream overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.13] pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-brand-gold/20 blur-3xl pointer-events-none" />
+      <section className="bg-brand-cream border-b border-brand-navy/10">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">
-                <MapPin className="w-4 h-4 text-brand-gold" />
-                Claw machine rentals in {city.city}
-              </div>
+              <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Claw machine rentals in {city.city}</span></p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
                 Rent a claw machine
                 <br />
@@ -92,8 +87,8 @@ export default async function RentalCityPage({ params }: Props) {
                 </a>
               </div>
             </div>
-            <div className="max-w-md mx-auto lg:mx-0 w-full animate-float">
-              <div className="relative aspect-[4/3] w-full rounded-[28px] overflow-hidden border-4 border-brand-navy shadow-[8px_8px_0_#FDB515]">
+            <div className="max-w-md mx-auto lg:mx-0 w-full">
+              <div className="photo-frame aspect-[4/3] w-full">
                 <Image
                   src={city.heroImage ?? joyCatcher}
                   alt={city.heroImage ? `${city.city}, California` : `A California Claw machine stocked with plush prizes, ready for ${city.city}`}
@@ -110,12 +105,17 @@ export default async function RentalCityPage({ params }: Props) {
       </section>
 
       {/* Local intro */}
-      <section className="section-padding bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">{city.city.toUpperCase()} EVENTS</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-6">
-            The hit of any <span className="highlight-gold">{city.city}</span> event
-          </h2>
+      <section className="section-padding bg-brand-cream">
+        <div className="max-w-3xl mx-auto">
+          <SectionHeading
+            label={`${city.city} events`}
+            title={
+              <>
+                The hit of any <span className="highlight-gold">{city.city}</span> event
+              </>
+            }
+            className="mb-6"
+          />
           <p className="text-lg text-brand-navy/70 leading-relaxed">{city.intro}</p>
         </div>
       </section>
@@ -130,18 +130,18 @@ export default async function RentalCityPage({ params }: Props) {
       <RentalIncluded />
 
       {/* Event types */}
-      <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">GREAT FOR</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-8">
-            {city.city} events we love
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="section-padding bg-brand-cream">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading
+            label="Great for"
+            title={`${city.city} events we love`}
+            className="mb-8"
+          />
+          <div className="flex flex-wrap gap-3">
             {city.eventTypes.map((type) => {
               const href = getOccasionHref(type)
               const pill = (
                 <>
-                  <Check className="w-4 h-4 text-brand-gold" />
                   {type}
                 </>
               )
@@ -149,14 +149,14 @@ export default async function RentalCityPage({ params }: Props) {
                 <Link
                   key={type}
                   href={href}
-                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
+                  className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
                 >
                   {pill}
                 </Link>
               ) : (
                 <span
                   key={type}
-                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                  className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
                 >
                   {pill}
                 </span>
@@ -210,54 +210,48 @@ export default async function RentalCityPage({ params }: Props) {
       </section>
 
       {/* How it works */}
-      <section className="section-padding bg-brand-cream relative overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
+      <section className="section-padding bg-brand-cream">
         <div className="max-w-5xl mx-auto relative">
-          <div className="text-center mb-14">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">HOW IT WORKS</div>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-              Booked in three easy steps
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, i) => {
-              const Icon = step.icon
-              return (
-                <div key={step.title} className="flex flex-col items-center text-center">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 rounded-3xl bg-white border-2 border-brand-navy flex items-center justify-center shadow-[5px_5px_0_rgba(0,50,98,0.12)]">
-                      <Icon className="w-8 h-8 text-brand-navy" />
-                    </div>
-                    <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-brand-gold border-2 border-brand-navy text-brand-navy text-sm font-display font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-xl font-bold text-brand-navy mb-3">{step.title}</h3>
-                  <p className="text-brand-navy/60 leading-relaxed">{step.description}</p>
-                </div>
-              )
-            })}
-          </div>
+          <SectionHeading
+            label="How it works"
+            title="Booked in three steps"
+            className="mb-10"
+          />
+          <ol className="grid md:grid-cols-3 gap-px bg-brand-navy/10 border border-brand-navy/10 rounded-3xl overflow-hidden">
+            {steps.map((step, i) => (
+              <li key={step.title} className="bg-white p-7 sm:p-8">
+                <span className="font-display text-5xl font-extrabold text-brand-gold leading-none">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-display text-xl font-bold text-brand-navy mt-4 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-brand-navy/60 leading-relaxed">{step.description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
       {/* Delivery areas */}
       <section className="section-padding bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHERE WE DELIVER</div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-4">
-            Delivery across <span className="highlight-gold">{city.city}</span>
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-2xl mx-auto mb-8">
-            Free delivery, setup, and pickup throughout {city.city}. {city.nearby}
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-5xl mx-auto">
+          <SectionHeading
+            label="Where we deliver"
+            title={
+              <>
+                Delivery across <span className="highlight-gold">{city.city}</span>
+              </>
+            }
+            lede={`Free delivery, setup, and pickup throughout ${city.city}. ${city.nearby}`}
+            className="mb-8"
+          />
+          <div className="flex flex-wrap gap-3">
             {city.neighborhoods.map((n) => (
               <span
                 key={n}
-                className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
               >
-                <MapPin className="w-4 h-4 text-brand-gold" />
                 {n}
               </span>
             ))}
@@ -268,12 +262,11 @@ export default async function RentalCityPage({ params }: Props) {
       {/* FAQ */}
       <section className="section-padding bg-brand-cream">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy">
-              Renting a claw machine in {city.city}
-            </h2>
-          </div>
+          <SectionHeading
+            label="Good to know"
+            title={`Renting a claw machine in ${city.city}`}
+            className="mb-10"
+          />
           <div className="space-y-4">
             {city.faqs.map((faq) => (
               <div key={faq.q} className="card-fun p-6 bg-white">
@@ -286,25 +279,21 @@ export default async function RentalCityPage({ params }: Props) {
       </section>
 
       {/* Booking form */}
-      <section id="book" className="section-padding bg-brand-navy relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.07] pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(#FDB515 1.5px, transparent 1.5px)',
-            backgroundSize: '40px 40px',
-          }}
-        />
+      <section id="book" className="section-padding bg-brand-navy">
         <div className="max-w-6xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">BOOK NOW</div>
-              <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Book your {city.city} <span className="text-brand-gold">claw machine</span>
-              </h2>
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                Tell us your date and package, and we&apos;ll confirm availability within 24 hours.
-                {city.city} dates fill up fast on weekends — reach out early.
-              </p>
+              <SectionHeading
+                tone="dark"
+                label="Book now"
+                title={
+                  <>
+                    Book your {city.city} <span className="text-brand-gold">claw machine</span>
+                  </>
+                }
+                lede={`Tell us your date and package, and we'll confirm availability within 24 hours. ${city.city} dates fill up fast on weekends — reach out early.`}
+                className="mb-8"
+              />
               <ul className="space-y-3">
                 {[
                   `Delivered & set up anywhere in ${city.city}`,
@@ -313,7 +302,6 @@ export default async function RentalCityPage({ params }: Props) {
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-white/80">
                     <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-brand-navy" />
                     </span>
                     {point}
                   </li>
