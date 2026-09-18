@@ -1,64 +1,57 @@
-import { Wrench, Package, DollarSign, Zap } from 'lucide-react'
+import SectionHeading from '@/components/SectionHeading'
 
 const benefits = [
   {
-    icon: DollarSign,
-    title: 'Free Machine Placement',
+    title: 'Free machine placement',
     description:
       'No upfront costs, no rental fees, no surprises. We place our premium claw machines at your location completely free of charge.',
-    chip: 'bg-brand-gold/20 text-brand-navy',
   },
   {
-    icon: Wrench,
-    title: 'Full Maintenance',
+    title: 'Full maintenance',
     description:
       'We handle all repairs, technical issues, and regular maintenance. Your team never needs to think about upkeep.',
-    chip: 'bg-brand-sky/50 text-brand-navy',
   },
   {
-    icon: Package,
-    title: 'Regular Restocking',
+    title: 'Regular restocking',
     description:
-      'Fresh prizes delivered and restocked on schedule. We ensure your machine always looks irresistible to customers.',
-    chip: 'bg-brand-coral/15 text-brand-coral',
+      'Fresh prizes delivered and restocked on schedule. We keep the cabinet full so the machine always looks worth a play.',
   },
   {
-    icon: Zap,
-    title: 'Zero Hidden Fees',
+    title: 'Zero hidden fees',
     description:
       'Seriously — nothing. We manage everything from installation to prizes to ongoing service. Your cost is always zero.',
-    chip: 'bg-emerald-100 text-emerald-600',
   },
 ]
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHY CALIFORNIA CLAW</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-            All the fun, <span className="highlight-gold">none of the work</span>
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-2xl mx-auto">
-            We make it incredibly simple to add entertainment value to your location.
-            Our turnkey setup means you get everything with none of the hassle.
-          </p>
-        </div>
+    <section id="benefits" className="section-padding bg-brand-cream">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-[minmax(0,380px)_1fr] gap-10 lg:gap-20 items-start">
+          {/* Left: the pitch */}
+          <SectionHeading
+            label="Why California Claw"
+            title={
+              <>
+                All the fun,
+                <br />
+                <span className="highlight-gold">none of the work</span>
+              </>
+            }
+            lede="You give us a corner and an outlet. We do everything after that."
+          />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((item) => {
-            const Icon = item.icon
-            return (
-              <div key={item.title} className="card-fun p-6">
-                <div className={`${item.chip} w-12 h-12 rounded-2xl flex items-center justify-center mb-5`}>
-                  <Icon className="w-6 h-6" />
-                </div>
-                <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{item.title}</h3>
-                <p className="text-brand-navy/60 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            )
-          })}
+          {/* Right: what the deal actually covers */}
+          <ul className="divide-y divide-brand-navy/10 border-y border-brand-navy/10">
+            {benefits.map((item) => (
+              <li key={item.title} className="py-7">
+                <h3 className="font-display text-xl font-bold text-brand-navy mb-1.5">
+                  {item.title}
+                </h3>
+                <p className="text-brand-navy/60 leading-relaxed">{item.description}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

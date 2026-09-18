@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import Stats from '@/components/Stats'
+import RealPlacements from '@/components/RealPlacements'
 import Benefits from '@/components/Benefits'
 import HowItWorks from '@/components/HowItWorks'
 import ServiceAreas from '@/components/ServiceAreas'
@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
+      <RealPlacements />
       <Benefits />
       <HowItWorks />
       <ServiceAreas />
       <About />
       <RelatedGuides
         audience="business"
-        eyebrow="BEFORE YOU ASK"
+        eyebrow="Before you ask"
         heading="How free placement actually works"
       />
       <ContactSection />

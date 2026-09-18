@@ -1,93 +1,83 @@
-import { Heart, Star, Users } from 'lucide-react'
+import SectionHeading from '@/components/SectionHeading'
 
-const values = [
+/**
+ * Concrete commitments rather than abstract "values" — each one restates a
+ * promise the site makes elsewhere, so there is nothing here we don't already
+ * stand behind.
+ */
+
+const commitments = [
   {
-    icon: Heart,
-    title: 'Joy-first',
-    description: 'We believe every business deserves to be a place customers love visiting.',
+    title: 'We answer within 24 hours',
+    description: 'Every request gets a real reply from a person, not an autoresponder.',
   },
   {
-    icon: Star,
-    title: 'Reliability',
-    description: 'Our machines are always stocked, always working, always bringing smiles.',
+    title: 'We restock on a schedule',
+    description: 'You never have to call us about an empty cabinet or a jammed claw.',
   },
   {
-    icon: Users,
-    title: 'Partnership',
-    description: 'We succeed when your customers keep coming back. Our goals are aligned.',
+    title: 'You can end it whenever',
+    description: 'No contracts, no notice period. If it stops working for you, we collect it.',
   },
 ]
 
 export default function About() {
   return (
     <section id="about" className="relative section-padding bg-brand-navy overflow-hidden">
-      {/* Confetti dots on navy */}
-      <div
-        className="absolute inset-0 opacity-[0.07] pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(#FDB515 1.5px, transparent 1.5px)',
-          backgroundSize: '40px 40px',
-        }}
-      />
-
-      <div className="max-w-7xl mx-auto relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
+      <div className="max-w-6xl mx-auto relative">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left: who we are */}
           <div>
-            <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">ABOUT US</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">
-              Every day is a chance to{' '}
-              <span className="text-brand-gold">spark joy</span>
-            </h2>
-            <p className="text-lg text-white/80 leading-relaxed mb-6">
-              At California Claw, our mission is simple: bring fun and engaging experiences
-              to campuses, restaurants, and businesses across the San Francisco Bay Area and San Diego. With a focus on
-              reliability, quality, and unforgettable entertainment, we make it easy to add
-              excitement to any space.
+            <SectionHeading
+              tone="dark"
+              label="About us"
+              title={
+                <>
+                  Every day is a chance to{' '}
+                  <span className="text-brand-gold">spark joy</span>
+                </>
+              }
+              className="mb-6"
+            />
+            <p className="text-lg text-white/75 leading-relaxed mb-5">
+              We&apos;re a small team in the San Francisco Bay Area. We started California
+              Claw because a claw machine turns a dead corner into the thing people
+              remember about a shop — and most owners never get one because of the cost
+              and the hassle.
             </p>
-            <p className="text-white/60 leading-relaxed mb-8">
-              We&apos;re a small, passionate team based in the San Francisco Bay Area. We started California
-              Claw because we saw how much joy a simple claw machine brings — and we wanted
-              to make that accessible to every business without the typical cost or hassle.
+            <p className="text-white/55 leading-relaxed mb-8">
+              So we removed both. We buy the machine, stock it, fix it, and split nothing
+              out of your register. You give us a corner and an outlet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="btn-gold px-8 py-3.5">
-                Work With Us
+                Work with us
               </a>
               <a
                 href="mailto:team@californiaclaw.com"
-                className="inline-flex items-center justify-center border-2 border-white/30 hover:border-brand-gold hover:text-brand-gold text-white font-bold px-8 py-3.5 rounded-full transition-colors"
+                className="inline-flex items-center justify-center border border-white/25 hover:border-brand-gold hover:text-brand-gold text-white font-bold px-8 py-3.5 rounded-full transition-colors"
               >
-                Say Hello 👋
+                Say hello
               </a>
             </div>
           </div>
 
-          {/* Right: Values */}
-          <div className="space-y-4">
-            {values.map((v) => {
-              const Icon = v.icon
-              return (
-                <div
-                  key={v.title}
-                  className="flex items-start gap-4 bg-white/5 border-2 border-white/10 hover:border-brand-gold/50 rounded-3xl p-5 transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-2xl bg-brand-gold flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-brand-navy" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-white mb-1">{v.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{v.description}</p>
-                  </div>
+          {/* Right: what we commit to */}
+          <div className="lg:pt-4">
+            <dl className="border-t border-white/15">
+              {commitments.map((c) => (
+                <div key={c.title} className="py-6 border-b border-white/15">
+                  <dt className="font-display text-xl font-bold text-white mb-1.5">
+                    {c.title}
+                  </dt>
+                  <dd className="text-white/55 leading-relaxed">{c.description}</dd>
                 </div>
-              )
-            })}
+              ))}
+            </dl>
 
-            {/* Company badge */}
-            <div className="bg-white/5 border-2 border-white/10 rounded-3xl p-5 text-center">
-              <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Legal name</p>
-              <p className="text-white font-medium">Coastal Vending Company DBA California Claw</p>
-            </div>
+            <p className="mt-8 text-sm text-white/35">
+              Coastal Vending Company, DBA California Claw
+            </p>
           </div>
         </div>
       </div>

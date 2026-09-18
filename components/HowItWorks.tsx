@@ -1,21 +1,18 @@
-import { ClipboardList, Truck, PartyPopper } from 'lucide-react'
+import SectionHeading from '@/components/SectionHeading'
 
 const steps = [
   {
-    icon: ClipboardList,
-    title: 'Apply Online',
+    title: 'Apply online',
     description:
-      'Fill out our quick form with your location details. We review every request within 24 hours and follow up to discuss placement options.',
+      'Fill out the form with your location details. We review every request within 24 hours and follow up to talk through placement.',
   },
   {
-    icon: Truck,
-    title: 'We Install Everything',
+    title: 'We install everything',
     description:
-      'Our team delivers, installs, and configures your machine. We handle permits, electrical, and setup — you just watch it happen.',
+      'Our team delivers, installs, and configures the machine. We handle permits, electrical, and setup — you just watch it happen.',
   },
   {
-    icon: PartyPopper,
-    title: 'Watch the Fun Begin',
+    title: 'Watch the fun begin',
     description:
       'Your customers start playing right away. We keep it stocked with fresh prizes and fully maintained, month after month.',
   },
@@ -23,45 +20,36 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="section-padding bg-brand-cream relative overflow-hidden">
-      <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
-      <div className="max-w-7xl mx-auto relative">
-        <div className="text-center mb-14">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">THE PROCESS</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-            Up and running in <span className="highlight-gold">days</span>
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
-            From first hello to happy customers in 3 simple steps.
-          </p>
-        </div>
+    <section className="section-padding bg-white">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeading
+          label="The process"
+          title={
+            <>
+              Up and running in <span className="highlight-gold">days</span>
+            </>
+          }
+          lede="From first hello to happy customers in three steps."
+          className="mb-12"
+        />
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Dotted connector (desktop only) */}
-          <div className="hidden md:block absolute top-10 left-[20%] right-[20%] border-t-2 border-dashed border-brand-navy/20" />
+        <ol className="grid md:grid-cols-3 gap-px bg-brand-navy/10 border border-brand-navy/10 rounded-3xl overflow-hidden">
+          {steps.map((step, i) => (
+            <li key={step.title} className="bg-white p-7 sm:p-8">
+              <span className="font-display text-5xl font-extrabold text-brand-gold leading-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 className="font-display text-xl font-bold text-brand-navy mt-4 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-brand-navy/60 leading-relaxed">{step.description}</p>
+            </li>
+          ))}
+        </ol>
 
-          {steps.map((step, i) => {
-            const Icon = step.icon
-            return (
-              <div key={step.title} className="relative flex flex-col items-center text-center">
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 rounded-3xl bg-white border-2 border-brand-navy flex items-center justify-center shadow-[5px_5px_0_rgba(0,50,98,0.12)]">
-                    <Icon className="w-8 h-8 text-brand-navy" />
-                  </div>
-                  <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-brand-gold border-2 border-brand-navy text-brand-navy text-sm font-display font-bold flex items-center justify-center">
-                    {i + 1}
-                  </span>
-                </div>
-                <h3 className="font-display text-xl font-bold text-brand-navy mb-3">{step.title}</h3>
-                <p className="text-brand-navy/60 leading-relaxed">{step.description}</p>
-              </div>
-            )
-          })}
-        </div>
-
-        <div className="text-center mt-12">
+        <div className="mt-10">
           <a href="#contact" className="btn-gold px-8 py-4 text-lg">
-            Start Your Application
+            Start your application
           </a>
         </div>
       </div>

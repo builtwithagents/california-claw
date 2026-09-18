@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Clock } from 'lucide-react'
+import SectionHeading from '@/components/SectionHeading'
+import { ArrowRight } from 'lucide-react'
 import type { Post } from '@/lib/posts'
 import { getBusinessPosts, getEventPosts } from '@/lib/posts'
 
@@ -27,7 +28,6 @@ function PostCard({ post }: { post: Post }) {
           {post.category}
         </span>
         <span className="inline-flex items-center gap-1 text-xs text-brand-navy/50">
-          <Clock className="w-3.5 h-3.5" />
           {post.readTime}
         </span>
         <span className="text-xs text-brand-navy/50">{formatDate(post.publishedAt)}</span>
@@ -46,7 +46,7 @@ export default function BlogIndexPage() {
   const groups = [
     {
       key: 'Business Placement',
-      eyebrow: 'FOR YOUR BUSINESS',
+      eyebrow: 'For your business',
       heading: 'Getting a free machine placed',
       blurb:
         'How free placement works, what a machine earns, and whether it fits your kind of space.',
@@ -54,7 +54,7 @@ export default function BlogIndexPage() {
     },
     {
       key: 'Rentals',
-      eyebrow: 'FOR YOUR EVENT',
+      eyebrow: 'For your event',
       heading: 'Renting for a party or event',
       blurb: 'Pricing, planning, and setup for parties, weddings, offices, and trade shows.',
       posts: getEventPosts(),
@@ -63,10 +63,9 @@ export default function BlogIndexPage() {
 
   return (
     <>
-      <section className="relative bg-brand-cream overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.1] pointer-events-none" />
+      <section className="bg-brand-cream border-b border-brand-navy/10">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center">
-          <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">FROM THE TEAM</div>
+          <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">FROM THE TEAM</span></p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-5 leading-[1.05]">
             The California Claw <span className="highlight-gold">Blog</span>
           </h1>
@@ -83,13 +82,12 @@ export default function BlogIndexPage() {
           className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-brand-cream'}`}
         >
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">{group.eyebrow}</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy mb-2">
-                {group.heading}
-              </h2>
-              <p className="text-brand-navy/60">{group.blurb}</p>
-            </div>
+            <SectionHeading
+              label={group.eyebrow}
+              title={group.heading}
+              lede={group.blurb}
+              className="mb-8"
+            />
             <div className="grid gap-6">
               {group.posts.map((post) => (
                 <PostCard key={post.slug} post={post} />

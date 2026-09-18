@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Check, Sparkles, MapPin, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { rentalCities } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
 import RentalPricing from '@/components/RentalPricing'
@@ -9,7 +9,9 @@ import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
+import SectionHeading from '@/components/SectionHeading'
 import joyCatcher from '@/public/joy-catcher.jpg'
+import eventWinners from '@/public/event-winners-plushies.jpg'
 
 export const metadata: Metadata = {
   title: 'Rent a Claw Machine — Event Rental Prices & Packages | California Claw',
@@ -91,14 +93,9 @@ export default function RentPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-brand-cream overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.13] pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-brand-gold/20 blur-3xl pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
-          <div className="sticker text-sm px-4 py-1.5 mb-6 -rotate-1">
-            <Sparkles className="w-4 h-4 text-brand-gold" />
-            Rentals across the SF Bay Area &amp; San Diego
-          </div>
+      <section className="bg-brand-cream border-b border-brand-navy/10">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-14 text-center">
+          <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Rentals across the SF Bay Area &amp; San Diego</span></p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
             Rent a claw machine
             <br />
@@ -118,6 +115,26 @@ export default function RentPage() {
             </a>
           </div>
         </div>
+
+        {/* A real grab from a real booking */}
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          <figure className="relative">
+            <div className="photo-frame aspect-[16/10] sm:aspect-[16/9]">
+              <Image
+                src={eventWinners}
+                alt="Three guests at an event holding plushies they won from a California Claw machine — two pink bunnies and a Pikachu"
+                fill
+                sizes="(max-width: 1024px) 100vw, 960px"
+                placeholder="blur"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <figcaption className="absolute bottom-4 left-4 sm:left-6 sticker bg-brand-gold/95 px-3.5 py-1.5 text-xs">
+              Free-play means everyone walks away with something
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       {/* Pricing (shared) */}
@@ -130,18 +147,22 @@ export default function RentPage() {
       <RentalIncluded />
 
       {/* Event types */}
-      <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">GREAT FOR</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-8">
-            Perfect for any <span className="highlight-gold">occasion</span>
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="section-padding bg-brand-cream">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading
+            label="Great for"
+            title={
+              <>
+                Perfect for any <span className="highlight-gold">occasion</span>
+              </>
+            }
+            className="mb-8"
+          />
+          <div className="flex flex-wrap gap-3">
             {eventTypes.map((type) => {
               const href = getOccasionHref(type)
               const pill = (
                 <>
-                  <Check className="w-4 h-4 text-brand-gold" />
                   {type}
                 </>
               )
@@ -149,14 +170,14 @@ export default function RentPage() {
                 <Link
                   key={type}
                   href={href}
-                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
+                  className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy hover:border-brand-navy/40 transition-colors"
                 >
                   {pill}
                 </Link>
               ) : (
                 <span
                   key={type}
-                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                  className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
                 >
                   {pill}
                 </span>
@@ -187,22 +208,22 @@ export default function RentPage() {
       </section>
 
       {/* Rentals by city */}
-      <section className="section-padding bg-brand-cream relative overflow-hidden">
-        <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
+      <section className="section-padding bg-brand-cream">
         <div className="max-w-5xl mx-auto relative">
-          <div className="text-center mb-12">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">RENTALS BY CITY</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-              Find your <span className="highlight-gold">city</span>
-            </h2>
-            <p className="text-lg text-brand-navy/60 max-w-xl mx-auto">
-              Local delivery details, event ideas, and pricing for your area.
-            </p>
-          </div>
+          <SectionHeading
+            label="Rentals by city"
+            title={
+              <>
+                Find your <span className="highlight-gold">city</span>
+              </>
+            }
+            lede="Local delivery details, event ideas, and pricing for your area."
+            className="mb-10"
+          />
           <div className="grid sm:grid-cols-2 gap-6">
             {rentalCities.map((c) => (
               <Link key={c.slug} href={`/rent-a-claw-machine/${c.slug}`} className="card-fun p-6 flex items-center gap-5 group">
-                <div className="relative w-28 h-28 flex-shrink-0 rounded-2xl overflow-hidden border-4 border-brand-navy">
+                <div className="relative w-28 h-28 flex-shrink-0 rounded-2xl overflow-hidden ring-1 ring-brand-navy/10">
                   <Image
                     src={c.heroImage ?? joyCatcher}
                     alt={c.heroImage ? `${c.city}, California` : 'A California Claw machine stocked with plush prizes'}
@@ -229,17 +250,19 @@ export default function RentPage() {
 
       {/* Where we deliver */}
       <section className="section-padding bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 rotate-1">WHERE WE DELIVER</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-            Claw machine rentals across the{' '}
-            <span className="highlight-gold">Bay Area</span> &amp; San Diego
-          </h2>
-          <p className="text-lg text-brand-navy/60 max-w-2xl mx-auto mb-8">
-            Free delivery, setup, and pickup throughout our service areas. If you&apos;re near
-            one of these cities, we can bring the fun to your event:
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="max-w-5xl mx-auto">
+          <SectionHeading
+            label="Where we deliver"
+            title={
+              <>
+                Rentals across the{' '}
+                <span className="highlight-gold">San Francisco Bay Area</span> &amp; San Diego
+              </>
+            }
+            lede="Free delivery, setup, and pickup throughout our service areas."
+            className="mb-8"
+          />
+          <div className="flex flex-wrap gap-3">
             {deliveryAreas.map((area) =>
               area.href ? (
                 <Link
@@ -247,15 +270,13 @@ export default function RentPage() {
                   href={area.href}
                   className="inline-flex items-center gap-2 bg-brand-navy text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-navy-light transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-brand-gold" />
                   {area.label}
                 </Link>
               ) : (
                 <span
                   key={area.label}
-                  className="inline-flex items-center gap-2 bg-brand-cream border-2 border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
+                  className="inline-flex items-center gap-2 bg-brand-cream border border-brand-navy/10 px-4 py-2 rounded-full text-sm font-semibold text-brand-navy"
                 >
-                  <MapPin className="w-4 h-4 text-brand-gold" />
                   {area.label}
                 </span>
               )
@@ -267,12 +288,11 @@ export default function RentPage() {
       {/* FAQ */}
       <section className="section-padding bg-brand-cream">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">GOOD TO KNOW</div>
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy">
-              Claw machine rental questions
-            </h2>
-          </div>
+          <SectionHeading
+            label="Good to know"
+            title="Claw machine rental questions"
+            className="mb-10"
+          />
           <div className="space-y-4">
             {faqs.map((faq) => (
               <div key={faq.q} className="card-fun p-6 bg-white">
@@ -285,26 +305,22 @@ export default function RentPage() {
       </section>
 
       {/* Booking form */}
-      <section id="book" className="section-padding bg-brand-navy relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.07] pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(#FDB515 1.5px, transparent 1.5px)',
-            backgroundSize: '40px 40px',
-          }}
-        />
+      <section id="book" className="section-padding bg-brand-navy">
         <div className="max-w-6xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">BOOK NOW</div>
-              <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Let&apos;s make your event{' '}
-                <span className="text-brand-gold">unforgettable</span>
-              </h2>
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                Tell us your date and package, and we&apos;ll confirm availability within
-                24 hours. Dates fill up fast on weekends — reach out early.
-              </p>
+              <SectionHeading
+                tone="dark"
+                label="Book now"
+                title={
+                  <>
+                    Let&apos;s get your date{' '}
+                    <span className="text-brand-gold">on the books</span>
+                  </>
+                }
+                lede="Tell us your date and package, and we'll confirm availability within 24 hours. Weekend dates fill up fast — reach out early."
+                className="mb-8"
+              />
               <ul className="space-y-3">
                 {[
                   'Serving the San Francisco Bay Area & San Diego',
@@ -313,7 +329,6 @@ export default function RentPage() {
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-white/80">
                     <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-brand-navy" />
                     </span>
                     {point}
                   </li>

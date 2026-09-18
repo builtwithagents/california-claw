@@ -1,37 +1,67 @@
-import { Gift, Truck, Sparkles, PartyPopper } from 'lucide-react'
+import Image from 'next/image'
+import prizePineapple from '@/public/prize-pineapple-plush.jpg'
+import SectionHeading from '@/components/SectionHeading'
 
 const included = [
-  { icon: Gift, title: 'Unlimited plushie prizes', description: 'Every play wins — we keep it stocked the whole time.' },
-  { icon: Truck, title: 'Delivery & setup', description: 'We bring it, plug it in, and take it away after.' },
-  { icon: Sparkles, title: 'Free-play mode', description: 'No coins needed. Guests just walk up and grab.' },
-  { icon: PartyPopper, title: 'A guaranteed crowd-pleaser', description: 'The photo-op and centerpiece your event needs.' },
+  {
+    title: 'Unlimited plushie prizes',
+    description: 'Every play wins — we keep the cabinet stocked for the whole booking.',
+  },
+  {
+    title: 'Delivery & setup',
+    description: 'We bring it, plug it in, and haul it away after. You never touch the machine.',
+  },
+  {
+    title: 'Free-play mode',
+    description: 'No coins, no card reader. Guests walk up, grab, and go.',
+  },
+  {
+    title: 'A photo-op that runs itself',
+    description: 'The machine pulls a line on its own — no host or attendant needed.',
+  },
 ]
 
 export default function RentalIncluded() {
   return (
-    <section className="section-padding bg-brand-cream relative overflow-hidden">
-      <div className="absolute inset-0 bg-confetti opacity-[0.08] pointer-events-none" />
-      <div className="max-w-7xl mx-auto relative">
-        <div className="text-center mb-14">
-          <div className="sticker text-xs px-4 py-1.5 mb-4 -rotate-1">EVERY RENTAL INCLUDES</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy mb-4">
-            Everything for one flat price
-          </h2>
-        </div>
+    <section className="section-padding bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-[1fr_minmax(0,340px)] gap-10 lg:gap-16 items-center">
+          {/* Left: what the flat price covers */}
+          <div>
+            <SectionHeading
+              label="Every rental includes"
+              title="Everything for one flat price"
+              className="mb-8"
+            />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {included.map((item) => {
-            const Icon = item.icon
-            return (
-              <div key={item.title} className="card-fun p-6">
-                <div className="bg-brand-gold/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-brand-navy" />
-                </div>
-                <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{item.title}</h3>
-                <p className="text-brand-navy/60 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            )
-          })}
+            <ul className="divide-y divide-brand-navy/10 border-y border-brand-navy/10">
+              {included.map((item) => (
+                <li key={item.title} className="py-6">
+                  <h3 className="font-display text-lg font-bold text-brand-navy mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-brand-navy/60 leading-relaxed">{item.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: an actual prize out of an actual machine */}
+          <figure className="relative mx-auto lg:mx-0 max-w-[340px]">
+            <div className="photo-frame aspect-[3/4]">
+              <Image
+                src={prizePineapple}
+                alt="A hand holding a smiling pineapple plushie won from a California Claw machine, with rows of boba-cup plushies behind it"
+                fill
+                sizes="(max-width: 1024px) 340px, 340px"
+                placeholder="blur"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="absolute bottom-4 left-4 sticker bg-brand-gold/95 px-3.5 py-1.5 text-xs">
+              Unlimited grabs, start to finish
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
