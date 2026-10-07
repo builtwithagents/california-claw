@@ -21,7 +21,7 @@ export const rentalCities: RentalCity[] = [
     region: 'the San Francisco Bay Area',
     heroImage: '/rental-hero-san-francisco.jpg',
     metaDescription:
-      'Rent a claw machine in San Francisco for your party, wedding, or corporate event. Delivery and setup across the Mission, SoMa, the Marina, and beyond. Unlimited plushie prizes, from $200.',
+      'Rent a claw machine in San Francisco for your party, wedding, or corporate event. Delivery and setup across the Mission, SoMa, the Marina, and beyond. Unlimited plushie prizes included.',
     heroSub:
       'A real claw machine, stocked with unlimited plushie prizes and set to free-play — delivered and set up anywhere in San Francisco, from a SoMa office party to a wedding in the Presidio.',
     intro:
@@ -48,7 +48,7 @@ export const rentalCities: RentalCity[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine in San Francisco?',
-        a: 'Our San Francisco event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours — each with unlimited plushie prizes, delivery, and setup included. Longer events or multiple machines are quoted custom.',
+        a: 'Every San Francisco rental includes unlimited plushie prizes, delivery, and setup. Send us your date, venue, and event length and we’ll get you a quote within 24 hours.',
       },
       {
         q: 'Do you deliver to my San Francisco neighborhood or venue?',
@@ -70,7 +70,7 @@ export const rentalCities: RentalCity[] = [
     region: 'the San Diego area',
     heroImage: '/rental-hero-san-diego.jpg',
     metaDescription:
-      'Rent a claw machine in San Diego for your party, wedding, or event. Delivery and setup across Pacific Beach, North Park, La Jolla, and beyond. Unlimited plushie prizes, from $200.',
+      'Rent a claw machine in San Diego for your party, wedding, or event. Delivery and setup across Pacific Beach, North Park, La Jolla, and beyond. Unlimited plushie prizes included.',
     heroSub:
       'A real claw machine, stocked with unlimited plushie prizes and set to free-play — delivered and set up anywhere in San Diego, from a Pacific Beach backyard bash to a La Jolla wedding.',
     intro:
@@ -97,7 +97,7 @@ export const rentalCities: RentalCity[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine in San Diego?',
-        a: 'San Diego event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours, each including unlimited plushie prizes, delivery, and setup. Longer events or multiple machines get a custom quote.',
+        a: 'Every San Diego rental includes unlimited plushie prizes, delivery, and setup. Send us your date, venue, and event length and we’ll get you a quote within 24 hours.',
       },
       {
         q: 'Do you deliver across San Diego County?',

@@ -38,27 +38,27 @@ export const posts: Post[] = [
     publishedAt: '2026-06-15',
     updatedAt: '2026-06-15',
     metaDescription:
-      'Claw machine rental pricing explained: what a 1, 2, 3, 4, or 6-hour rental costs, what\'s included, common hidden fees to watch for, and how to pick the right package for your event.',
+      'Claw machine rental pricing explained: what affects the cost of a 1 to 6-hour rental, what\'s included, common hidden fees to watch for, and how to pick the right package for your event.',
     content: [
       {
         type: 'p',
-        text: "If you're planning an event and searching \"how much to rent a claw machine,\" you want a number, not a sales pitch. So here it is: our packages run $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours — flat rate, no surprises. Here's exactly what that gets you, and how to think about which package fits your event.",
+        text: "If you're planning an event and searching \"how much to rent a claw machine,\" you want a number, not a sales pitch. So here it is: rental pricing mostly comes down to how long you need the machine, how many machines you want, and what's actually included. We quote every event at one flat price with no surprises. Here's what goes into that number, what to watch for in other quotes, and how to think about which package fits your event.",
       },
-      { type: 'h2', text: 'California Claw pricing at a glance' },
+      { type: 'h2', text: 'Our rental packages at a glance' },
       {
         type: 'list',
         items: [
-          '1 hour — $200. A quick, high-energy activation for a shorter event or a busy happy hour.',
-          '2 hours — $350. Our most-booked package, and the sweet spot for most parties.',
-          '3 hours — $475. Keeps guests entertained for the full length of a longer event.',
-          '4 hours — $575. For a longer reception or an all-afternoon celebration.',
-          '6 hours — $700. Our wedding and corporate-event favorite — covers cocktail hour through the reception, or a full workday.',
+          '1 hour — a quick, high-energy activation for a shorter event or a busy happy hour.',
+          '2 hours — our most-booked package, and the sweet spot for most parties.',
+          '3 hours — keeps guests entertained for the full length of a longer event.',
+          '4 hours — for a longer reception or an all-afternoon celebration.',
+          '6 hours — our wedding and corporate-event favorite — covers cocktail hour through the reception, or a full workday.',
           'Beyond 6 hours, multiple machines, or a compact mini machine — custom quote.',
         ],
       },
       {
         type: 'p',
-        text: "Every tier is a flat price. There's no per-play charge, no separate delivery fee, and no \"prize refill\" surcharge tacked on at the end.",
+        text: "Every package is quoted at one flat price. There's no per-play charge, no separate delivery fee, and no \"prize refill\" surcharge tacked on at the end.",
       },
       { type: 'h2', text: "What's included in every rental" },
       {
@@ -79,7 +79,7 @@ export const posts: Post[] = [
         type: 'list',
         items: [
           'Coin or token fees — some rentals are coin-operated by default, meaning guests pay per play unless you buy a "free-play" upgrade.',
-          'Prize caps — many competitors include around 25 starter prizes, then charge roughly $150 for each additional batch of 25. Ours are unlimited, restocked all event long, at no extra charge.',
+          'Prize caps — many competitors include around 25 starter prizes, then charge for each additional batch of refills. Ours are unlimited, restocked all event long, at no extra charge.',
           'Delivery fees based on distance — often not disclosed until the invoice.',
           'Setup/breakdown labor charged separately from the rental itself.',
         ],
@@ -87,7 +87,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Our packages fold all of this into one number up front, so the price you see is the price you pay.',
-        cta: { label: 'See current pricing', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Get a quote', href: '/rent-a-claw-machine#book' },
       },
       { type: 'h2', text: 'How to pick the right package for your event' },
       {
@@ -104,8 +104,8 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          'Second machine — half the price of your booked tier (for example, +$350 on a 6-hour booking). Worth it once you\'re past about 150 guests and one machine starts to bottleneck.',
-          'Extended hours — $45/hour beyond the 6-hour package, if your event runs long.',
+          'Second machine — worth it once you\'re past about 150 guests and one machine starts to bottleneck.',
+          'Extended hours — available beyond the 6-hour package, if your event runs long.',
         ],
       },
       { type: 'h2', text: 'A few things that can affect your quote' },
@@ -121,7 +121,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'Is a claw machine rental actually worth it?' },
       {
         type: 'p',
-        text: "Compare it to the other ways people fill the same budget line — a photo booth, a caricature artist, a candy bar — and a claw machine holds up well. It's interactive rather than passive, it works for every age at the event, and the prize itself doubles as a favor guests take home. At $350 for two hours, the per-guest cost for a 50-person party works out to about $7, and that's before you factor in that most guests play more than once.",
+        text: "Compare it to the other ways people fill the same budget line — a photo booth, a caricature artist, a candy bar — and a claw machine holds up well. It's interactive rather than passive, it works for every age at the event, and the prize itself doubles as a favor guests take home. Spread across a 50-person party, the per-guest cost usually compares well with other entertainment, and that's before you factor in that most guests play more than once.",
       },
       { type: 'h2', text: 'How claw machine rental pricing compares' },
       {
@@ -155,7 +155,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine?',
-        a: 'Our packages are flat-rate: $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours. Every tier includes unlimited plushie prizes, delivery, setup, and pickup. Events longer than six hours, multiple machines, or a compact mini machine are quoted custom.',
+        a: 'It depends mainly on how long you need the machine and how many machines you want. We offer packages from one to six hours, each quoted at one flat price that includes unlimited plushie prizes, delivery, setup, and pickup. Send us your date and event details and we’ll get you an exact quote within 24 hours.',
       },
       {
         q: 'Do I need to pay a deposit to book?',
@@ -171,11 +171,11 @@ export const posts: Post[] = [
       },
       {
         q: 'What if my event runs longer than planned?',
-        a: 'Extended hours are available at $45 per hour beyond the six-hour package. Let our team know during the event and we can typically accommodate it on the spot.',
+        a: 'Extended hours are available beyond the six-hour package. Let our team know during the event and we can typically accommodate it on the spot.',
       },
       {
         q: 'Can I add a second machine?',
-        a: "Yes — a second machine is half the price of your booked tier (for example, +$350 on a six-hour booking). It's a popular add-on for events over 150 guests.",
+        a: "Yes — it's a popular add-on for events over 150 guests.",
       },
       {
         q: 'Do guests really get unlimited plays and prizes?',
@@ -369,7 +369,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What a rental includes' },
       {
         type: 'p',
-        text: "Our packages are flat-rate: $200 for one hour, $350 for two hours, $475 for three, $575 for four, and $700 for six — the [full pricing breakdown](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers what each tier includes. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 6-hour package, which covers cocktail hour through the reception, since unlimited prizes and a flat price mean there's nothing to negotiate mid-event.",
+        text: "Packages run from one to six hours at a flat price — the [pricing guide](/blog/how-much-does-it-cost-to-rent-a-claw-machine) covers what goes into a quote. Every package includes unlimited plushie prizes, delivery, setup, and pickup — your venue coordinator never has to manage the machine. Most weddings land on the 6-hour package, which covers cocktail hour through the reception, since unlimited prizes and a flat price mean there's nothing to negotiate mid-event.",
       },
       { type: 'h2', text: 'Setup details your venue will ask about' },
       {
@@ -409,7 +409,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'How much does it cost to add a claw machine to a wedding?',
-        a: 'Our packages are flat-rate: $200 for one hour up to $700 for six hours, which is our most-booked wedding option since it covers cocktail hour through the reception. Every tier includes unlimited plushie prizes, delivery, setup, and pickup.',
+        a: 'Packages run from one to six hours at a flat price, and six hours is our most-booked wedding option since it covers cocktail hour through the reception. Every package includes unlimited plushie prizes, delivery, setup, and pickup.',
       },
       {
         q: 'Does someone need to staff or supervise it during the wedding?',
@@ -429,7 +429,7 @@ export const posts: Post[] = [
       },
       {
         q: 'Can we extend the rental if the reception runs long?',
-        a: 'Yes — extended hours are $45 per hour beyond your booked package. Flagging this possibility with us ahead of time makes it a quick call on the day rather than a scramble.',
+        a: 'Yes — extended hours are available beyond your booked package. Flagging this possibility with us ahead of time makes it a quick call on the day rather than a scramble.',
       },
       {
         q: 'What does our venue need to prepare?',
@@ -476,10 +476,10 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          "1 hour ($200): a good fit for a shorter kids' party or a quick backyard gathering.",
-          '2 hours ($350): our most-booked package, and the sweet spot for a typical birthday party.',
-          '3 hours ($475) or 4 hours ($575): best for an all-afternoon or all-evening bash where you want the machine running the whole time.',
-          '6 hours ($700): for a large blowout party or a rental shared across multiple back-to-back celebrations in one day.',
+          "1 hour: a good fit for a shorter kids' party or a quick backyard gathering.",
+          '2 hours: our most-booked package, and the sweet spot for a typical birthday party.',
+          '3 or 4 hours: best for an all-afternoon or all-evening bash where you want the machine running the whole time.',
+          '6 hours: for a large blowout party or a rental shared across multiple back-to-back celebrations in one day.',
         ],
       },
       { type: 'h2', text: 'Backyard, home, or venue setups' },
@@ -510,7 +510,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Ready to book the machine for your next party?',
-        cta: { label: 'See pricing and packages', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Book your event', href: '/rent-a-claw-machine#book' },
       },
     ],
     faqs: [
@@ -520,7 +520,7 @@ export const posts: Post[] = [
       },
       {
         q: 'How much does a birthday party rental cost?',
-        a: 'Packages start at $200 for one hour and go up to $700 for six hours ($350 for two hours is our most-booked option for a typical birthday party). Every tier includes unlimited prizes, delivery, setup, and pickup.',
+        a: 'Packages run from one to six hours at a flat price, and two hours is our most-booked option for a typical birthday party. Send us your date for an exact quote. Every package includes unlimited prizes, delivery, setup, and pickup.',
       },
       {
         q: 'Do we need to supervise the machine during the party?',
@@ -594,10 +594,10 @@ export const posts: Post[] = [
       {
         type: 'list',
         items: [
-          '1 hour ($200): a quick energy boost for a Friday happy hour or a short lull in the day.',
-          '2 hours ($350): the standard choice for a holiday party or team celebration.',
-          '3 hours ($475) or 4 hours ($575): best for a larger company event that runs most of the afternoon.',
-          '6 hours ($700): our most-booked option for an all-day open house, offsite, or company-wide event.',
+          '1 hour: a quick energy boost for a Friday happy hour or a short lull in the day.',
+          '2 hours: the standard choice for a holiday party or team celebration.',
+          '3 or 4 hours: best for a larger company event that runs most of the afternoon.',
+          '6 hours: our most-booked option for an all-day open house, offsite, or company-wide event.',
         ],
       },
       { type: 'h2', text: 'What the space needs to provide' },
@@ -641,7 +641,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'How much does it cost to rent a claw machine for an office event?',
-        a: 'Packages range from $200 for one hour to $700 for six hours, which is our most-booked option for an all-day open house or company-wide event. Every tier includes unlimited plushie prizes, delivery, setup, and pickup.',
+        a: 'Packages run from one to six hours at a flat price, and six hours is our most-booked option for an all-day open house or company-wide event. Every package includes unlimited plushie prizes, delivery, setup, and pickup.',
       },
       {
         q: 'Is this the same as your free machine program?',
@@ -657,7 +657,7 @@ export const posts: Post[] = [
       },
       {
         q: 'Can we book it for a multi-day company event?',
-        a: "Our standard packages run up to six hours in a single day, with extended hours available at $45/hour beyond that. For a multi-day event, reach out and we'll put together a custom quote.",
+        a: "Our standard packages run up to six hours in a single day, with extended hours available beyond that. For a multi-day event, reach out and we'll put together a custom quote.",
       },
       {
         q: 'Does someone need to staff the machine during our event?',
@@ -669,7 +669,7 @@ export const posts: Post[] = [
       },
       {
         q: 'Can we add a second machine for a larger company event?',
-        a: 'Yes — a second machine is half the price of your booked tier, which is worth considering for company-wide events or offices spread across multiple floors.',
+        a: 'Yes — a second machine is worth considering for company-wide events or offices spread across multiple floors.',
       },
     ],
   },
@@ -756,7 +756,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Tell us your date, city, and rough guest count — we confirm availability within 24 hours.',
-        cta: { label: 'Check pricing and book', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Check availability', href: '/rent-a-claw-machine#book' },
       },
     ],
     faqs: [
