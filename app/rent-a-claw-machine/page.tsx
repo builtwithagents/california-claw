@@ -112,14 +112,14 @@ export default function RentPage() {
         </div>
 
         {/* A real grab from a real booking */}
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <figure className="relative">
-            <div className="photo-frame aspect-[16/10] sm:aspect-[16/9]">
+            <div className="photo-frame aspect-[3/2]">
               <Image
                 src={eventWinners}
                 alt="Three guests at an event holding plushies they won from a California Claw machine — two pink bunnies and a Pikachu"
                 fill
-                sizes="(max-width: 1024px) 100vw, 960px"
+                sizes="(max-width: 768px) 100vw, 704px"
                 placeholder="blur"
                 className="object-cover"
                 priority
