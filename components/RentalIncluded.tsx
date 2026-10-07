@@ -24,7 +24,7 @@ const included = [
 export default function RentalIncluded() {
   return (
     <section className="section-padding bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_minmax(0,340px)] gap-10 lg:gap-16 items-center">
           {/* Left: what every rental covers */}
           <div>

@@ -99,9 +99,52 @@ export default async function RentalCityPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Booking form */}
+      <section id="book" className="section-padding bg-brand-navy">
+        <div className="max-w-6xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <SectionHeading
+                tone="dark"
+                label="Book now"
+                title={
+                  <>
+                    Book your {city.city} <span className="text-brand-gold">claw machine</span>
+                  </>
+                }
+                lede={`Tell us your date and event details, and we'll confirm availability within 24 hours. ${city.city} dates fill up fast on weekends — reach out early.`}
+                className="mb-8"
+              />
+              <ul className="space-y-3">
+                {[
+                  `Delivered & set up anywhere in ${city.city}`,
+                  'Unlimited plushie prizes included',
+                  'Indoor or outdoor setups',
+                ].map((point) => (
+                  <li key={point} className="flex items-center gap-3 text-white/80">
+                    <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-white/60 text-sm">
+                Looking somewhere else?{' '}
+                <Link href="/rent-a-claw-machine" className="text-brand-gold font-semibold underline underline-offset-4">
+                  See all rental areas
+                </Link>
+                .
+              </p>
+            </div>
+
+            <RequestForm defaultType="event" defaultCity={city.city} />
+          </div>
+        </div>
+      </section>
+
       {/* Local intro */}
       <section className="section-padding bg-brand-cream">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading
             label={`${city.city} events`}
             title={
@@ -111,7 +154,7 @@ export default async function RentalCityPage({ params }: Props) {
             }
             className="mb-6"
           />
-          <p className="text-lg text-brand-navy/70 leading-relaxed">{city.intro}</p>
+          <p className="text-lg text-brand-navy/70 leading-relaxed max-w-3xl">{city.intro}</p>
         </div>
       </section>
 
@@ -120,7 +163,7 @@ export default async function RentalCityPage({ params }: Props) {
 
       {/* Event types */}
       <section className="section-padding bg-brand-cream">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading
             label="Great for"
             title={`${city.city} events we love`}
@@ -250,13 +293,13 @@ export default async function RentalCityPage({ params }: Props) {
 
       {/* FAQ */}
       <section className="section-padding bg-brand-cream">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading
             label="Good to know"
             title={`Renting a claw machine in ${city.city}`}
             className="mb-10"
           />
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {city.faqs.map((faq) => (
               <div key={faq.q} className="card-fun p-6 bg-white">
                 <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{faq.q}</h3>
@@ -267,48 +310,6 @@ export default async function RentalCityPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Booking form */}
-      <section id="book" className="section-padding bg-brand-navy">
-        <div className="max-w-6xl mx-auto relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <SectionHeading
-                tone="dark"
-                label="Book now"
-                title={
-                  <>
-                    Book your {city.city} <span className="text-brand-gold">claw machine</span>
-                  </>
-                }
-                lede={`Tell us your date and event details, and we'll confirm availability within 24 hours. ${city.city} dates fill up fast on weekends — reach out early.`}
-                className="mb-8"
-              />
-              <ul className="space-y-3">
-                {[
-                  `Delivered & set up anywhere in ${city.city}`,
-                  'Unlimited plushie prizes included',
-                  'Indoor or outdoor setups',
-                ].map((point) => (
-                  <li key={point} className="flex items-center gap-3 text-white/80">
-                    <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 text-white/60 text-sm">
-                Looking somewhere else?{' '}
-                <Link href="/rent-a-claw-machine" className="text-brand-gold font-semibold underline underline-offset-4">
-                  See all rental areas
-                </Link>
-                .
-              </p>
-            </div>
-
-            <RequestForm defaultType="event" defaultCity={city.city} />
-          </div>
-        </div>
-      </section>
     </>
   )
 }

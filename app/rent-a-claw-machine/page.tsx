@@ -132,12 +132,49 @@ export default function RentPage() {
         </div>
       </section>
 
+      {/* Booking form */}
+      <section id="book" className="section-padding bg-brand-navy">
+        <div className="max-w-6xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <SectionHeading
+                tone="dark"
+                label="Book now"
+                title={
+                  <>
+                    Let&apos;s get your date{' '}
+                    <span className="text-brand-gold">on the books</span>
+                  </>
+                }
+                lede="Tell us your date and event details, and we'll confirm availability within 24 hours. Weekend dates fill up fast — reach out early."
+                className="mb-8"
+              />
+              <ul className="space-y-3">
+                {[
+                  'Serving the San Francisco Bay Area & San Diego',
+                  'Indoor or outdoor setups',
+                  'Flexible timing to fit your schedule',
+                ].map((point) => (
+                  <li key={point} className="flex items-center gap-3 text-white/80">
+                    <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <RequestForm defaultType="event" />
+          </div>
+        </div>
+      </section>
+
       {/* What's included (shared) */}
       <RentalIncluded />
 
       {/* Event types */}
       <section className="section-padding bg-brand-cream">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading
             label="Great for"
             title={
@@ -276,13 +313,13 @@ export default function RentPage() {
 
       {/* FAQ */}
       <section className="section-padding bg-brand-cream">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading
             label="Good to know"
             title="Claw machine rental questions"
             className="mb-10"
           />
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {faqs.map((faq) => (
               <div key={faq.q} className="card-fun p-6 bg-white">
                 <h3 className="font-display text-lg font-bold text-brand-navy mb-2">{faq.q}</h3>
@@ -293,42 +330,6 @@ export default function RentPage() {
         </div>
       </section>
 
-      {/* Booking form */}
-      <section id="book" className="section-padding bg-brand-navy">
-        <div className="max-w-6xl mx-auto relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <SectionHeading
-                tone="dark"
-                label="Book now"
-                title={
-                  <>
-                    Let&apos;s get your date{' '}
-                    <span className="text-brand-gold">on the books</span>
-                  </>
-                }
-                lede="Tell us your date and event details, and we'll confirm availability within 24 hours. Weekend dates fill up fast — reach out early."
-                className="mb-8"
-              />
-              <ul className="space-y-3">
-                {[
-                  'Serving the San Francisco Bay Area & San Diego',
-                  'Indoor or outdoor setups',
-                  'Flexible timing to fit your schedule',
-                ].map((point) => (
-                  <li key={point} className="flex items-center gap-3 text-white/80">
-                    <span className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center flex-shrink-0">
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <RequestForm defaultType="event" />
-          </div>
-        </div>
-      </section>
     </>
   )
 }
