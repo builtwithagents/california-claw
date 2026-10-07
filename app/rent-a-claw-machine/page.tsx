@@ -214,7 +214,7 @@ export default function RentPage() {
       </section>
 
       {/* Planning guides */}
-      <RelatedGuides limit={4} />
+      <RelatedGuides limit={4} variant="list" />
 
       {/* Cross-link: the other side of the business */}
       <section className="bg-white pb-12">
