@@ -4,8 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { rentalCities, getRentalCityBySlug } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
-import RentalPricing from '@/components/RentalPricing'
-import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
@@ -37,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const steps = [
-  { title: 'Book your date', description: 'Tell us your event date, package, and venue. We confirm availability within 24 hours.' },
+  { title: 'Book your date', description: 'Tell us your event date, length, and venue. We confirm availability within 24 hours.' },
   { title: 'We deliver & set up', description: 'Our team brings the machine, sets it to free-play, and stocks it with prizes.' },
   { title: 'Enjoy the fun', description: 'Guests play all event long. When it wraps, we come back and pack it away.' },
 ]
@@ -82,9 +80,6 @@ export default async function RentalCityPage({ params }: Props) {
                 <a href="#book" className="btn-gold px-8 py-4 text-lg">
                   Book Your Event
                 </a>
-                <a href="#pricing" className="btn-outline px-8 py-4 text-lg">
-                  See Pricing
-                </a>
               </div>
             </div>
             <div className="max-w-md mx-auto lg:mx-0 w-full">
@@ -119,12 +114,6 @@ export default async function RentalCityPage({ params }: Props) {
           <p className="text-lg text-brand-navy/70 leading-relaxed">{city.intro}</p>
         </div>
       </section>
-
-      {/* Pricing (shared) */}
-      <RentalPricing cityLabel={city.city} />
-
-      {/* Add-ons (shared) */}
-      <RentalAddOns />
 
       {/* What's included (shared) */}
       <RentalIncluded />
@@ -291,7 +280,7 @@ export default async function RentalCityPage({ params }: Props) {
                     Book your {city.city} <span className="text-brand-gold">claw machine</span>
                   </>
                 }
-                lede={`Tell us your date and package, and we'll confirm availability within 24 hours. ${city.city} dates fill up fast on weekends — reach out early.`}
+                lede={`Tell us your date and event details, and we'll confirm availability within 24 hours. ${city.city} dates fill up fast on weekends — reach out early.`}
                 className="mb-8"
               />
               <ul className="space-y-3">

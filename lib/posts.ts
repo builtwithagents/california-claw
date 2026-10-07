@@ -87,7 +87,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Our packages fold all of this into one number up front, so the price you see is the price you pay.',
-        cta: { label: 'See current pricing', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Get a quote', href: '/rent-a-claw-machine#book' },
       },
       { type: 'h2', text: 'How to pick the right package for your event' },
       {
@@ -510,7 +510,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Ready to book the machine for your next party?',
-        cta: { label: 'See pricing and packages', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Book your event', href: '/rent-a-claw-machine#book' },
       },
     ],
     faqs: [
@@ -756,7 +756,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Tell us your date, city, and rough guest count — we confirm availability within 24 hours.',
-        cta: { label: 'Check pricing and book', href: '/rent-a-claw-machine#pricing' },
+        cta: { label: 'Check availability', href: '/rent-a-claw-machine#book' },
       },
     ],
     faqs: [

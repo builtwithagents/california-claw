@@ -4,8 +4,6 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { rentalCities } from '@/lib/rentalCities'
 import { getOccasionHref } from '@/lib/occasionLinks'
-import RentalPricing from '@/components/RentalPricing'
-import RentalAddOns from '@/components/RentalAddOns'
 import RentalIncluded from '@/components/RentalIncluded'
 import RelatedGuides from '@/components/RelatedGuides'
 import RequestForm from '@/components/RequestForm'
@@ -14,14 +12,14 @@ import joyCatcher from '@/public/joy-catcher.jpg'
 import eventWinners from '@/public/event-winners-plushies.jpg'
 
 export const metadata: Metadata = {
-  title: 'Rent a Claw Machine — Event Rental Prices & Packages | California Claw',
+  title: 'Rent a Claw Machine for Your Event | California Claw',
   description:
-    'Rent a claw machine for your next party, wedding, or corporate event. Simple flat pricing from $200 with unlimited plushie prizes, delivery, and setup across the San Francisco Bay Area and San Diego.',
+    'Rent a claw machine for your next party, wedding, or corporate event. Unlimited plushie prizes, delivery, and setup across the San Francisco Bay Area and San Diego.',
   alternates: { canonical: '/rent-a-claw-machine' },
   openGraph: {
     title: 'Rent a Claw Machine for Your Event',
     description:
-      'The hit of any party — a real claw machine stocked with unlimited plushie prizes. Simple flat pricing, delivery and setup included.',
+      'The hit of any party — a real claw machine stocked with unlimited plushie prizes. Delivery and setup included.',
   },
 }
 
@@ -58,7 +56,7 @@ const faqs = [
   },
   {
     q: 'How much does it cost to rent a claw machine?',
-    a: 'Our event packages are $200 for one hour, $350 for two hours, $475 for three hours, $575 for four hours, and $700 for six hours. Every package includes unlimited plushie prizes, delivery, and setup — no per-play or per-prize charges. Events over six hours, multiple machines, or a compact mini machine are available on a custom quote.',
+    a: 'Every rental includes unlimited plushie prizes, delivery, and setup — no per-play or per-prize charges. Tell us your date, location, and event length, and we’ll send you a quote within 24 hours.',
   },
   {
     q: 'How far in advance should I book?',
@@ -66,7 +64,7 @@ const faqs = [
   },
   {
     q: 'Do guests have to pay to play, and do prizes cost extra?',
-    a: 'No. We set the machine to free-play, so your guests just walk up and grab. Unlimited plushie prizes are included in the flat price — there are no per-play or per-prize charges.',
+    a: 'No. We set the machine to free-play, so your guests just walk up and grab. Unlimited plushie prizes are included — there are no per-play or per-prize charges.',
   },
   {
     q: 'What kind of space do I need?',
@@ -110,9 +108,6 @@ export default function RentPage() {
             <a href="#book" className="btn-gold px-8 py-4 text-lg">
               Book Your Event
             </a>
-            <a href="#pricing" className="btn-outline px-8 py-4 text-lg">
-              See Pricing
-            </a>
           </div>
         </div>
 
@@ -136,12 +131,6 @@ export default function RentPage() {
           </figure>
         </div>
       </section>
-
-      {/* Pricing (shared) */}
-      <RentalPricing />
-
-      {/* Add-ons (shared) */}
-      <RentalAddOns />
 
       {/* What's included (shared) */}
       <RentalIncluded />
@@ -217,7 +206,7 @@ export default function RentPage() {
                 Find your <span className="highlight-gold">city</span>
               </>
             }
-            lede="Local delivery details, event ideas, and pricing for your area."
+            lede="Local delivery details and event ideas for your area."
             className="mb-10"
           />
           <div className="grid sm:grid-cols-2 gap-6">
@@ -318,7 +307,7 @@ export default function RentPage() {
                     <span className="text-brand-gold">on the books</span>
                   </>
                 }
-                lede="Tell us your date and package, and we'll confirm availability within 24 hours. Weekend dates fill up fast — reach out early."
+                lede="Tell us your date and event details, and we'll confirm availability within 24 hours. Weekend dates fill up fast — reach out early."
                 className="mb-8"
               />
               <ul className="space-y-3">

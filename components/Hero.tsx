@@ -17,7 +17,7 @@ const paths = [
     tag: 'For your event',
     title: 'Rent one for a party',
     points: ['From $200', 'Unlimited prizes', 'Delivery & setup included'],
-    cta: 'See rental pricing',
+    cta: 'See event rentals',
     href: '/rent-a-claw-machine',
     featured: false,
   },

@@ -26,11 +26,11 @@ export default function RentalIncluded() {
     <section className="section-padding bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_minmax(0,340px)] gap-10 lg:gap-16 items-center">
-          {/* Left: what the flat price covers */}
+          {/* Left: what every rental covers */}
           <div>
             <SectionHeading
               label="Every rental includes"
-              title="Everything for one flat price"
+              title="Everything you need, included"
               className="mb-8"
             />
 
