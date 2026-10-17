@@ -6,6 +6,14 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/ad-assets/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
