@@ -10,6 +10,8 @@ const files = [
   'sf_peninsula-4x5.mp4',
   'san_diego-9x16.mp4',
   'san_diego-4x5.mp4',
+  'sf_peninsula-cover.jpg',
+  'san_diego-cover.jpg',
 ]
 
 export default function AdAssetsPage() {
