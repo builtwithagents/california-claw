@@ -38,14 +38,14 @@ export default function ContactSection() {
                   key={d.label}
                   className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4 border-b border-brand-navy/10"
                 >
-                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/45 w-28 flex-shrink-0">
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/45 w-full sm:w-28 sm:flex-shrink-0">
                     {d.label}
                   </dt>
-                  <dd className="font-display text-lg font-bold text-brand-navy">
+                  <dd className="font-display text-lg font-bold text-brand-navy break-words min-w-0">
                     {d.href ? (
                       <a
                         href={d.href}
-                        className="underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
+                        className="inline-block py-1 underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
                       >
                         {d.value}
                       </a>

@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import RealPlacements from '@/components/RealPlacements'
+import VideoShowcase from '@/components/VideoShowcase'
 import Benefits from '@/components/Benefits'
 import HowItWorks from '@/components/HowItWorks'
 import ServiceAreas from '@/components/ServiceAreas'
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <RealPlacements />
+      <VideoShowcase />
       <Benefits />
       <HowItWorks />
       <ServiceAreas />

@@ -9,7 +9,7 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 
 const inputStyles =
-  'w-full px-4 py-3 rounded-2xl border border-brand-navy/15 bg-brand-cream/50 focus:border-brand-navy focus:bg-white outline-none transition-all text-sm text-brand-navy placeholder:text-brand-navy/30'
+  'w-full px-4 py-3 rounded-2xl border border-brand-navy/15 bg-brand-cream/50 focus:border-brand-navy focus:bg-white outline-none transition-all text-base sm:text-sm text-brand-navy placeholder:text-brand-navy/30'
 
 type RequestType = 'machine' | 'event'
 
@@ -120,7 +120,7 @@ export default function RequestForm({
   }
 
   return (
-    <div className="bg-white rounded-3xl border border-brand-navy/70 p-8">
+    <div className="bg-white rounded-3xl border border-brand-navy/70 p-5 sm:p-8">
       {success ? (
         <div className="flex flex-col items-center text-center py-8">
           <CheckCircle2 className="w-8 h-8 text-brand-gold-dark mb-4" />
@@ -171,7 +171,7 @@ export default function RequestForm({
                     onChange={() => setRequestType(option.value)}
                     className="w-4 h-4 accent-brand-navy flex-shrink-0"
                   />
-                  <span className="text-sm font-semibold text-brand-navy">{option.label}</span>
+                  <span className="text-sm font-semibold text-brand-navy leading-snug">{option.label}</span>
                 </label>
               ))}
             </div>
@@ -187,6 +187,7 @@ export default function RequestForm({
                 name="name"
                 type="text"
                 required
+                autoComplete="name"
                 placeholder="Jane Smith"
                 className={inputStyles}
               />
@@ -200,6 +201,8 @@ export default function RequestForm({
                 name="email"
                 type="email"
                 required
+                autoComplete="email"
+                inputMode="email"
                 placeholder="jane@email.com"
                 className={inputStyles}
               />
@@ -215,6 +218,7 @@ export default function RequestForm({
                 id="phone"
                 name="phone"
                 type="tel"
+                autoComplete="tel"
                 placeholder="(510) 555-0100"
                 className={inputStyles}
               />

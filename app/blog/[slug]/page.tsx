@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       <section className="bg-brand-cream border-b border-brand-navy/10">
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-12 sm:pb-16">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-brand-navy/60 hover:text-brand-navy text-sm font-semibold mb-6 transition-colors"
@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
             <span className="text-xs text-brand-navy/50">{formatDate(post.publishedAt)}</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy leading-tight text-balance">
             {post.title}
           </h1>
         </div>

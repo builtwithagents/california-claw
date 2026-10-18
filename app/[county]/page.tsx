@@ -8,6 +8,7 @@ import SectionHeading from '@/components/SectionHeading'
 import { getVenueGuide } from '@/lib/venueLinks'
 import ContactSection from '@/components/ContactSection'
 import RelatedGuides from '@/components/RelatedGuides'
+import VideoShowcase from '@/components/VideoShowcase'
 import joyCatcher from '@/public/joy-catcher.jpg'
 import machinePizzeria from '@/public/machine-pizzeria.jpg'
 import machineLobbyPalms from '@/public/machine-lobby-palms.jpg'
@@ -91,10 +92,10 @@ export default async function CountyPage({ params }: Props) {
 
       {/* Hero */}
       <section className="bg-brand-cream border-b border-brand-navy/10">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-14 sm:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Now serving {county.city}</span></p>
+              <p className="flex items-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Now serving {county.city}</span></p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-5 leading-[1.05]">
                 Free Claw Machines in <span className="highlight-gold">{county.name}</span>
               </h1>
@@ -136,6 +137,8 @@ export default async function CountyPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <VideoShowcase region={county.region === 'the San Diego area' ? 'sd' : 'bay'} />
 
       {/* Where we serve */}
       <section className="section-padding bg-white">
