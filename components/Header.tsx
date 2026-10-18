@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-11 h-11 rounded-xl overflow-hidden bg-white group-hover:animate-wiggle">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-white group-hover:animate-wiggle">
               <Image
                 src={logo}
                 alt="California Claw logo"
@@ -42,7 +42,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="font-display font-bold text-xl tracking-tight text-brand-navy">
+            <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-brand-navy">
               California <span className="text-brand-gold [-webkit-text-stroke:1px_#003262]">Claw</span>
             </span>
           </Link>
@@ -72,9 +72,10 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-brand-navy p-1"
+            className="md:hidden text-brand-navy -mr-2 w-11 h-11 flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -83,13 +84,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-brand-navy/5 shadow-lg">
-          <div className="px-4 py-4 space-y-3">
+        <div className="md:hidden bg-white border-t border-brand-navy/5 shadow-lg max-h-[calc(100dvh-4rem)] overflow-y-auto">
+          <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block text-brand-navy/70 hover:text-brand-navy py-2 text-sm font-semibold transition-colors"
+                className="block text-brand-navy/70 hover:text-brand-navy py-3 text-base font-semibold transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -98,14 +99,14 @@ export default function Header() {
             <div className="flex flex-col gap-2 mt-2">
               <Link
                 href="/rent-a-claw-machine"
-                className="btn-outline block px-5 py-3 text-sm text-center"
+                className="btn-outline block px-5 py-3.5 text-base text-center"
                 onClick={() => setMobileOpen(false)}
               >
                 Rent for an Event
               </Link>
               <a
                 href="/#contact"
-                className="btn-gold block px-5 py-3 text-sm text-center"
+                className="btn-gold block px-5 py-3.5 text-base text-center"
                 onClick={() => setMobileOpen(false)}
               >
                 Get a Free Machine

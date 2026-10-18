@@ -66,18 +66,18 @@ export default async function RentalCityPage({ params }: Props) {
 
       {/* Hero */}
       <section className="bg-brand-cream border-b border-brand-navy/10">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-14 sm:pb-20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div>
-              <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Claw machine rentals in {city.city}</span></p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
+              <p className="flex items-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Claw machine rentals in {city.city}</span></p>
+              <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
                 Rent a claw machine
                 <br />
                 in <span className="font-bold">{city.city}</span>.
               </h1>
               <p className="text-lg text-brand-navy/70 leading-relaxed mb-8 max-w-xl">{city.heroSub}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#book" className="btn-gold px-8 py-4 text-lg">
+                <a href="#book" className="btn-gold px-8 py-4 text-lg w-full sm:w-auto">
                   Book Your Event
                 </a>
               </div>

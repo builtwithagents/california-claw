@@ -92,27 +92,27 @@ export default function RentPage() {
 
       {/* Hero */}
       <section className="bg-brand-cream border-b border-brand-navy/10">
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-14 text-center">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-10 sm:pb-14 text-center">
           <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">Rentals across the SF Bay Area &amp; San Diego</span></p>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
+          <h1 className="text-[2.5rem] sm:text-6xl lg:text-7xl font-normal text-slate-900 leading-[1.05] mb-6 tracking-tight">
             Rent a claw machine
             <br />
             for your <span className="font-bold">event</span>.
           </h1>
-          <p className="text-xl text-brand-navy/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-brand-navy/70 leading-relaxed mb-8 max-w-2xl mx-auto">
             A real claw machine, stocked with unlimited plushie prizes, set to free-play.
             We deliver and set up across the San Francisco Bay Area and San Diego — you
             just enjoy the party.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#book" className="btn-gold px-8 py-4 text-lg">
+            <a href="#book" className="btn-gold px-8 py-4 text-lg w-full sm:w-auto">
               Book Your Event
             </a>
           </div>
         </div>
 
         {/* A real grab from a real booking */}
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 sm:pb-20">
           <figure className="relative">
             <div className="photo-frame aspect-[16/10] sm:aspect-[16/9]">
               <Image
@@ -211,13 +211,13 @@ export default function RentPage() {
           />
           <div className="grid sm:grid-cols-2 gap-6">
             {rentalCities.map((c) => (
-              <Link key={c.slug} href={`/rent-a-claw-machine/${c.slug}`} className="card-fun p-6 flex items-center gap-5 group">
-                <div className="relative w-28 h-28 flex-shrink-0 rounded-2xl overflow-hidden ring-1 ring-brand-navy/10">
+              <Link key={c.slug} href={`/rent-a-claw-machine/${c.slug}`} className="card-fun p-4 sm:p-6 flex items-center gap-4 sm:gap-5 group">
+                <div className="relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 rounded-2xl overflow-hidden ring-1 ring-brand-navy/10">
                   <Image
                     src={c.heroImage ?? joyCatcher}
                     alt={c.heroImage ? `${c.city}, California` : 'A California Claw machine stocked with plush prizes'}
                     fill
-                    sizes="112px"
+                    sizes="(max-width: 640px) 80px, 112px"
                     className="object-cover"
                   />
                 </div>
@@ -257,7 +257,7 @@ export default function RentPage() {
                 <Link
                   key={area.label}
                   href={area.href}
-                  className="inline-flex items-center gap-2 bg-brand-navy text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-navy-light transition-colors"
+                  className="inline-flex items-center gap-2 bg-brand-navy text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-navy-light transition-colors"
                 >
                   {area.label}
                 </Link>

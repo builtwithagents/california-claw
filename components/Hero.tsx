@@ -26,7 +26,7 @@ const paths = [
 export default function Hero() {
   return (
     <section className="bg-brand-cream border-b border-brand-navy/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-14 sm:pb-20">
         <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center mb-16">
           {/* Left: Copy */}
           <div className="max-w-xl">
@@ -37,7 +37,7 @@ export default function Hero() {
               </span>
             </p>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.05] mb-5 tracking-tight">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.05] mb-5 tracking-tight">
               A claw machine.
               <br />
               For <span className="highlight-gold">free</span>. Really.
@@ -88,7 +88,7 @@ export default function Hero() {
           {paths.map((path) => (
             <div
               key={path.title}
-              className={`rounded-2xl bg-white p-7 flex flex-col border transition-colors ${
+              className={`rounded-2xl bg-white p-6 sm:p-7 flex flex-col border transition-colors ${
                 path.featured
                   ? 'border-brand-navy/25'
                   : 'border-brand-navy/10 hover:border-brand-navy/25'
@@ -115,7 +115,7 @@ export default function Hero() {
 
               <Link
                 href={path.href}
-                className={`${path.featured ? 'btn-gold' : 'btn-outline'} mt-auto self-start px-6 py-3`}
+                className={`${path.featured ? 'btn-gold' : 'btn-outline'} mt-auto w-full sm:w-auto sm:self-start px-6 py-3.5`}
               >
                 {path.cta}
                 <ArrowRight className="w-4 h-4" />

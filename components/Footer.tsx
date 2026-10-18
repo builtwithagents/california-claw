@@ -50,13 +50,13 @@ export default function Footer() {
             <div className="space-y-2">
               <a
                 href="mailto:team@californiaclaw.com"
-                className="flex items-center gap-2 text-white/60 hover:text-brand-gold text-sm transition-colors"
+                className="flex items-center gap-2 py-1.5 text-white/60 hover:text-brand-gold text-sm transition-colors"
               >
                 team@californiaclaw.com
               </a>
               <a
                 href="tel:+15105064159"
-                className="flex items-center gap-2 text-white/60 hover:text-brand-gold text-sm transition-colors"
+                className="flex items-center gap-2 py-1.5 text-white/60 hover:text-brand-gold text-sm transition-colors"
               >
                 (510) 506-4159
               </a>
@@ -69,12 +69,12 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-display text-white font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-brand-gold text-sm transition-colors"
+                    className="inline-block py-1.5 text-white/60 hover:text-brand-gold text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -86,12 +86,12 @@ export default function Footer() {
           {/* Placement guides, by business type */}
           <div>
             <h3 className="font-display text-white font-bold mb-4">Free Placement</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {placementLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-brand-gold text-sm transition-colors"
+                    className="inline-block py-1.5 text-white/60 hover:text-brand-gold text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -103,12 +103,12 @@ export default function Footer() {
           {/* Service Areas */}
           <div>
             <h3 className="font-display text-white font-bold mb-4">Service Areas</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {counties.map((county) => (
                 <li key={county.slug}>
                   <Link
                     href={`/${county.slug}`}
-                    className="text-white/60 hover:text-brand-gold text-sm transition-colors"
+                    className="inline-block py-1.5 text-white/60 hover:text-brand-gold text-sm transition-colors"
                   >
                     {county.name}
                   </Link>
@@ -131,15 +131,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/40 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Coastal Vending Company DBA California Claw. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap justify-center">
             {legalLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-white/40 hover:text-white/70 text-sm transition-colors"
+                className="inline-block py-2 text-white/40 hover:text-white/70 text-sm transition-colors"
               >
                 {link.label}
               </Link>
