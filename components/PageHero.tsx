@@ -62,7 +62,12 @@ export default function PageHero({ title, lede, actions, meta, back, clip, photo
             <div className="justify-self-center lg:justify-self-end w-[220px] sm:w-[260px] lg:w-[280px] lg:mr-[10px]">
               <div className="photo-frame aspect-[9/16]">
                 {clip ? (
-                  <LoopVideo name={clip.name} label={clip.label} priority />
+                  <LoopVideo
+                    name={clip.name}
+                    label={clip.label}
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 280px"
+                    priority
+                  />
                 ) : (
                   photo && (
                     <Image

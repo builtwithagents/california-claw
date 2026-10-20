@@ -255,7 +255,7 @@ export default function RequestForm({
             {pending ? 'Sending...' : c.button}
           </button>
 
-          <p className="text-center text-xs text-brand-navy/40">{c.footer}</p>
+          <p className="text-center text-xs text-brand-navy/65">{c.footer}</p>
         </form>
       )}
     </div>

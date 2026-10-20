@@ -44,6 +44,7 @@ export default function Hero() {
               <LoopVideo
                 name="green-pizzeria"
                 label="A neon-green California Claw machine in a pizzeria, packed with plush prizes"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 280px, 310px"
                 priority
               />
             </div>

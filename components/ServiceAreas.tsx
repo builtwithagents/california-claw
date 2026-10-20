@@ -27,7 +27,7 @@ export default function ServiceAreas() {
                           {county.name}
                         </span>
                         <span className="text-sm text-brand-navy/55 ml-auto">{county.city}</span>
-                        <ArrowUpRight className="w-4 h-4 text-brand-navy/40 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
+                        <ArrowUpRight className="w-4 h-4 text-brand-navy/60 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
                       </Link>
                     </li>
                   ))}

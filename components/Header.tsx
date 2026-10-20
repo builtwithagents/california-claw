@@ -80,7 +80,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
           ? 'bg-white/95 backdrop-blur-md shadow-md shadow-brand-navy/5 border-b border-brand-navy/5'
-          : 'bg-transparent'
+          : 'bg-brand-navy'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,6 +91,8 @@ export default function Header() {
               <Image
                 src={logo}
                 alt="California Claw logo"
+                width={88}
+                height={88}
                 className="w-full h-full object-contain scale-[1.35]"
                 priority
               />
