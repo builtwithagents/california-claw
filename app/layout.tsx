@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Baloo_2 } from 'next/font/google'
+import { Figtree, Baloo_2 } from 'next/font/google'
 import './globals.css'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const figtree = Figtree({ subsets: ['latin'], variable: '--font-body' })
 const baloo = Baloo_2({ subsets: ['latin'], variable: '--font-baloo', weight: ['600', '700', '800'] })
 
 export const metadata: Metadata = {
@@ -66,8 +66,8 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
-      <body className="bg-brand-cream text-brand-navy font-sans">
+    <html lang="en" className={`${figtree.variable} ${baloo.variable}`}>
+      <body className="bg-white text-brand-navy font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

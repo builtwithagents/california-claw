@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import type { PostBlock } from '@/lib/posts'
 
 const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g
@@ -44,7 +44,7 @@ export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
             return (
               <h2
                 key={i}
-                className="font-display text-2xl sm:text-3xl font-extrabold text-brand-navy pt-4"
+                className="font-display text-3xl sm:text-4xl font-extrabold text-brand-navy leading-[1.08] pt-6"
               >
                 {block.text}
               </h2>
@@ -60,7 +60,7 @@ export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
               <ul key={i} className="space-y-3">
                 {block.items.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
+                    <span className="w-2.5 h-2.5 bg-brand-gold flex-shrink-0 mt-[0.6rem]" aria-hidden="true" />
                     <span className="text-lg text-brand-navy/75 leading-relaxed">
                       {withLinks(item)}
                     </span>
@@ -72,10 +72,10 @@ export default function PostBody({ blocks }: { blocks: PostBlock[] }) {
             return (
               <div
                 key={i}
-                className="card-fun bg-brand-cream p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
+                className="bg-brand-gold p-6 sm:p-8 my-4 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
               >
-                <p className="text-brand-navy font-semibold">{block.text}</p>
-                <Link href={block.cta.href} className="btn-gold px-6 py-3 flex-shrink-0 whitespace-nowrap">
+                <p className="font-display text-xl font-bold text-brand-navy leading-snug">{block.text}</p>
+                <Link href={block.cta.href} className="btn-navy self-start sm:self-auto px-6 py-3 flex-shrink-0 whitespace-nowrap">
                   {block.cta.label}
                   <ArrowRight className="w-4 h-4" />
                 </Link>

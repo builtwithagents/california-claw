@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import SectionHeading from '@/components/SectionHeading'
+import PageHero from '@/components/PageHero'
 import { ArrowRight } from 'lucide-react'
 import type { Post } from '@/lib/posts'
 import { getBusinessPosts, getEventPosts } from '@/lib/posts'
@@ -20,25 +21,29 @@ function formatDate(iso: string) {
   })
 }
 
-function PostCard({ post }: { post: Post }) {
+/** One post as a ruled row: meta line, display-face title, excerpt. */
+function PostRow({ post }: { post: Post }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="card-fun p-7 sm:p-8 block group">
-      <div className="flex flex-wrap items-center gap-3 mb-3">
-        <span className="text-xs font-bold uppercase tracking-wider text-brand-navy bg-brand-gold/20 px-3 py-1 rounded-full">
-          {post.category}
+    <li className="border-b-2 border-brand-navy/15">
+      <Link href={`/blog/${post.slug}`} className="group grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-3 py-7">
+        <div>
+          <p className="text-sm text-brand-navy/60 mb-2">
+            <span className="font-bold text-brand-navy">{post.category}</span>
+            <span aria-hidden="true"> · </span>
+            {post.readTime}
+            <span aria-hidden="true"> · </span>
+            {formatDate(post.publishedAt)}
+          </p>
+          <h3 className="font-display text-2xl sm:text-[1.7rem] font-extrabold text-brand-navy leading-tight mb-2 group-hover:text-brand-navy-light transition-colors">
+            {post.title}
+          </h3>
+          <p className="text-brand-navy/70 leading-relaxed max-w-2xl">{post.excerpt}</p>
+        </div>
+        <span className="hidden sm:flex self-center w-11 h-11 rounded-full border-2 border-brand-navy items-center justify-center text-brand-navy group-hover:bg-brand-gold group-hover:border-brand-gold transition-colors">
+          <ArrowRight className="w-5 h-5" />
         </span>
-        <span className="inline-flex items-center gap-1 text-xs text-brand-navy/50">
-          {post.readTime}
-        </span>
-        <span className="text-xs text-brand-navy/50">{formatDate(post.publishedAt)}</span>
-      </div>
-      <h2 className="font-display text-2xl font-extrabold text-brand-navy mb-2">{post.title}</h2>
-      <p className="text-brand-navy/60 leading-relaxed mb-4">{post.excerpt}</p>
-      <span className="inline-flex items-center gap-1 text-brand-navy font-semibold text-sm underline decoration-brand-gold decoration-2 underline-offset-4 group-hover:decoration-4 transition-all">
-        Read the article
-        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-      </span>
-    </Link>
+      </Link>
+    </li>
   )
 }
 
@@ -46,7 +51,6 @@ export default function BlogIndexPage() {
   const groups = [
     {
       key: 'Business Placement',
-      eyebrow: 'For your business',
       heading: 'Getting a free machine placed',
       blurb:
         'How free placement works, what a machine earns, and whether it fits your kind of space.',
@@ -54,7 +58,6 @@ export default function BlogIndexPage() {
     },
     {
       key: 'Rentals',
-      eyebrow: 'For your event',
       heading: 'Renting for a party or event',
       blurb: 'Pricing, planning, and setup for parties, weddings, offices, and trade shows.',
       posts: getEventPosts(),
@@ -63,36 +66,29 @@ export default function BlogIndexPage() {
 
   return (
     <>
-      <section className="bg-brand-cream border-b border-brand-navy/10">
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center">
-          <p className="flex items-center justify-center gap-3 mb-6"><span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" /><span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">FROM THE TEAM</span></p>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-5 leading-[1.05]">
-            The California Claw <span className="highlight-gold">Blog</span>
-          </h1>
-          <p className="text-lg text-brand-navy/70 max-w-xl mx-auto">
-            Guides on renting a claw machine for your event and placing one in your business —
-            straight answers, no fluff.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <>
+            The California Claw <span className="text-brand-gold">blog</span>.
+          </>
+        }
+        lede="Guides on renting a claw machine for your event and placing one in your business. Straight answers, no fluff."
+      />
 
       {groups.map((group, i) => (
         <section
           key={group.key}
           className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-brand-cream'}`}
         >
-          <div className="max-w-4xl mx-auto">
-            <SectionHeading
-              label={group.eyebrow}
-              title={group.heading}
-              lede={group.blurb}
-              className="mb-8"
-            />
-            <div className="grid gap-6">
-              {group.posts.map((post) => (
-                <PostCard key={post.slug} post={post} />
-              ))}
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+            <div className="lg:sticky lg:top-24">
+              <SectionHeading title={`${group.heading}.`} lede={group.blurb} />
             </div>
+            <ul className="border-t-4 border-brand-navy">
+              {group.posts.map((post) => (
+                <PostRow key={post.slug} post={post} />
+              ))}
+            </ul>
           </div>
         </section>
       ))}

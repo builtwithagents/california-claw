@@ -9,7 +9,7 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 
 const inputStyles =
-  'w-full px-4 py-3 rounded-2xl border border-brand-navy/15 bg-brand-cream/50 focus:border-brand-navy focus:bg-white outline-none transition-all text-sm text-brand-navy placeholder:text-brand-navy/30'
+  'w-full px-4 py-3 border-2 border-brand-navy/15 bg-white focus:border-brand-navy outline-none transition-all text-sm text-brand-navy placeholder:text-brand-navy/30'
 
 type RequestType = 'machine' | 'event'
 
@@ -120,7 +120,7 @@ export default function RequestForm({
   }
 
   return (
-    <div className="bg-white rounded-3xl border border-brand-navy/70 p-8">
+    <div className="bg-white p-8 shadow-[10px_10px_0_#FDB515]">
       {success ? (
         <div className="flex flex-col items-center text-center py-8">
           <CheckCircle2 className="w-8 h-8 text-brand-gold-dark mb-4" />
@@ -143,7 +143,7 @@ export default function RequestForm({
           <h3 className="font-display text-xl font-bold text-brand-navy mb-2">{c.title}</h3>
 
           {error && (
-            <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-2xl p-4 text-red-700 text-sm">
+            <div className="flex items-start gap-2 bg-red-50 border-2 border-red-200 p-4 text-red-700 text-sm">
               <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
               {error}
             </div>
@@ -157,7 +157,7 @@ export default function RequestForm({
               {typeOptions.map((option) => (
                 <label
                   key={option.value}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3 border-2 cursor-pointer transition-colors ${
                     requestType === option.value
                       ? 'border-brand-navy bg-brand-cream'
                       : 'border-brand-navy/15 hover:border-brand-navy/30'
