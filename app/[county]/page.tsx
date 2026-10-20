@@ -44,7 +44,6 @@ const benefits = [
   'All repairs and maintenance handled',
   'Regular prize restocking on schedule',
   'Direct line to a real person, not a ticket queue',
-  'No long-term contracts required',
 ]
 
 export default async function CountyPage({ params }: Props) {

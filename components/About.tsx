@@ -16,10 +16,6 @@ const commitments = [
     title: 'We restock on a schedule',
     description: 'You never have to call us about an empty cabinet or a jammed claw.',
   },
-  {
-    title: 'You can end it whenever',
-    description: 'No contracts, no notice period. If it stops working for you, we collect it.',
-  },
 ]
 
 export default function About() {

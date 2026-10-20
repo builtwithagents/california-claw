@@ -24,7 +24,7 @@ const content: Record<
       </>
     ),
     lede: 'Tell us about your space. We review every request within 24 hours and follow up to talk through placement.',
-    points: ['$0 cost, ever', 'We handle everything', 'No contracts'],
+    points: ['$0 cost, ever', 'We handle everything', 'Restocked on a schedule'],
     steps: [
       { title: 'We review your request', description: 'A real person reads it and replies within 24 hours.' },
       { title: 'A quick call', description: 'We go over your space, foot traffic, and where a machine would fit.' },

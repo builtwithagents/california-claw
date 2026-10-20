@@ -22,7 +22,7 @@ const copy: Record<RequestType, { title: string; button: string; footer: string;
   machine: {
     title: 'Request a Free Machine',
     button: 'Request My Free Machine →',
-    footer: "No commitment required. We'll reach out within 24 hours.",
+    footer: "We'll reach out within 24 hours.",
     success: "We'll be in touch within 24 hours to discuss placement options.",
   },
   event: {

@@ -221,7 +221,7 @@ export const counties: County[] = [
     faqs: [
       {
         q: 'How much does placement cost in Oakland or Berkeley?',
-        a: 'Zero. We place and service the machine at no charge and keep it stocked with prizes. There are no contracts and no fees for your business.',
+        a: 'Zero. We place and service the machine at no charge and keep it stocked with prizes. There are no fees for your business.',
       },
       {
         q: 'What parts of the East Bay do you cover?',
@@ -305,7 +305,7 @@ export const counties: County[] = [
     faqs: [
       {
         q: 'Is claw machine placement free in San Diego?',
-        a: 'Yes. We place, service, and stock the machine at no cost to your business. No rental fees, no contracts — just a fun new draw for your customers.',
+        a: 'Yes. We place, service, and stock the machine at no cost to your business. No rental fees — just a fun new draw for your customers.',
       },
       {
         q: 'Which San Diego areas do you cover?',
