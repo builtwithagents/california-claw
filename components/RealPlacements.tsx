@@ -86,7 +86,8 @@ export default function RealPlacements() {
                 src={cityView}
                 alt="A purple-lit California Claw machine beside a tall window with a city view, a panda and a dog plush in the display box on top"
                 fill
-                sizes="400px"
+                sizes="(max-width: 640px) 92vw, 400px"
+                quality={70}
                 placeholder="blur"
                 className="object-cover"
               />
@@ -108,6 +109,7 @@ export default function RealPlacements() {
                     alt={shot.alt}
                     fill
                     sizes="(max-width: 1024px) 50vw, 280px"
+                    quality={65}
                     placeholder="blur"
                     className={`object-cover ${shot.position ?? 'object-center'}`}
                   />

@@ -27,7 +27,7 @@ function PostRow({ post }: { post: Post }) {
     <li className="border-b-2 border-brand-navy/15">
       <Link href={`/blog/${post.slug}`} className="group grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-3 py-7">
         <div>
-          <p className="text-sm text-brand-navy/60 mb-2">
+          <p className="text-sm text-brand-navy/70 mb-2">
             <span className="font-bold text-brand-navy">{post.category}</span>
             <span aria-hidden="true"> · </span>
             {post.readTime}

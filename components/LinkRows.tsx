@@ -22,7 +22,7 @@ export default function LinkRows({
                 {row.title}
               </span>
               {row.note && (
-                <span className="block mt-1 text-sm text-brand-navy/60 leading-relaxed">{row.note}</span>
+                <span className="block mt-1 text-sm text-brand-navy/70 leading-relaxed">{row.note}</span>
               )}
             </span>
             <span className="flex-shrink-0 w-9 h-9 rounded-full border-2 border-brand-navy flex items-center justify-center text-brand-navy group-hover:bg-brand-gold group-hover:border-brand-gold transition-colors">

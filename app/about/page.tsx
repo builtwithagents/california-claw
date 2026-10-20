@@ -146,7 +146,7 @@ export default function AboutPage() {
 
       {/* Who we are, legally */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <p className="max-w-6xl mx-auto text-brand-navy/60">
+        <p className="max-w-6xl mx-auto text-brand-navy/70">
           California Claw is a trade name of Coastal Vending Company. Reach us at{' '}
           <a
             href="mailto:team@californiaclaw.com"

@@ -82,7 +82,9 @@ export default function LoopVideo({
         alt={label}
         fill
         sizes={sizes}
+        quality={65}
         priority={priority}
+        fetchPriority={priority ? 'high' : 'auto'}
         className="object-cover"
       />
       <video
