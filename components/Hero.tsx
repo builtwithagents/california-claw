@@ -79,7 +79,7 @@ export default function Hero() {
               For your business
             </span>
             <span className="mt-2 text-brand-navy/80 text-lg">
-              $0 to you, ever. We stock it, fix it, and collect it if it isn&apos;t working out.
+              $0 to you, ever. We stock it, fix it, and keep it running.
             </span>
             <span className="mt-6 inline-flex items-center gap-2 font-bold">
               Get a free machine

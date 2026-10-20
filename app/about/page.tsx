@@ -28,10 +28,6 @@ const commitments = [
     title: 'We restock on a schedule',
     description: 'You never have to call us about an empty cabinet or a jammed claw.',
   },
-  {
-    title: 'You can end it whenever',
-    description: 'No contracts, no notice period. If it stops working for you, we collect it.',
-  },
 ]
 
 const services = [
@@ -109,7 +105,7 @@ export default function AboutPage() {
             }
             className="mb-12"
           />
-          <dl className="grid md:grid-cols-3 gap-x-10 gap-y-9">
+          <dl className="grid md:grid-cols-2 gap-x-10 gap-y-9 max-w-4xl">
             {commitments.map((c) => (
               <div key={c.title} className="border-t-4 border-brand-gold pt-4">
                 <dt className="font-display text-2xl font-bold mb-1.5">{c.title}</dt>

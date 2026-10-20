@@ -4,6 +4,7 @@ import SectionHeading from '@/components/SectionHeading'
 import PageHero from '@/components/PageHero'
 import FaqList from '@/components/FaqList'
 import LinkRows from '@/components/LinkRows'
+import { machinePhotos, pick } from '@/lib/media'
 import { posts, getPostBySlug, getRelatedPosts, audienceOf } from '@/lib/posts'
 import PostBody from '@/components/PostBody'
 import PlacementAreas from '@/components/PlacementAreas'
@@ -50,6 +51,9 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound()
 
   const relatedPosts = getRelatedPosts(post.slug, 3)
+  // One of our Super Mini machines in the header, rotated by post so
+  // neighbouring posts don't repeat the same photo.
+  const photo = pick(machinePhotos, posts.findIndex((p) => p.slug === post.slug))
   const isBusinessGuide = audienceOf(post) === 'business'
 
   const articleSchema = {
@@ -98,6 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
           </>
         }
         title={post.title}
+        photo={photo}
       />
 
       <article className="section-padding bg-white">

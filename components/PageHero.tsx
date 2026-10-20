@@ -75,7 +75,7 @@ export default function PageHero({ title, lede, actions, meta, back, clip, photo
                       alt={photo.alt}
                       fill
                       priority
-                      sizes="280px"
+                      sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 280px"
                       placeholder="blur"
                       className="object-cover"
                     />

@@ -196,7 +196,7 @@ export const posts: Post[] = [
     ],
     title: 'Free Claw Machine for Your Business: How It Actually Works',
     excerpt:
-      "\"Free\" makes people suspicious, and that's fair. Here's exactly what happens when you request a claw machine placement — no contract, no catch, just the honest process.",
+      "\"Free\" makes people suspicious, and that's fair. Here's exactly what happens when you request a claw machine placement — no catch, just the honest process.",
     category: 'Business Placement',
     readTime: '8 min read',
     publishedAt: '2026-06-22',
@@ -211,7 +211,7 @@ export const posts: Post[] = [
       { type: 'h2', text: "The short version: there isn't a catch" },
       {
         type: 'p',
-        text: 'We own the machine. We pay for delivery and installation. We handle every repair and service visit. We restock the prizes on our own schedule. Your business provides the floor space and a power outlet — that\'s the entire ask. There\'s no rental fee, no minimum contract, and no invoice that shows up later.',
+        text: 'We own the machine. We pay for delivery and installation. We handle every repair and service visit. We restock the prizes on our own schedule. Your business provides the floor space and a power outlet — that\'s the entire ask. There\'s no rental fee and no invoice that shows up later.',
       },
       { type: 'h2', text: 'How we make it work' },
       {
@@ -238,7 +238,7 @@ export const posts: Post[] = [
           'Longer dwell time — customers linger a few extra minutes, which matters most for cafes, waiting areas, and anywhere a longer visit means an extra purchase.',
           'Organic social mentions — a claw machine is more photogenic than most break-room perks, and it shows up in check-ins and stories without any prompting.',
           "A reason for repeat visits — kids in particular ask to come back to \"the place with the claw machine,\" which is a stickier hook than most low-cost perks.",
-          "Zero downside if it doesn't land — since there's no cost and no contract, trying it out carries basically no risk to the business.",
+          "Zero downside if it doesn't land — since there's no cost, trying it out carries basically no risk to the business.",
         ],
       },
       { type: 'h2', text: 'The process, step by step' },
@@ -254,11 +254,6 @@ export const posts: Post[] = [
         ],
       },
       { type: 'h2', text: 'Common questions we hear' },
-      { type: 'h3', text: 'Do I have to sign a long-term contract?' },
-      {
-        type: 'p',
-        text: "No. There's no lock-in period. If the machine isn't working for your space, we'll remove it — no penalty, no hard feelings.",
-      },
       { type: 'h3', text: 'How much space does it need?' },
       {
         type: 'p',
@@ -283,7 +278,7 @@ export const posts: Post[] = [
       { type: 'h2', text: "Why we do it this way" },
       {
         type: 'p',
-        text: "We'd rather earn a spot in your business by proving the machine adds value than lock you into a contract that assumes it will. Most of our placements come from word of mouth between businesses in the same neighborhood — that only works if the first machine actually delivers. If you are still weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison lays out the real costs.",
+        text: "We'd rather earn a spot in your business by proving the machine adds value. Most of our placements come from word of mouth between businesses in the same neighborhood — that only works if the first machine actually delivers. If you are still weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison lays out the real costs.",
       },
       {
         type: 'callout',
@@ -294,11 +289,7 @@ export const posts: Post[] = [
     faqs: [
       {
         q: 'Is a free claw machine placement really free?',
-        a: "Yes. We own the machine, pay for delivery and installation, and cover all maintenance and restocking. Your business provides floor space and a power outlet — there's no rental fee, no minimum contract, and no invoice later.",
-      },
-      {
-        q: 'Do I need to sign a contract?',
-        a: "No long-term contract. If the machine isn't working for your space, we'll remove it — no penalty either way.",
+        a: "Yes. We own the machine, pay for delivery and installation, and cover all maintenance and restocking. Your business provides floor space and a power outlet — there's no rental fee and no invoice later.",
       },
       {
         q: 'How is this different from renting a claw machine?',
@@ -315,10 +306,6 @@ export const posts: Post[] = [
       {
         q: 'How long does installation take once I apply?',
         a: 'We review requests within 24 hours, follow up with a quick call to confirm details, then schedule delivery and setup — most businesses have a working machine within one to two weeks of reaching out.',
-      },
-      {
-        q: 'Can I request the machine be removed later?',
-        a: "Yes, any time. There's no penalty and no notice period required — just let us know and we'll coordinate a pickup.",
       },
       {
         q: 'Is this available outside the San Francisco Bay Area and San Diego?',
@@ -1141,7 +1128,7 @@ export const posts: Post[] = [
       },
       {
         q: 'Can I get a claw machine for my business without buying one?',
-        a: 'Yes. Operators place machines in qualifying businesses at no cost — they own the machine, handle delivery, maintenance, and restocking, and you provide floor space and a power outlet. There is no purchase, no rental fee, and no long-term contract.',
+        a: 'Yes. Operators place machines in qualifying businesses at no cost — they own the machine, handle delivery, maintenance, and restocking, and you provide floor space and a power outlet. There is no purchase and no rental fee.',
       },
       {
         q: 'Is buying a claw machine ever a better option than free placement?',
@@ -1154,10 +1141,6 @@ export const posts: Post[] = [
       {
         q: 'What are the hidden costs of owning a claw machine?',
         a: 'Prize sourcing and restocking, mechanical repairs to the claw and coin mechanism, payout tuning so the machine stays winnable but sustainable, cash collection and banking, and your own time managing all of it. These recurring costs usually matter more than the purchase price.',
-      },
-      {
-        q: 'Do I need a contract for a free claw machine placement?',
-        a: 'Not with us. There is no lock-in period. If the machine is not working in your space we remove it, with no penalty and no notice period required.',
       },
       {
         q: 'How much space does a claw machine need?',
@@ -1275,11 +1258,6 @@ export const posts: Post[] = [
         type: 'p',
         text: 'A claw machine does draw people toward it, and in an unattended store at 11pm that can mean kids hanging around the machine rather than doing laundry. In practice this looks a lot like the concern owners already have about vending and arcade equipment, and the same things address it: put the machine where your cameras cover it, keep it in a well-lit part of the floor, and if your store has unattended overnight hours, know that machines in attended stores hold up better. If loitering is already a problem in your store, adding an attraction near the entrance is not the fix, and we will say so.',
       },
-      { type: 'h2', text: 'What happens if it does not work out' },
-      {
-        type: 'p',
-        text: 'We remove it. There is no contract, no penalty, and no notice period — you tell us, we schedule a pickup, and you have your floor space back. That is deliberate: we would rather earn the spot by having the machine actually perform than lock a store into keeping something that is not working. If you are weighing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that comparison is worth reading first.',
-      },
       { type: 'h2', text: 'Where we place laundromat machines' },
       {
         type: 'p',
@@ -1319,10 +1297,6 @@ export const posts: Post[] = [
       {
         q: 'Does the laundromat make money from the machine?',
         a: 'It depends on the setup. Free-play produces no coin revenue for anyone and serves purely as an amenity that keeps families choosing your store. Coin-play generates play revenue, and how that is handled is agreed up front during onboarding rather than after installation.',
-      },
-      {
-        q: 'Can I have the machine removed later?',
-        a: 'Yes, at any time. There is no contract, no penalty, and no notice period required — just let us know and we will coordinate a pickup.',
       },
     ],
   },
@@ -1441,7 +1415,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What it costs you' },
       {
         type: 'p',
-        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. There is no contract, and if it turns out to be wrong for your room we remove it. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math. And if you only want a machine for a single night — a buyout, an anniversary party, a private event in your back room — we [rent machines by the hour](/rent-a-claw-machine) instead.',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, service it, and restock the prizes on our own schedule. Your restaurant provides floor space and an outlet. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math. And if you only want a machine for a single night — a buyout, an anniversary party, a private event in your back room — we [rent machines by the hour](/rent-a-claw-machine) instead.',
       },
       { type: 'h2', text: 'Where we place restaurant machines' },
       {
@@ -1481,11 +1455,7 @@ export const posts: Post[] = [
       },
       {
         q: 'What does it cost the restaurant?',
-        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. The restaurant provides floor space and a power outlet, with no rental fee and no long-term contract.',
-      },
-      {
-        q: 'What if it does not work in my restaurant?',
-        a: 'We remove it. There is no penalty and no notice period — you tell us, we schedule a pickup, and you get the floor space back.',
+        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. The restaurant provides floor space and a power outlet, with no rental fee.',
       },
     ],
   },
@@ -1598,7 +1568,7 @@ export const posts: Post[] = [
       { type: 'h2', text: 'What it costs you' },
       {
         type: 'p',
-        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. No contract, and if it is not working for your shop we take it back out. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, maintain it, and keep it stocked. You provide the floor space and an outlet — a standard 110V wall socket, no special wiring. If you are comparing this against [buying a machine outright](/blog/free-claw-machine-vs-buying-vs-renting), that piece has the real math.',
       },
       { type: 'h2', text: 'Where we place boba shop machines' },
       {
@@ -1638,7 +1608,7 @@ export const posts: Post[] = [
       },
       {
         q: 'What does it cost the shop?',
-        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. You provide floor space and a standard 110V outlet, with no rental fee and no long-term contract.',
+        a: 'Nothing. We own the machine and cover delivery, installation, maintenance, and prize restocking. You provide floor space and a standard 110V outlet, with no rental fee.',
       },
       {
         q: 'Do you place machines in cafes too?',
