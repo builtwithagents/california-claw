@@ -3,6 +3,9 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Steps between 384 and 640, so phone-sized posters and photos aren't
+    // served at the next size up.
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 320, 384, 420, 480, 540],
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],

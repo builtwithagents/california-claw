@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { CheckCircle2, AlertCircle } from 'lucide-react'
-import { sendGAEvent } from '@next/third-parties/google'
+import { trackEvent } from '@/components/Analytics'
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 
@@ -104,7 +104,7 @@ export default function RequestForm({
       }
 
       // GA4 key event — only fires once Web3Forms confirms the lead was delivered
-      sendGAEvent('event', 'generate_lead', {
+      trackEvent('generate_lead', {
         form_name: 'request_form',
         lead_type: isEvent ? 'event_rental' : 'free_placement',
         city: city || '(not provided)',
@@ -125,7 +125,7 @@ export default function RequestForm({
         <div className="flex flex-col items-center text-center py-8">
           <CheckCircle2 className="w-8 h-8 text-brand-gold-dark mb-4" />
           <h3 className="font-display text-xl font-bold text-brand-navy mb-2">Request sent</h3>
-          <p className="text-brand-navy/60">{c.success}</p>
+          <p className="text-brand-navy/70">{c.success}</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -151,7 +151,7 @@ export default function RequestForm({
 
           <div>
             <label className="block text-sm font-bold text-brand-navy mb-2">
-              What are you looking for? <span className="text-brand-coral">*</span>
+              What are you looking for? <span className="text-red-700">*</span>
             </label>
             <div className="space-y-2">
               {typeOptions.map((option) => (
@@ -180,7 +180,7 @@ export default function RequestForm({
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="block text-sm font-bold text-brand-navy mb-1.5">
-                Name <span className="text-brand-coral">*</span>
+                Name <span className="text-red-700">*</span>
               </label>
               <input
                 id="name"
@@ -193,7 +193,7 @@ export default function RequestForm({
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-bold text-brand-navy mb-1.5">
-                Email <span className="text-brand-coral">*</span>
+                Email <span className="text-red-700">*</span>
               </label>
               <input
                 id="email"

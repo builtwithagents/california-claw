@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Figtree, Baloo_2 } from 'next/font/google'
 import './globals.css'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Analytics from '@/components/Analytics'
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-body' })
-const baloo = Baloo_2({ subsets: ['latin'], variable: '--font-baloo', weight: ['600', '700', '800'] })
+const baloo = Baloo_2({ subsets: ['latin'], variable: '--font-baloo', weight: ['700', '800'] })
 
 export const metadata: Metadata = {
   title: 'California Claw — Free Claw Machine Placement',
@@ -75,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-RMQHHWC6S6" />
+        <Analytics />
       </body>
     </html>
   )

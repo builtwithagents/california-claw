@@ -26,8 +26,8 @@ export default function ServiceAreas() {
                         <span className="font-display text-lg sm:text-xl font-bold text-brand-navy group-hover:text-brand-navy-light transition-colors">
                           {county.name}
                         </span>
-                        <span className="text-sm text-brand-navy/55 ml-auto">{county.city}</span>
-                        <ArrowUpRight className="w-4 h-4 text-brand-navy/60 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
+                        <span className="text-sm text-brand-navy/70 ml-auto">{county.city}</span>
+                        <ArrowUpRight className="w-4 h-4 text-brand-navy/70 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
                       </Link>
                     </li>
                   ))}
