@@ -92,10 +92,10 @@ export default async function CountyPage({ params }: Props) {
         clip={clip}
         actions={
           <>
-            <a href="#contact" className="btn-gold px-8 py-4 text-lg">
+            <Link href="/get-a-free-machine" className="btn-gold px-8 py-4 text-lg">
               Request a free machine
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </Link>
             <HeroLink href="/rent-a-claw-machine">Or rent one for an event</HeroLink>
           </>
         }

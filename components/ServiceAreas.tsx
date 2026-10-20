@@ -39,7 +39,7 @@ export default function ServiceAreas() {
         <p className="mt-10 text-brand-navy/70">
           Somewhere else in California?{' '}
           <a
-            href="#contact"
+            href="/get-a-free-machine"
             className="text-brand-navy font-bold underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
           >
             Ask anyway. We&apos;re expanding.

@@ -107,10 +107,10 @@ export default function RentPage() {
         lede="A real claw machine, stocked with unlimited plushie prizes and set to free-play. We deliver and set up across the San Francisco Bay Area and San Diego. You just enjoy the party."
         clip={clips.find((c) => c.name === 'diner')}
         actions={
-          <a href="#book" className="btn-gold px-8 py-4 text-lg">
+          <Link href="/book-an-event" className="btn-gold px-8 py-4 text-lg">
             Book your event
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         }
       />
 

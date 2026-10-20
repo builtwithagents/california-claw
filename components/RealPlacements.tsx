@@ -74,7 +74,7 @@ export default function RealPlacements() {
               When a cabinet runs low or a claw acts up, that&apos;s our problem to
               solve, not yours.
             </p>
-            <Link href="#contact" className="btn-gold px-7 py-3.5">
+            <Link href="/get-a-free-machine" className="btn-gold px-7 py-3.5">
               Get one for your space
               <ArrowRight className="w-4 h-4" />
             </Link>

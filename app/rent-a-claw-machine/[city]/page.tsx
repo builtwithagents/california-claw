@@ -83,10 +83,10 @@ export default async function RentalCityPage({ params }: Props) {
         clip={clip}
         actions={
           <>
-            <a href="#book" className="btn-gold px-8 py-4 text-lg">
+            <Link href="/book-an-event" className="btn-gold px-8 py-4 text-lg">
               Book your event
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </Link>
             <HeroLink href="/rent-a-claw-machine">See all rental areas</HeroLink>
           </>
         }

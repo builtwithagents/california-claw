@@ -87,7 +87,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Our packages fold all of this into one number up front, so the price you see is the price you pay.',
-        cta: { label: 'Get a quote', href: '/rent-a-claw-machine#book' },
+        cta: { label: 'Get a quote', href: '/book-an-event' },
       },
       { type: 'h2', text: 'How to pick the right package for your event' },
       {
@@ -288,7 +288,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: "See what's involved for your specific city, or just reach out and we'll walk you through it.",
-        cta: { label: 'Request a free machine', href: '/#contact' },
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
       },
     ],
     faqs: [
@@ -510,7 +510,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Ready to book the machine for your next party?',
-        cta: { label: 'Book your event', href: '/rent-a-claw-machine#book' },
+        cta: { label: 'Book your event', href: '/book-an-event' },
       },
     ],
     faqs: [
@@ -756,7 +756,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Tell us your date, city, and rough guest count — we confirm availability within 24 hours.',
-        cta: { label: 'Check availability', href: '/rent-a-claw-machine#book' },
+        cta: { label: 'Check availability', href: '/book-an-event' },
       },
     ],
     faqs: [
@@ -865,7 +865,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Planning a trade show booth or brand activation? Tell us the dates and we will build a quote.',
-        cta: { label: 'Get an activation quote', href: '/rent-a-claw-machine' },
+        cta: { label: 'Get an activation quote', href: '/book-an-event' },
       },
     ],
     faqs: [
@@ -973,7 +973,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Have your date and venue? Send them over and we will confirm the setup details with you.',
-        cta: { label: 'Book your rental', href: '/rent-a-claw-machine' },
+        cta: { label: 'Book your rental', href: '/book-an-event' },
       },
     ],
     faqs: [
@@ -1131,7 +1131,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Not sure which of the three makes sense for your space? Tell us about it and we will give you a straight answer.',
-        cta: { label: 'Request a free machine', href: '/#contact' },
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
       },
     ],
     faqs: [
@@ -1288,7 +1288,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Run a laundromat in the San Francisco Bay Area or San Diego? Tell us about your store and we will tell you if it is a fit.',
-        cta: { label: 'Request a free machine', href: '/#contact' },
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
       },
     ],
     faqs: [
@@ -1451,7 +1451,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Run a restaurant in the San Francisco Bay Area or San Diego? Tell us about your waiting area and we will tell you honestly whether it fits.',
-        cta: { label: 'Request a free machine', href: '/#contact' },
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
       },
     ],
     faqs: [
@@ -1608,7 +1608,7 @@ export const posts: Post[] = [
       {
         type: 'callout',
         text: 'Run a boba shop or cafe in the San Francisco Bay Area or San Diego? Tell us your footprint and we will tell you which machine fits.',
-        cta: { label: 'Request a free machine', href: '/#contact' },
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
       },
     ],
     faqs: [

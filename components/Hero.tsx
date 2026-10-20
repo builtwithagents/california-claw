@@ -25,10 +25,10 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-              <a href="#contact" className="btn-gold px-8 py-4 text-lg">
+              <Link href="/get-a-free-machine" className="btn-gold px-8 py-4 text-lg">
                 Get a free machine
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
               <Link
                 href="/rent-a-claw-machine"
                 className="font-semibold text-white underline decoration-brand-gold decoration-2 underline-offset-[6px] hover:text-brand-gold transition-colors"
@@ -70,8 +70,8 @@ export default function Hero() {
       */}
       <div className="bg-brand-gold md:bg-[linear-gradient(90deg,#FDB515_50%,#001833_50%)]">
         <div className="max-w-6xl mx-auto md:px-6 lg:px-8 grid md:grid-cols-2">
-          <a
-            href="#contact"
+          <Link
+            href="/get-a-free-machine"
             className="group bg-brand-gold text-brand-navy px-4 md:pl-0 md:pr-10 py-10 lg:py-12 flex flex-col"
           >
             <span className="font-display text-3xl lg:text-4xl font-extrabold leading-tight">
@@ -84,9 +84,9 @@ export default function Hero() {
               Get a free machine
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-          </a>
+          </Link>
           <Link
-            href="/rent-a-claw-machine"
+            href="/book-an-event"
             className="group bg-brand-navy-dark text-white px-4 md:pl-10 md:pr-0 py-10 lg:py-12 flex flex-col"
           >
             <span className="font-display text-3xl lg:text-4xl font-extrabold leading-tight">
@@ -96,7 +96,7 @@ export default function Hero() {
               From $200, with unlimited prizes. Delivery and setup included.
             </span>
             <span className="mt-6 inline-flex items-center gap-2 font-bold text-brand-gold">
-              See event rentals
+              Book an event
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           </Link>
