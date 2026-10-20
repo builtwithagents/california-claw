@@ -50,7 +50,7 @@ export default function VideoReel() {
                 <LoopVideo
                   name={clip.name}
                   label={clip.label}
-                  sizes="(max-width: 640px) 62vw, (max-width: 1024px) 40vw, 260px"
+                  sizes="(max-width: 640px) 56vw, (max-width: 1024px) 38vw, 260px"
                 />
               </div>
               <figcaption className="mt-3 px-1">

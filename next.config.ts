@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // The whole stylesheet is ~8 KB, so inline it instead of a blocking request.
+    inlineCss: true,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     // Steps between 384 and 640, so phone-sized posters and photos aren't
