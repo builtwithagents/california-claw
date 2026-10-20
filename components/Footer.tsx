@@ -37,6 +37,8 @@ export default function Footer() {
                 <Image
                   src={logo}
                   alt="California Claw logo"
+                  width={88}
+                  height={88}
                   className="w-full h-full object-contain scale-[1.35]"
                 />
               </div>
@@ -132,7 +134,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} Coastal Vending Company DBA California Claw. All rights reserved.
           </p>
           <div className="flex gap-6">
@@ -140,7 +142,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-white/40 hover:text-white/70 text-sm transition-colors"
+                className="text-white/60 hover:text-white/70 text-sm transition-colors"
               >
                 {link.label}
               </Link>

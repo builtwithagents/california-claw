@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import pizzeriaCorner from '@/public/media/pizzeria-corner.jpg'
 import dinerCorner from '@/public/media/diner-corner.jpg'
@@ -45,9 +46,9 @@ export default function HowItWorks() {
             ))}
           </ol>
 
-          <a href="#contact" className="btn-gold px-8 py-4 text-lg mt-12">
+          <Link href="/get-a-free-machine" className="btn-gold px-8 py-4 text-lg mt-12">
             Start your application
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 gap-5 mr-[10px]">

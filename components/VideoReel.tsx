@@ -47,13 +47,17 @@ export default function VideoReel() {
           <li key={clip.name} className="snap-start flex-shrink-0 w-[62%] sm:w-[40%] lg:w-auto">
             <figure>
               <div className="photo-frame-navy aspect-[9/16]">
-                <LoopVideo name={clip.name} label={clip.label} />
+                <LoopVideo
+                  name={clip.name}
+                  label={clip.label}
+                  sizes="(max-width: 640px) 62vw, (max-width: 1024px) 40vw, 260px"
+                />
               </div>
               <figcaption className="mt-3 px-1">
                 <span className="block text-sm font-bold text-brand-navy leading-snug">
                   {clip.caption}
                 </span>
-                <span className="block text-xs text-brand-navy/65 mt-0.5">{clip.note}</span>
+                <span className="block text-xs font-semibold text-brand-navy/80 mt-0.5">{clip.note}</span>
               </figcaption>
             </figure>
           </li>

@@ -27,7 +27,7 @@ export default function ServiceAreas() {
                           {county.name}
                         </span>
                         <span className="text-sm text-brand-navy/55 ml-auto">{county.city}</span>
-                        <ArrowUpRight className="w-4 h-4 text-brand-navy/40 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
+                        <ArrowUpRight className="w-4 h-4 text-brand-navy/60 group-hover:text-brand-navy group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
                       </Link>
                     </li>
                   ))}
@@ -39,7 +39,7 @@ export default function ServiceAreas() {
         <p className="mt-10 text-brand-navy/70">
           Somewhere else in California?{' '}
           <a
-            href="#contact"
+            href="/get-a-free-machine"
             className="text-brand-navy font-bold underline decoration-brand-gold decoration-2 underline-offset-4 hover:decoration-4 transition-all"
           >
             Ask anyway. We&apos;re expanding.

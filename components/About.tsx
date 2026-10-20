@@ -78,7 +78,7 @@ export default function About() {
               ))}
             </dl>
 
-            <p className="mt-8 text-sm text-white/35">
+            <p className="mt-8 text-sm text-white/60">
               Coastal Vending Company, DBA California Claw
             </p>
           </div>
