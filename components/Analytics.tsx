@@ -1,12 +1,14 @@
 import Script from 'next/script'
+import GtagLoader from '@/components/GtagLoader'
 
 export const GA_ID = 'G-RMQHHWC6S6'
 
 /**
- * GA4 without slowing the first paint. The tiny inline stub defines
- * `gtag` straight away, so events (like form leads) queue in dataLayer
- * from the start. The ~175 KB gtag.js library itself loads only once the
- * browser is idle after the page has loaded.
+ * GA4 without slowing the page. The tiny inline stub defines `gtag` right
+ * away, so the page view and any events (like form leads) queue in
+ * dataLayer from the start. The ~175 KB gtag.js library loads on the
+ * visitor's first scroll or tap, or after a few seconds if they never
+ * interact, and then sends everything that queued.
  */
 export default function Analytics() {
   return (
@@ -14,7 +16,7 @@ export default function Analytics() {
       <Script id="ga-init" strategy="afterInteractive">
         {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_ID}');`}
       </Script>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+      <GtagLoader id={GA_ID} />
     </>
   )
 }

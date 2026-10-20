@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { onEngaged } from '@/lib/engage'
 
 type Props = {
   /** Path under /media/video, without extension. Expects .mp4 and .jpg poster. */
@@ -21,9 +22,10 @@ type NetworkInfo = { saveData?: boolean; effectiveType?: string }
  *
  * The poster is a normal optimised image (responsive, WebP/AVIF), so it is
  * what the visitor sees first and what Lighthouse measures as LCP. The video
- * has no source until it is needed: on screen, after the page has finished
- * loading for an above-the-fold clip, and never for reduced-motion, Save-Data
- * or 2G visitors. It fades in over the poster once it is actually playing.
+ * has no source until it is needed: on screen, and for an above-the-fold
+ * clip only after the visitor's first scroll or tap (or a few seconds after
+ * load). Never for reduced-motion, Save-Data or 2G visitors. It fades in over
+ * the poster once it is actually playing.
  */
 export default function LoopVideo({
   name,
@@ -62,15 +64,13 @@ export default function LoopVideo({
     )
 
     const begin = () => observer.observe(video)
-    // Hold the hero clip until everything the first paint needs has loaded.
-    if (priority && document.readyState !== 'complete') {
-      window.addEventListener('load', begin, { once: true })
-    } else {
-      begin()
-    }
+    // Hold the hero clip until the visitor engages, so its download and
+    // decoding stay out of the initial load. Below-the-fold clips need a
+    // scroll to be seen anyway.
+    const stopWaiting = priority ? onEngaged(begin, 4000) : (begin(), () => {})
 
     return () => {
-      window.removeEventListener('load', begin)
+      stopWaiting()
       observer.disconnect()
     }
   }, [name, priority])
