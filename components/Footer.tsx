@@ -6,8 +6,9 @@ import { counties } from '@/lib/counties'
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Benefits', href: '/#benefits' },
-  { label: 'Rent for Events', href: '/rent-a-claw-machine' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'Rent for events', href: '/rent-a-claw-machine' },
+  { label: 'Service areas', href: '/service-areas' },
+  { label: 'About us', href: '/about' },
   { label: 'Blog', href: '/blog' },
 ]
 
@@ -26,13 +27,13 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy">
+    <footer className="bg-brand-navy border-t-[6px] border-brand-gold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-11 h-11 rounded-xl overflow-hidden bg-white">
+              <div className="w-11 h-11 overflow-hidden bg-white">
                 <Image
                   src={logo}
                   alt="California Claw logo"
@@ -68,7 +69,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-white font-bold mb-4">Quick Links</h3>
+            <h3 className="font-display text-white font-bold mb-4">Quick links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -85,7 +86,7 @@ export default function Footer() {
 
           {/* Placement guides, by business type */}
           <div>
-            <h3 className="font-display text-white font-bold mb-4">Free Placement</h3>
+            <h3 className="font-display text-white font-bold mb-4">Free placement</h3>
             <ul className="space-y-2">
               {placementLinks.map((link) => (
                 <li key={link.label}>
@@ -102,7 +103,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-display text-white font-bold mb-4">Service Areas</h3>
+            <h3 className="font-display text-white font-bold mb-4">Service areas</h3>
             <ul className="space-y-2">
               {counties.map((county) => (
                 <li key={county.slug}>
@@ -123,9 +124,9 @@ export default function Footer() {
             <p className="text-white/60 text-sm mb-5">
               Apply for a free claw machine at your location today. We&apos;ll handle everything.
             </p>
-            <a href="/#contact" className="btn-gold text-sm px-6 py-3">
+            <Link href="/get-a-free-machine" className="btn-gold text-sm px-6 py-3">
               Get a Free Machine →
-            </a>
+            </Link>
           </div>
         </div>
 

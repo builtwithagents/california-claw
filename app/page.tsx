@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import VideoReel from '@/components/VideoReel'
 import RealPlacements from '@/components/RealPlacements'
 import Benefits from '@/components/Benefits'
 import HowItWorks from '@/components/HowItWorks'
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <VideoReel />
       <RealPlacements />
       <Benefits />
       <HowItWorks />
@@ -18,7 +20,7 @@ export default function Home() {
       <About />
       <RelatedGuides
         audience="business"
-        eyebrow="Before you ask"
+        eyebrow=""
         heading="How free placement actually works"
       />
       <ContactSection />

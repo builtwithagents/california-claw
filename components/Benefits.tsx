@@ -1,57 +1,58 @@
-import SectionHeading from '@/components/SectionHeading'
+import Image from 'next/image'
+import cityView from '@/public/media/city-view-2.jpg'
 
 const benefits = [
   {
-    title: 'Free machine placement',
-    description:
-      'No upfront costs, no rental fees, no surprises. We place our premium claw machines at your location completely free of charge.',
+    title: 'Free placement',
+    description: 'No upfront cost, no rental fee. We bring the machine and set it up.',
   },
   {
     title: 'Full maintenance',
-    description:
-      'We handle all repairs, technical issues, and regular maintenance. Your team never needs to think about upkeep.',
+    description: 'Repairs, jams, and tech issues are ours. Your team never touches it.',
   },
   {
     title: 'Regular restocking',
-    description:
-      'Fresh prizes delivered and restocked on schedule. We keep the cabinet full so the machine always looks worth a play.',
+    description: 'Fresh prizes on a schedule, so the cabinet always looks worth a play.',
   },
   {
-    title: 'Zero hidden fees',
-    description:
-      'Seriously — nothing. We manage everything from installation to prizes to ongoing service. Your cost is always zero.',
+    title: 'No hidden fees',
+    description: 'From installation to prizes to service, your cost stays at zero.',
   },
 ]
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="section-padding bg-brand-cream">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-[minmax(0,380px)_1fr] gap-10 lg:gap-20 items-start">
-          {/* Left: the pitch */}
-          <SectionHeading
-            label="Why California Claw"
-            title={
-              <>
-                All the fun,
-                <br />
-                <span className="highlight-gold">none of the work</span>
-              </>
-            }
-            lede="You give us a corner and an outlet. We do everything after that."
-          />
+    <section id="benefits" className="section-padding bg-brand-navy-dark text-white">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_380px] gap-14 lg:gap-20 items-center">
+        <div>
+          <h2 className="font-display text-4xl sm:text-5xl font-extrabold leading-[1.02] mb-5 max-w-lg">
+            All the fun. <span className="text-brand-gold">None of the work.</span>
+          </h2>
+          <p className="text-lg text-white/70 mb-12 max-w-md">
+            You give us a corner and an outlet. Everything after that is on us.
+          </p>
 
-          {/* Right: what the deal actually covers */}
-          <ul className="divide-y divide-brand-navy/10 border-y border-brand-navy/10">
+          <dl className="grid sm:grid-cols-2 gap-x-10 gap-y-9">
             {benefits.map((item) => (
-              <li key={item.title} className="py-7">
-                <h3 className="font-display text-xl font-bold text-brand-navy mb-1.5">
-                  {item.title}
-                </h3>
-                <p className="text-brand-navy/60 leading-relaxed">{item.description}</p>
-              </li>
+              <div key={item.title} className="border-t-4 border-brand-gold pt-4">
+                <dt className="font-display text-2xl font-bold mb-1.5">{item.title}</dt>
+                <dd className="text-white/65 leading-relaxed">{item.description}</dd>
+              </div>
             ))}
-          </ul>
+          </dl>
+        </div>
+
+        <div className="justify-self-center lg:justify-self-end w-full max-w-[380px] lg:mr-[10px]">
+          <div className="photo-frame aspect-[3/4]">
+            <Image
+              src={cityView}
+              alt="A purple-lit claw machine by a window with a city view, an orange plush and a white bunny in the display box on top"
+              fill
+              sizes="380px"
+              placeholder="blur"
+              className="object-cover object-[50%_35%]"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { counties } from '@/lib/counties'
 import SectionHeading from '@/components/SectionHeading'
+import TagList from '@/components/TagList'
 
 /**
  * Geo links for the placement guides. The business-placement articles rank on
@@ -11,26 +11,22 @@ import SectionHeading from '@/components/SectionHeading'
 
 export default function PlacementAreas() {
   return (
-    <section className="section-padding bg-brand-cream">
-      <div className="max-w-3xl mx-auto">
+    <section className="section-padding bg-brand-gold">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,380px)_1fr] gap-10 lg:gap-16 items-start">
         <SectionHeading
-          label="Where we place"
-          title="Free placement across your county"
-          lede="We place, service, and restock machines throughout the San Francisco Bay Area and San Diego."
-          className="mb-8"
+          title="Free placement across your county."
+          lede={
+            <span className="text-brand-navy/80">
+              We place, service, and restock machines throughout the San Francisco Bay Area
+              and San Diego.
+            </span>
+          }
         />
-        <ul className="flex flex-wrap gap-2">
-          {counties.map((county) => (
-            <li key={county.slug}>
-              <Link
-                href={`/${county.slug}`}
-                className="inline-block bg-white border border-brand-navy/10 hover:border-brand-navy px-4 py-2 rounded-full text-sm font-semibold text-brand-navy transition-colors"
-              >
-                {county.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <TagList
+          tone="gold"
+          items={counties.map((c) => ({ label: c.name, href: `/${c.slug}` }))}
+          columns="sm:columns-2"
+        />
       </div>
     </section>
   )

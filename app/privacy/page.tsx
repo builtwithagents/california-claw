@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — California Claw',
@@ -38,31 +37,23 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <>
-      <section className="relative bg-brand-cream pt-32 pb-14 sm:pb-16 overflow-hidden">
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-brand-navy/60 hover:text-brand-navy text-sm font-semibold mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to home
-          </Link>
-          <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-navy">Privacy Policy</h1>
-          <p className="text-brand-navy/50 mt-3 text-sm">Last updated June 2026</p>
-        </div>
-      </section>
+      <PageHero
+        back={{ href: '/', label: 'Back to home' }}
+        title="Privacy policy."
+        lede="Last updated June 2026"
+      />
 
-      <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="section-padding bg-white">
         <div className="max-w-3xl mx-auto">
-          <p className="text-brand-navy/70 leading-relaxed mb-10">
+          <p className="text-lg text-brand-navy/75 leading-relaxed mb-12">
             This Privacy Policy explains how Coastal Vending Company (DBA California Claw)
             handles information collected through californiaclaw.com.
           </p>
-          <div className="space-y-8">
+          <div className="border-t-4 border-brand-navy">
             {sections.map((s) => (
-              <div key={s.heading}>
-                <h2 className="font-display text-xl sm:text-2xl font-bold text-brand-navy mb-2">{s.heading}</h2>
-                <p className="text-brand-navy/70 leading-relaxed">{s.body}</p>
+              <div key={s.heading} className="py-8 border-b-2 border-brand-navy/15">
+                <h2 className="font-display text-2xl font-bold text-brand-navy mb-2">{s.heading}</h2>
+                <p className="text-brand-navy/75 leading-relaxed">{s.body}</p>
               </div>
             ))}
           </div>

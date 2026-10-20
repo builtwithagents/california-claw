@@ -1,127 +1,105 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import joyCatcher from '@/public/joy-catcher.jpg'
-import machinePizzeria from '@/public/machine-pizzeria.jpg'
-
-const paths = [
-  {
-    tag: 'For your business',
-    title: 'Get a free machine',
-    points: ['$0 cost, ever', 'We handle everything', 'No contracts'],
-    cta: 'Get a free machine',
-    href: '#contact',
-    featured: true,
-  },
-  {
-    tag: 'For your event',
-    title: 'Rent one for a party',
-    points: ['From $200', 'Unlimited prizes', 'Delivery & setup included'],
-    cta: 'See event rentals',
-    href: '/rent-a-claw-machine',
-    featured: false,
-  },
-]
+import LoopVideo from '@/components/LoopVideo'
+import pizzeriaPlush from '@/public/media/pizzeria-plush.jpg'
 
 export default function Hero() {
   return (
-    <section className="bg-brand-cream border-b border-brand-navy/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center mb-16">
-          {/* Left: Copy */}
+    <section className="bg-brand-navy text-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pb-24">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-14 lg:gap-24 items-center">
           <div className="max-w-xl">
-            <p className="flex items-center gap-3 mb-5">
-              <span className="h-0.5 w-7 bg-brand-gold" aria-hidden="true" />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/50">
-                100% free for your business
-              </span>
-            </p>
-
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.05] mb-5 tracking-tight">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.98] tracking-tight mb-6">
               A claw machine.
               <br />
-              For <span className="highlight-gold">free</span>. Really.
+              For <span className="text-brand-gold">free</span>.
+              <br />
+              Really.
             </h1>
 
-            <p className="text-lg text-brand-navy/65 leading-relaxed">
-              We place, stock, and maintain premium claw machines at cafés,
-              restaurants, and campuses across the San Francisco Bay Area and San
-              Diego — or rent one for your next event.
+            <p className="text-lg sm:text-xl text-white/75 leading-relaxed mb-9">
+              We place, stock, and maintain claw machines at cafés, restaurants, and
+              campuses across the San Francisco Bay Area and San Diego. You give us a
+              corner and an outlet.
             </p>
+
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
+              <a href="#contact" className="btn-gold px-8 py-4 text-lg">
+                Get a free machine
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <Link
+                href="/rent-a-claw-machine"
+                className="font-semibold text-white underline decoration-brand-gold decoration-2 underline-offset-[6px] hover:text-brand-gold transition-colors"
+              >
+                Or rent one for a party
+              </Link>
+            </div>
           </div>
 
-          {/* Right: the two cabinet sizes, to scale */}
-          <div className="hidden sm:block relative mx-auto lg:mx-0 w-[300px] lg:w-[340px] pb-12">
-            <div className="photo-frame aspect-[3/4]">
-              <Image
-                src={joyCatcher}
-                alt="A full-size neon-lit Joy Catcher claw machine in a teahouse, packed with unicorn and penguin plushies"
-                fill
-                sizes="(max-width: 1024px) 300px, 340px"
-                placeholder="blur"
-                className="object-cover"
+          {/* A real machine, running */}
+          <div className="relative justify-self-center lg:justify-self-end w-[240px] sm:w-[280px] lg:w-[310px] lg:mr-[10px]">
+            <div className="photo-frame aspect-[9/16]">
+              <LoopVideo
+                name="green-pizzeria"
+                label="A neon-green California Claw machine in a pizzeria, packed with plush prizes"
                 priority
               />
             </div>
 
-            <div className="absolute -bottom-2 -left-10 w-[112px]">
-              <div className="photo-frame aspect-[2/3] rounded-xl">
+            <div className="absolute -bottom-8 -left-14 sm:-left-20 w-[120px] sm:w-[150px] rotate-[-5deg]">
+              <div className="relative aspect-square overflow-hidden border-4 border-white">
                 <Image
-                  src={machinePizzeria}
-                  alt="A compact Super Mini claw machine in a pizzeria, stocked with Pikachu and Poké Ball plushies"
+                  src={pizzeriaPlush}
+                  alt="Close-up of a claw machine stocked with pizza-slice and boba-cup plushies"
                   fill
-                  sizes="112px"
+                  sizes="150px"
                   placeholder="blur"
-                  className="object-cover object-top"
+                  className="object-cover"
                 />
               </div>
             </div>
-
-            <p className="absolute bottom-0 right-0 text-xs text-brand-navy/45">
-              Full-size or compact — whichever fits.
-            </p>
           </div>
         </div>
+      </div>
 
-        {/* Two paths — the main choice, above the fold */}
-        <div className="grid md:grid-cols-2 gap-5">
-          {paths.map((path) => (
-            <div
-              key={path.title}
-              className={`rounded-2xl bg-white p-7 flex flex-col border transition-colors ${
-                path.featured
-                  ? 'border-brand-navy/25'
-                  : 'border-brand-navy/10 hover:border-brand-navy/25'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-navy/45 mb-3">
-                {path.tag}
-              </p>
-
-              <h2 className="font-display text-2xl font-extrabold text-brand-navy mb-4">
-                {path.title}
-              </h2>
-
-              <ul className="space-y-2 mb-7 text-sm text-brand-navy/65">
-                {path.points.map((point) => (
-                  <li key={point} className="flex items-baseline gap-2.5">
-                    <span className="text-brand-gold-dark" aria-hidden="true">
-                      —
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href={path.href}
-                className={`${path.featured ? 'btn-gold' : 'btn-outline'} mt-auto self-start px-6 py-3`}
-              >
-                {path.cta}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          ))}
+      {/*
+        The two ways in. Colour runs edge to edge, but the content sits on the
+        same centred column as everything else, so it holds at any width.
+      */}
+      <div className="bg-brand-gold md:bg-[linear-gradient(90deg,#FDB515_50%,#001833_50%)]">
+        <div className="max-w-6xl mx-auto md:px-6 lg:px-8 grid md:grid-cols-2">
+          <a
+            href="#contact"
+            className="group bg-brand-gold text-brand-navy px-4 md:pl-0 md:pr-10 py-10 lg:py-12 flex flex-col"
+          >
+            <span className="font-display text-3xl lg:text-4xl font-extrabold leading-tight">
+              For your business
+            </span>
+            <span className="mt-2 text-brand-navy/80 text-lg">
+              $0 to you, ever. We stock it, fix it, and collect it if it isn&apos;t working out.
+            </span>
+            <span className="mt-6 inline-flex items-center gap-2 font-bold">
+              Get a free machine
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+          <Link
+            href="/rent-a-claw-machine"
+            className="group bg-brand-navy-dark text-white px-4 md:pl-10 md:pr-0 py-10 lg:py-12 flex flex-col"
+          >
+            <span className="font-display text-3xl lg:text-4xl font-extrabold leading-tight">
+              For your event
+            </span>
+            <span className="mt-2 text-white/70 text-lg">
+              From $200, with unlimited prizes. Delivery and setup included.
+            </span>
+            <span className="mt-6 inline-flex items-center gap-2 font-bold text-brand-gold">
+              See event rentals
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </Link>
         </div>
       </div>
     </section>

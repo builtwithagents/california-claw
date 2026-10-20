@@ -1,3 +1,4 @@
+import PageHero from '@/components/PageHero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,18 +21,22 @@ const files = [
 
 export default function AdAssetsPage() {
   return (
-    <main className="mx-auto max-w-xl px-6 py-16">
-      <h1 className="text-xl font-semibold">Ad assets</h1>
-      <p className="mt-2 text-sm">Hosted video files used by Meta ads. Not indexed.</p>
-      <ul className="mt-6 space-y-2 text-sm">
-        {files.map((f) => (
-          <li key={f}>
-            <a className="underline" href={`/ad-assets/${f}`}>
-              {f}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <>
+      <PageHero title="Ad assets." lede="Hosted video files used by Meta ads. Not indexed." />
+      <section className="section-padding bg-white">
+        <ul className="max-w-3xl mx-auto border-t-4 border-brand-navy">
+          {files.map((f) => (
+            <li key={f} className="border-b-2 border-brand-navy/15 py-3">
+              <a
+                className="font-semibold text-brand-navy underline decoration-brand-gold decoration-2 underline-offset-4"
+                href={`/ad-assets/${f}`}
+              >
+                {f}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
   )
 }

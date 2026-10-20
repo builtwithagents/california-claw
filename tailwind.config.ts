@@ -17,14 +17,15 @@ const config: Config = {
           gold: '#FDB515',
           'gold-light': '#FFD060',
           'gold-dark': '#CC8800',
-          cream: '#FFF9EF',
+          // Pale tint of brand sky. Replaced the old cream ground, which read as generic.
+          cream: '#E6F3FB',
           coral: '#FF6B5E',
           sky: '#B8E3F5',
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-baloo)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-baloo)', 'var(--font-body)', 'system-ui', 'sans-serif'],
       },
       animation: {
         float: 'float 5s ease-in-out infinite',

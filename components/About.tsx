@@ -1,4 +1,5 @@
-import SectionHeading from '@/components/SectionHeading'
+import Image from 'next/image'
+import windowCafeTall from '@/public/media/window-cafe-tall.jpg'
 
 /**
  * Concrete commitments rather than abstract "values" — each one restates a
@@ -28,17 +29,9 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: who we are */}
           <div>
-            <SectionHeading
-              tone="dark"
-              label="About us"
-              title={
-                <>
-                  Every day is a chance to{' '}
-                  <span className="text-brand-gold">spark joy</span>
-                </>
-              }
-              className="mb-6"
-            />
+            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-white leading-[1.02] mb-6">
+              A small team that <span className="text-brand-gold">likes a good grab</span>.
+            </h2>
             <p className="text-lg text-white/75 leading-relaxed mb-5">
               We&apos;re a small team in the San Francisco Bay Area. We started California
               Claw because a claw machine turns a dead corner into the thing people
@@ -50,12 +43,12 @@ export default function About() {
               out of your register. You give us a corner and an outlet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="btn-gold px-8 py-3.5">
-                Work with us
+              <a href="/about" className="btn-gold px-8 py-3.5">
+                More about us
               </a>
               <a
                 href="mailto:team@californiaclaw.com"
-                className="inline-flex items-center justify-center border border-white/25 hover:border-brand-gold hover:text-brand-gold text-white font-bold px-8 py-3.5 rounded-full transition-colors"
+                className="btn-outline-light px-8 py-3.5"
               >
                 Say hello
               </a>
@@ -64,6 +57,16 @@ export default function About() {
 
           {/* Right: what we commit to */}
           <div className="lg:pt-4">
+            <div className="photo-frame aspect-[16/10] mb-10 mr-[10px]">
+              <Image
+                src={windowCafeTall}
+                alt="A purple-lit California Claw machine by a café window, two axolotl plushies on top"
+                fill
+                sizes="(max-width: 1024px) 100vw, 560px"
+                placeholder="blur"
+                className="object-cover object-[50%_30%]"
+              />
+            </div>
             <dl className="border-t border-white/15">
               {commitments.map((c) => (
                 <div key={c.title} className="py-6 border-b border-white/15">
