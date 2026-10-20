@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { onEngaged } from '@/lib/engage'
 
 type Props = {
   /** Path under /media/video, without extension. Expects .mp4 and .jpg poster. */
@@ -11,7 +10,11 @@ type Props = {
   /** Rendered width, so the poster is served at the right size. */
   sizes?: string
   className?: string
-  /** Above-the-fold clip: its poster is the page's LCP image. */
+  /**
+   * Above-the-fold clip: its poster is the page's LCP image, it plays as soon
+   * as that poster has painted, and it uses the lighter `-sm` encode
+   * (432px wide), since hero frames render at most ~310px wide.
+   */
   priority?: boolean
 }
 
@@ -22,10 +25,10 @@ type NetworkInfo = { saveData?: boolean; effectiveType?: string }
  *
  * The poster is a normal optimised image (responsive, WebP/AVIF), so it is
  * what the visitor sees first and what Lighthouse measures as LCP. The video
- * has no source until it is needed: on screen, and for an above-the-fold
- * clip only after the visitor's first scroll or tap (or a few seconds after
- * load). Never for reduced-motion, Save-Data or 2G visitors. It fades in over
- * the poster once it is actually playing.
+ * has no source until it is needed: an above-the-fold clip starts right
+ * after its poster paints, others when scrolled into view. Never for
+ * reduced-motion, Save-Data or 2G visitors. It fades in over the poster once
+ * it is actually playing.
  */
 export default function LoopVideo({
   name,
@@ -53,24 +56,33 @@ export default function LoopVideo({
         if (entry.isIntersecting) {
           if (!attached) {
             attached = true
-            video.src = `/media/video/${name}.mp4`
+            video.src = `/media/video/${name}${priority ? '-sm' : ''}.mp4`
           }
           video.play().catch(() => {})
         } else if (attached) {
           video.pause()
         }
       },
-      { threshold: 0.35 },
+      // Hero clips start as soon as any of the frame is visible (on phones only
+      // its top edge shows under the headline); others once a third is in view.
+      { threshold: priority ? 0 : 0.35 },
     )
 
     const begin = () => observer.observe(video)
-    // Hold the hero clip until the visitor engages, so its download and
-    // decoding stay out of the initial load. Below-the-fold clips need a
-    // scroll to be seen anyway.
-    const stopWaiting = priority ? onEngaged(begin, 4000) : (begin(), () => {})
+    // The hero clip waits only for its poster to paint, so the video never
+    // competes with the LCP image but still starts almost immediately.
+    const poster = video.previousElementSibling as HTMLImageElement | null
+    let fallback: number | undefined
+    if (priority && poster && !poster.complete) {
+      poster.addEventListener('load', begin, { once: true })
+      fallback = window.setTimeout(begin, 1500)
+    } else {
+      begin()
+    }
 
     return () => {
-      stopWaiting()
+      poster?.removeEventListener('load', begin)
+      window.clearTimeout(fallback)
       observer.disconnect()
     }
   }, [name, priority])
