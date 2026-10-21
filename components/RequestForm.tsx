@@ -103,7 +103,7 @@ export default function RequestForm({
         return
       }
 
-      // GA4 key event — only fires once Web3Forms confirms the lead was delivered
+      // GA4 key event + Amplitude event — only fires once Web3Forms confirms the lead was delivered
       trackEvent('generate_lead', {
         form_name: 'request_form',
         lead_type: isEvent ? 'event_rental' : 'free_placement',
