@@ -1,6 +1,6 @@
 /**
- * Amplitude, loaded on demand. The SDK is a separate chunk that is only
- * fetched by `loadAmplitude`, so it stays out of the initial page load.
+ * Amplitude (analytics + Session Replay), loaded on demand. Both are chunks
+ * only fetched by `loadAmplitude`, so they stay out of the initial page load.
  * Events tracked before it loads wait in a queue and are sent once it does.
  */
 type AmplitudeSdk = typeof import('@amplitude/analytics-browser')
@@ -12,7 +12,14 @@ const queue: [string, Record<string, unknown>][] = []
 export async function loadAmplitude(apiKey: string) {
   if (sdk || loading) return
   loading = true
-  const mod = await import('@amplitude/analytics-browser')
+  const [mod, { sessionReplayPlugin }] = await Promise.all([
+    import('@amplitude/analytics-browser'),
+    import('@amplitude/plugin-session-replay-browser'),
+  ])
+  // Records a quarter of sessions. Form fields are masked by default, so
+  // names, phone numbers and emails typed into the lead form never leave
+  // the browser. Shares the analytics device and session IDs.
+  mod.add(sessionReplayPlugin({ sampleRate: 0.25 }))
   mod.init(apiKey, {
     autocapture: {
       pageViews: { trackHistoryChanges: 'all' },
