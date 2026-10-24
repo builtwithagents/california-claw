@@ -1616,6 +1616,503 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: 'free-claw-machine-for-your-auto-shop-waiting-room',
+    related: [
+      'how-to-keep-customers-entertained-while-they-wait',
+      'free-claw-machine-in-your-laundromat',
+      'free-claw-machine-for-your-business-how-it-works',
+    ],
+    title: 'Free Claw Machines in Auto Shops and Dealership Waiting Rooms',
+    excerpt:
+      'An oil change, a tire rotation, a warranty repair: nobody chooses to spend an hour in your waiting room. A claw machine will not fix a slow service bay, but it can make a long wait easier on the families sitting through it.',
+    category: 'Business Placement',
+    readTime: '8 min read',
+    publishedAt: '2026-10-23',
+    updatedAt: '2026-10-23',
+    metaDescription:
+      'Should an auto repair shop, tire shop, or dealership service lounge put in a claw machine? Who it helps, where it goes in a waiting room, free-play versus coin-play, and when it is the wrong fix.',
+    content: [
+      {
+        type: 'p',
+        text: 'Of all the businesses where people wait, an auto shop might have the most resentful waiting room. Nobody came in for the experience. They came because the car needed something, the work takes somewhere between thirty minutes and half a day, and the one thing they cannot do is leave with the car. If you run a tire shop, an oil change bay, a repair shop, or a dealership service department, the waiting room is part of your product whether you planned it that way or not.',
+      },
+      { type: 'h2', text: 'Who is actually sitting in your waiting room' },
+      {
+        type: 'p',
+        text: 'It is easy to picture a lone adult scrolling a phone, and on a weekday morning that is often accurate. But the picture changes on Saturdays, after school, and during school holidays, because the car in your bay is frequently the family car and the family came with it. A parent with a seven-year-old and a forty-five-minute estimate is the customer whose experience a machine changes the most.',
+      },
+      {
+        type: 'p',
+        text: 'That is worth saying plainly, because it also tells you when a machine is a poor fit. If your customers are almost all fleet drivers, commercial accounts, or drop-off appointments who leave the keys and walk away, nobody is waiting and the machine has no job to do.',
+      },
+      { type: 'h2', text: 'What a machine does in a service lounge' },
+      {
+        type: 'p',
+        text: 'It does not make the repair faster, and it will not rescue a bad estimate or a missed promise time. What it does is change how the wait feels for the people who have a child with them:',
+      },
+      {
+        type: 'list',
+        items: [
+          'It gives a restless kid something to do that is not climbing the chairs or asking when the car will be ready. That takes pressure off the parent, and a calmer parent is a calmer customer when your service advisor walks over with the total.',
+          'It is a reason to look forward to coming back. Families remember "the shop with the claw machine," and a child asking to go there is a small tiebreaker the next time a parent is choosing between two shops with similar prices.',
+          'It gives dealership service lounges something that a coffee machine and a television do not. If your lounge is already comfortable, a machine is the part of it that kids will actually mention.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'We would not claim it moves your reviews or your repeat rate by any particular amount. Nobody can promise that, and an owner deciding whether to use floor space deserves a straight answer: it is a modest improvement to a part of the visit that is usually the worst part.',
+      },
+      { type: 'h2', text: 'Where it goes' },
+      {
+        type: 'p',
+        text: 'The placement rules for an auto shop are mostly about keeping the machine away from the work:',
+      },
+      {
+        type: 'list',
+        items: [
+          'In the customer waiting area only, never in or beside the service bays. Customers should not be walking through the shop floor to play, and a child should not be anywhere near vehicles or lifts.',
+          'In sightline of the seating, so a parent can watch from their chair rather than getting up each time.',
+          'Out of the path between the front counter and the door. Customers settling a bill while carrying keys and paperwork need a clear line.',
+          'Off any wall where a floor mat, a tire display, or an oil rack already sits. A claw machine needs about three by three feet of level floor and a few feet of clearance in front.',
+          'Near a standard 110V outlet. No dedicated circuit and no electrician involved.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'If your waiting room is a few chairs and a counter, a [compact mini machine](/blog/free-claw-machine-for-your-business-how-it-works) usually fits where a full cabinet will not, such as the end of a bench or the wall beside the water cooler.',
+      },
+      { type: 'h2', text: 'Free-play or coin-play?' },
+      {
+        type: 'p',
+        text: 'It depends on what you want the machine to say about your shop.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Free-play reads as hospitality. For a dealership service lounge or a shop that wants to look generous, a machine that costs the customer nothing while they wait for a repair is a small, visible gesture. There is nothing to count or split, and no one is asked for money while they are already about to be handed a bill.',
+          'Coin-play suits a busy tire shop or quick-lube with steady walk-in volume. Customers can pay by card, cash, or coin, so nobody has to hunt for quarters. If you choose this, the arrangement for your share is something we talk through up front, not after installation.',
+          'Either way, the setting can be changed later if the first one does not fit.',
+        ],
+      },
+      { type: 'h2', text: 'The practical questions' },
+      { type: 'h3', text: 'Greasy hands and a clean machine' },
+      {
+        type: 'p',
+        text: 'Auto shops have more grime in the air than a cafe does, and a glass box will show it. We clean the machine on service visits, and your staff can wipe the glass with whatever they already use on the front-office windows. Keeping it in the customer lounge rather than the shop-adjacent hallway helps more than anything.',
+      },
+      { type: 'h3', text: 'Noise' },
+      {
+        type: 'p',
+        text: 'The attract and play sounds are adjustable. A service lounge with a television and a few people on laptops is usually fine at a low volume, and we can turn the sound off entirely if a customer waiting on a work call would be bothered.',
+      },
+      { type: 'h3', text: 'Who looks after it' },
+      {
+        type: 'p',
+        text: 'We do. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, monitor it, repair it, and restock the prizes on our own schedule. Your staff never opens it, orders plush, or calls a repair line. What you provide is the floor space and the outlet.',
+      },
+      { type: 'h2', text: 'When it is the wrong fix' },
+      {
+        type: 'p',
+        text: 'If your complaints are about wait times, the answer is to fix the wait: better scheduling, a text when the car is ready, honest quotes. A machine is not a substitute for those, and a customer who has been told thirty minutes and waited ninety will not be soothed by a plush toy. Fix the process first. The machine is for the minutes that cannot be removed.',
+      },
+      { type: 'h2', text: 'Where we place machines' },
+      {
+        type: 'p',
+        text: 'We work with businesses across [San Francisco](/san-francisco-county), [Oakland and the East Bay](/oakland-county), [San Jose](/san-jose-county), [San Mateo County](/san-mateo-county), [Contra Costa County](/contra-costa-county), and [San Diego](/san-diego-county). The first step is a short conversation about your waiting room, how many families you see in a typical week, and where a machine would fit.',
+      },
+      {
+        type: 'callout',
+        text: 'Run an auto shop or a service department in the San Francisco Bay Area or San Diego? Tell us about your waiting room and we will tell you honestly if a machine fits.',
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does a claw machine make sense in an auto repair shop?',
+        a: 'It does if families wait in your lobby. The machine gives children something to do during a long service visit, which takes pressure off parents. It does not help if most of your customers drop off a car and leave, since no one is waiting.',
+      },
+      {
+        q: 'Where should a claw machine go in a service waiting room?',
+        a: 'In the customer waiting area only, visible from the seating, out of the walkway between the counter and the door, and never in or beside the service bays. It needs a level spot of about three by three feet and a standard 110V outlet.',
+      },
+      {
+        q: 'Does a claw machine cost the shop anything?',
+        a: 'No. We own the machine and cover delivery, installation, repairs, and prize restocking. The shop provides floor space and an outlet, and there is no rental fee.',
+      },
+      {
+        q: 'Should a dealership run the machine free-play?',
+        a: 'Often, yes. Free-play reads as a courtesy to a customer who is waiting on a repair and is about to receive a bill. Coin-play suits busier tire shops and quick-lube locations with steady walk-in traffic, and you can switch later.',
+      },
+      {
+        q: 'Will the machine be a problem with grease and dirt?',
+        a: 'Keep it in the customer lounge rather than a shop-adjacent hallway and it is not. We clean the machine on service visits, and staff can wipe the glass with the same cleaner used on the front-office windows.',
+      },
+      {
+        q: 'Will a claw machine improve my reviews?',
+        a: 'We cannot promise that. It improves a part of the visit that is usually the least pleasant for families, but fixing the wait itself, through better scheduling and honest quotes, matters more.',
+      },
+    ],
+  },
+  {
+    slug: 'claw-machine-for-your-apartment-building-or-clubhouse',
+    related: [
+      'how-to-keep-customers-entertained-while-they-wait',
+      'free-claw-machine-in-your-laundromat',
+      'free-claw-machine-for-your-business-how-it-works',
+    ],
+    title: 'Claw Machines in Apartment Buildings: A Low-Cost Amenity for Lobbies and Clubhouses',
+    excerpt:
+      'Every building has a gym nobody uses and a clubhouse that sits empty on weekdays. A claw machine is a cheaper way to make a common area feel like somewhere residents actually want to be, especially the ones with kids.',
+    category: 'Business Placement',
+    readTime: '8 min read',
+    publishedAt: '2026-10-23',
+    updatedAt: '2026-10-23',
+    metaDescription:
+      'How property managers use a claw machine as a resident amenity: which buildings it suits, where it goes in a lobby, clubhouse, or laundry room, noise and after-hours concerns, and what it costs the building.',
+    content: [
+      {
+        type: 'p',
+        text: 'If you manage an apartment building, you already know the amenity problem. Prospective residents expect a gym, a package room, and a courtyard, so every building has them, and none of it is a reason to choose your building over the one down the street. The things residents actually mention are small and specific: the building where the kids have somewhere to go, the lobby that feels alive. A claw machine is a small, specific thing.',
+      },
+      { type: 'h2', text: 'What a machine does for a building' },
+      {
+        type: 'p',
+        text: 'We want to be straight about the scale of this. A claw machine will not raise your rents or fill a vacancy by itself. It is a modest amenity that does three useful things:',
+      },
+      {
+        type: 'list',
+        items: [
+          'It gives families a reason to use a common area. A clubhouse that is empty on weekday afternoons gets used when children have somewhere to go that is not their apartment.',
+          'It shows up on tours. A leasing agent walking a family through the building has something to point to that is not a generic checklist, and a child who asks to play is a small piece of goodwill.',
+          'It makes the building feel looked after. A machine that is kept stocked, clean, and working says something about how the rest of the property is run.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'It is not equally useful everywhere. A building full of young families gets real use out of a machine. A building that is mostly single professionals or a quiet senior community will not, and we will tell you so rather than place a machine that sits unplayed.',
+      },
+      { type: 'h2', text: 'Where it goes in a residential building' },
+      {
+        type: 'list',
+        items: [
+          'The clubhouse or lounge, where children already congregate and the noise is expected. This is usually the best spot.',
+          'The shared laundry room, if your building has one. It is the same logic as [a laundromat](/blog/free-claw-machine-in-your-laundromat): a forced wait on a recurring schedule, with kids tagging along. Check that the room is well lit and not a tight corridor.',
+          'The lobby, with care. A lobby is the first thing guests and prospects see, so a machine here has to look good, but sound and crowds travel into the units above. A mini machine near the mail area can work.',
+          'Not beside the elevators, a front door, or a ground-floor unit. Place it where a group of children gathering will not block movement or sit under someone’s window.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'A standard machine needs about three by three feet and a few feet of clearance, plus a standard 110V outlet. A [compact mini machine](/blog/free-claw-machine-for-your-business-how-it-works) fits where a full cabinet will not, such as a corner of the package room.',
+      },
+      { type: 'h2', text: 'The concerns a manager should raise' },
+      { type: 'h3', text: 'Noise and after-hours use' },
+      {
+        type: 'p',
+        text: 'This is the one that generates complaints in a residential setting, and it deserves a real answer. Attract and play sounds are adjustable, and in a building we would normally set them low or off. For access, keep the common room on the same hours as the rest of your amenities so the machine is not drawing groups at midnight. If you already have trouble with after-hours gatherings in a common area, adding an attraction is not the fix.',
+      },
+      { type: 'h3', text: 'Who supervises children' },
+      {
+        type: 'p',
+        text: 'Residents’ children are residents’ responsibility, in the same way they are at your pool or your playground. A sign on the wall stating that children under a certain age must be accompanied is your decision to make and costs nothing. A machine placed within sight of the leasing office or a camera is easier to keep orderly.',
+      },
+      { type: 'h3', text: 'Approval' },
+      {
+        type: 'p',
+        text: 'If you manage on behalf of an owner, an HOA, or a board, a machine in a common area will likely need their sign-off. It helps to bring them the simple version: it costs the building nothing, and the machine is owned and maintained by someone else. We are glad to walk a board through the details.',
+      },
+      { type: 'h2', text: 'Free-play or coin-play?' },
+      {
+        type: 'p',
+        text: 'For a residential amenity, free-play is usually the right call. Charging residents to play a machine in their own building feels like an upsell at home, and the point is goodwill rather than income. Coin-play can work in a laundry room with heavy traffic, where the machine behaves more like it would in a commercial laundromat. Either way, the arrangement is explained up front, and you can change it later if the first choice is not working.',
+      },
+      { type: 'h2', text: 'What it costs the building' },
+      {
+        type: 'p',
+        text: 'Nothing. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver and install it, repair it, and restock the prizes on our own schedule. Your on-site staff never opens it or orders anything. The one thing we will need is access: service visits have to be arranged with whoever controls the common room or the building doors, and the easiest way to handle that is to tell us who to call.',
+      },
+      { type: 'h2', text: 'Where we place machines' },
+      {
+        type: 'p',
+        text: 'We work with properties across [San Francisco](/san-francisco-county), [Oakland and the East Bay](/oakland-county), [San Jose](/san-jose-county), [San Mateo County](/san-mateo-county), [Marin County](/marin-county), [Contra Costa County](/contra-costa-county), and [San Diego](/san-diego-county). Tell us about the building and we will say whether it is a fit.',
+      },
+      {
+        type: 'callout',
+        text: 'Manage a building in the San Francisco Bay Area or San Diego? Tell us about your common areas and we will tell you honestly whether a machine fits.',
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a claw machine a good amenity for an apartment building?',
+        a: 'It is a good, inexpensive amenity for buildings with families, because it gives children a reason to use a common area. It will not raise rents on its own, and it is a poor fit for buildings with mostly single adults or a quiet senior community.',
+      },
+      {
+        q: 'Where should a claw machine go in an apartment complex?',
+        a: 'The clubhouse or lounge is usually best. A shared laundry room also works well, and a mini machine can fit near the mail or package area. Avoid spots beside elevators, front doors, or ground-floor units.',
+      },
+      {
+        q: 'Will a claw machine be too noisy for residents?',
+        a: 'The attract and play sounds are adjustable, and in a residential building we would normally set them low or off. Keeping the machine in a common room, away from units, and on the same hours as your other amenities addresses most of it.',
+      },
+      {
+        q: 'What does it cost the property?',
+        a: 'Nothing. We own the machine and cover delivery, installation, repairs, and prize restocking. The property provides floor space and a standard 110V outlet, with no rental fee.',
+      },
+      {
+        q: 'Do we need approval from an HOA or owner?',
+        a: 'Probably, for a machine in a common area. The pitch to a board is simple: no cost, and owned and maintained by someone else. We can walk a board through the details.',
+      },
+      {
+        q: 'Should the machine be free-play for residents?',
+        a: 'Usually, yes. Charging residents to play in their own building feels like an upsell, and the goal is goodwill. Coin-play can make sense in a busy shared laundry room. You can change the setting later.',
+      },
+    ],
+  },
+  {
+    slug: 'free-claw-machine-for-your-salon-or-barbershop',
+    related: [
+      'how-to-keep-customers-entertained-while-they-wait',
+      'free-claw-machine-for-your-restaurant',
+      'free-claw-machine-for-your-business-how-it-works',
+    ],
+    title: 'Free Claw Machines in Hair Salons and Barbershops: Keeping Kids Busy While You Work',
+    excerpt:
+      'A child’s haircut goes better when the child is happy, and a walk-in barbershop has a waiting room full of people who were not quoted a time. Here is when a claw machine helps a shop like that, and when it does not.',
+    category: 'Business Placement',
+    readTime: '8 min read',
+    publishedAt: '2026-10-23',
+    updatedAt: '2026-10-23',
+    metaDescription:
+      'Should a barbershop or hair salon put in a claw machine? Where it helps (kids’ cuts, walk-in waits), where it does not (quiet salons), placement away from the chairs, and what it costs the shop.',
+    content: [
+      {
+        type: 'p',
+        text: 'A barbershop and a salon sound like the same kind of business, and for this question they are not. A walk-in barbershop has a waiting room that runs on no schedule, full of people who were told "it will be a bit." A color salon has appointments and a calm room that people pay to be in. A claw machine suits the first and usually works against the second, so it is worth being clear about which shop you run before deciding anything.',
+      },
+      { type: 'h2', text: 'Where it helps: the walk-in wait' },
+      {
+        type: 'p',
+        text: 'A walk-in barbershop is a close cousin of a restaurant host stand. The customer arrives, is told roughly how long it will be, and has to decide whether to stay. If there are three men ahead of them and a child with them, the decision is easy to get wrong, and the result is a walkout that you never see. A machine in the waiting area gives a child something to do and gives the parent a reason to stay in the chair.',
+      },
+      {
+        type: 'p',
+        text: 'It matters most on Saturdays and the days before school photos or holidays, when the waiting room fills with families. That is when the wait is longest and the children are least patient.',
+      },
+      { type: 'h2', text: 'Where it helps: the child in the chair' },
+      {
+        type: 'p',
+        text: 'The second job is quieter. A first haircut, or a haircut for a child who dislikes sitting still, goes easier when the child arrives in a good mood. A barber trimming around a squirming five-year-old is working more slowly and with more risk. A machine in the waiting area, and a prize to take home afterward, gives a parent something to promise. That is a small thing, but anyone who cuts children’s hair will tell you it is the kind of small thing that makes the difference between a good appointment and a bad one.',
+      },
+      { type: 'h2', text: 'Where it does not fit' },
+      {
+        type: 'list',
+        items: [
+          'Appointment-only salons. If nobody waits, the machine has no job. It is a thing in the corner taking up floor space.',
+          'Quiet, premium rooms. A color or spa salon sells calm. A machine with attract sounds, even turned low, can work against the room you have built.',
+          'Very small shops with no space for a waiting area. If a machine would sit within arm’s reach of a chair, it is too close. A [compact mini machine](/blog/free-claw-machine-for-your-business-how-it-works) helps in a tight room, but it cannot fix a room with no waiting area.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'We would rather tell you that than install a machine that fights your concept. If your shop is a mix of both, a family-friendly barbershop with a loud, social atmosphere is a good fit, and a quiet salon with a few chairs is not.',
+      },
+      { type: 'h2', text: 'Where it goes' },
+      {
+        type: 'list',
+        items: [
+          'In the waiting area, visible from the front desk or the nearest chair, so a parent can see a child while their own cut is in progress.',
+          'Well away from the chairs. Children playing within earshot of a customer mid-service is what makes a shop feel chaotic.',
+          'Out of the way of the door and the walkway to the chairs. People carrying coats and bags need a clear line.',
+          'Away from the sinks and the product shelves, and on a level floor with a few feet of clearance in front.',
+          'Near a standard 110V outlet. A standard machine needs about three by three feet.',
+        ],
+      },
+      { type: 'h2', text: 'Free-play or coin-play?' },
+      {
+        type: 'p',
+        text: 'Barbershops are one of the places where free-play is easy to justify. Kids’ cuts are often priced low, the margin is thin, and a machine that gives a child a free play after the cut is a cheap way to keep a family coming back. Coin-play suits a busy walk-in shop with a steady crowd who are used to paying for small things while they wait. Machines take cards, cash, and coins, so nobody has to find quarters. If the first choice does not suit the shop, we change it.',
+      },
+      { type: 'h2', text: 'Noise, cleaning, and the practical side' },
+      {
+        type: 'p',
+        text: 'Sound is adjustable, and in a shop with clippers and a radio running it is usually fine at low volume. Hair clippings do end up everywhere in a barbershop, so we clean the machine on service visits and your staff can wipe the glass with whatever they use on the mirrors. [We own the machine](/blog/free-claw-machine-for-your-business-how-it-works), deliver it, monitor it, repair it, and restock the prizes on our own schedule. Your barbers never touch it.',
+      },
+      { type: 'h2', text: 'What it costs the shop' },
+      {
+        type: 'p',
+        text: 'Nothing. There is no rental fee. You provide the floor space and the outlet. If you have been thinking about [buying a machine yourself](/blog/free-claw-machine-vs-buying-vs-renting), that piece goes through the real costs.',
+      },
+      { type: 'h2', text: 'Where we place machines' },
+      {
+        type: 'p',
+        text: 'We work with shops across [San Francisco](/san-francisco-county), [Oakland and the East Bay](/oakland-county), [San Jose](/san-jose-county), [San Mateo County](/san-mateo-county), [Contra Costa County](/contra-costa-county), and [San Diego](/san-diego-county). A quick conversation about your waiting area and your busiest days is enough to tell whether it is worth doing.',
+      },
+      {
+        type: 'callout',
+        text: 'Run a barbershop or salon in the San Francisco Bay Area or San Diego? Tell us about your waiting area and we will tell you honestly whether it fits.',
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does a claw machine work in a barbershop?',
+        a: 'In a walk-in or family-oriented shop, yes. It gives children something to do during the wait and helps a parent stay in line rather than walking out. In an appointment-only shop where nobody waits, it has no job to do.',
+      },
+      {
+        q: 'Is a claw machine appropriate for a hair salon?',
+        a: 'It depends on the room. A casual, family-friendly salon with a waiting area can use one. A quiet, premium, appointment-only salon should not, because the machine works against the calm you are selling.',
+      },
+      {
+        q: 'Where should the machine go in a barbershop?',
+        a: 'In the waiting area, visible from the front desk or nearest chair, well away from the cutting chairs, and out of the walkway to the door. It needs a level three-by-three-foot spot and a standard 110V outlet.',
+      },
+      {
+        q: 'What if my shop is very small?',
+        a: 'A compact mini machine fits places a full cabinet will not, such as the end of a bench or a narrow wall. But if there is no waiting area at all, a machine will not fix that, and we will tell you so.',
+      },
+      {
+        q: 'Should a barbershop run the machine free-play?',
+        a: 'Free-play works well for family shops, for example as a free play after a child’s haircut. Coin-play suits busy walk-in shops. Machines accept cards, cash, and coins, and the setting can be changed later.',
+      },
+      {
+        q: 'What does it cost the shop?',
+        a: 'Nothing. We own the machine and cover delivery, installation, repairs, and prize restocking. The shop provides floor space and an outlet, with no rental fee.',
+      },
+    ],
+  },
+  {
+    slug: 'how-to-keep-customers-entertained-while-they-wait',
+    related: [
+      'free-claw-machine-for-your-restaurant',
+      'free-claw-machine-in-your-laundromat',
+      'free-claw-machine-for-your-auto-shop-waiting-room',
+    ],
+    title: 'How to Keep Customers Entertained While They Wait: What Works and What Does Not',
+    excerpt:
+      'Waiting is the part of the visit customers remember. Here is an honest ranking of the usual fixes, from cheap and boring to a little unusual, and when a claw machine is worth the floor space.',
+    category: 'Business Placement',
+    readTime: '9 min read',
+    publishedAt: '2026-10-23',
+    updatedAt: '2026-10-23',
+    metaDescription:
+      'Practical ways to keep customers entertained while they wait: shorten the wait first, then comfort, then distraction. Where TVs, Wi-Fi, kids’ corners, and claw machines each help, and what each really costs.',
+    content: [
+      {
+        type: 'p',
+        text: 'Almost every business that serves people has a wait in it: the table, the chair, the repair, the wash cycle, the pickup counter. Customers tend to forget the product and remember the wait, and the research on queues backs this up in a general way: an occupied wait feels shorter than an empty one, and an uncertain wait feels longer than a known one. That gives you three things to work on, in order.',
+      },
+      { type: 'h2', text: 'Step one: shorten or explain the wait' },
+      {
+        type: 'p',
+        text: 'Before you spend anything on entertainment, look at the wait itself. Distraction is the last resort, not the first, and an entertained customer who has been lied to about timing is still an angry customer.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Quote honestly. A wait of thirty minutes that is described as thirty minutes is easier to bear than a wait of twenty that was described as ten.',
+          'Tell people what is happening. A text when the car is ready, a buzzer for the table, a board with the queue on it. Uncertainty is what makes a wait feel long.',
+          'Give people the option to leave. If you can text them when it is their turn, a good share of them will go and do something else, which frees up your waiting room.',
+        ],
+      },
+      { type: 'h2', text: 'Step two: make the waiting area comfortable' },
+      {
+        type: 'p',
+        text: 'The cheapest improvements are the least exciting ones, and they work for almost every customer:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Real seating, in enough quantity, not facing a wall.',
+          'Water, and coffee if the wait is long. It is a small cost and it is read as hospitality.',
+          'Working Wi-Fi with a password on a sign. Adults will entertain themselves if you let them.',
+          'A place to charge a phone. This is more valued than most owners expect.',
+          'Clean, well-lit space. A clean waiting room says the same about the rest of the business.',
+        ],
+      },
+      { type: 'h2', text: 'Step three: give people something to do' },
+      {
+        type: 'p',
+        text: 'Once the wait is honest and the room is comfortable, distraction does its job. These are the usual options, with the real limits of each:',
+      },
+      { type: 'h3', text: 'A television' },
+      {
+        type: 'p',
+        text: 'Cheap and universal, and it works for adults. It does very little for children, and what is on the screen is a decision that annoys somebody. Muted, with captions, is a reasonable default.',
+      },
+      { type: 'h3', text: 'Magazines and reading material' },
+      {
+        type: 'p',
+        text: 'Mostly decoration now. Most people have a phone, and a pile of old magazines can make a room look neglected rather than welcoming.',
+      },
+      { type: 'h3', text: 'A kids’ corner' },
+      {
+        type: 'p',
+        text: 'Books, blocks, a small table. It is effective with younger children and costs little, but it takes up floor space, it needs to be kept clean, and it stops working at around age seven or eight, when children want something with a goal.',
+      },
+      { type: 'h3', text: 'A claw machine' },
+      {
+        type: 'p',
+        text: 'It has a goal, a result, and a prize, which is what children past the toddler stage want. Adults play too, and watching someone else play is a mild entertainment in itself. The honest limits: it needs about three by three feet and an outlet, it is noisy unless you turn it down, and it only earns its place where a wait is long enough, and families come often enough, to use it. [We own it, service it, and restock it](/blog/free-claw-machine-for-your-business-how-it-works), so it costs the business nothing to try.',
+      },
+      { type: 'h3', text: 'A big arcade or game room' },
+      {
+        type: 'p',
+        text: 'Only if entertainment is the business. For everyone else it is too much space, too much noise, and too much management.',
+      },
+      { type: 'h2', text: 'Where a claw machine fits best' },
+      {
+        type: 'p',
+        text: 'Three conditions make it worth considering:',
+      },
+      {
+        type: 'list',
+        items: [
+          'The wait is between about ten minutes and an hour and a half. Shorter and nobody has time. Much longer and you need seating and food more than a game.',
+          'Families with children are regular customers, not occasional ones.',
+          'The room can tolerate some noise and a small crowd of children. A [laundromat](/blog/free-claw-machine-in-your-laundromat) or an [auto shop](/blog/free-claw-machine-for-your-auto-shop-waiting-room) qualifies. A [fine dining room](/blog/free-claw-machine-for-your-restaurant) does not.',
+        ],
+      },
+      { type: 'h2', text: 'Where it does not' },
+      {
+        type: 'p',
+        text: 'If nobody waits, the machine has no purpose. If your complaints are about slow service, the machine is a distraction from a problem you need to fix. And if your brand depends on a quiet, upscale feel, it is the wrong object for the room. We would rather say so than place a machine that does not work for you.',
+      },
+      { type: 'h2', text: 'A simple way to decide' },
+      {
+        type: 'p',
+        text: 'Count how many families with children walk through on your busiest day, and how long they stay. If the answer is "a lot, for a while," and you have a spare three feet of floor and an outlet, a machine is worth trying. If the answer is "few, briefly," spend the effort on seating and Wi-Fi instead.',
+      },
+      {
+        type: 'callout',
+        text: 'Run a business in the San Francisco Bay Area or San Diego where people wait? Tell us about your space and we will tell you honestly whether a machine would help.',
+        cta: { label: 'Request a free machine', href: '/get-a-free-machine' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do you keep customers entertained while they wait?',
+        a: 'Start by making the wait honest and shorter, then make the waiting area comfortable with seating, water, Wi-Fi, and phone charging. Only then add entertainment, such as a television, a kids’ corner, or a claw machine, depending on who your customers are.',
+      },
+      {
+        q: 'What is the cheapest way to improve a waiting room?',
+        a: 'Honest wait quotes and a text or buzzer when it is the customer’s turn. After that, comfortable seating, working Wi-Fi, a place to charge a phone, and clean, well-lit space. None of these needs special equipment.',
+      },
+      {
+        q: 'What keeps children busy in a waiting room?',
+        a: 'Younger children do well with books, blocks, or a small play table. Children past about seven or eight usually want something with a goal and a result, which is where a claw machine or similar game earns its space.',
+      },
+      {
+        q: 'Is a claw machine worth it for a small business?',
+        a: 'It is worth trying if customers wait between about ten minutes and an hour and a half, families visit regularly, and the room can tolerate some noise. With a free placement the business pays nothing, so the main cost is three by three feet of floor.',
+      },
+      {
+        q: 'When is a claw machine a bad idea?',
+        a: 'When nobody waits, when the real problem is slow service, or when the brand depends on a quiet, upscale room. In those cases, fix the underlying issue or choose a different amenity.',
+      },
+    ],
+  },
 ]
 
 export type Audience = 'business' | 'event'
