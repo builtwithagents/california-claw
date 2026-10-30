@@ -11,24 +11,26 @@ type Props = {
   sizes?: string
   className?: string
   /**
-   * Above-the-fold clip: its poster is the page's LCP image, it plays as soon
-   * as that poster has painted, and it uses the lighter `-sm` encode
-   * (432px wide), since hero frames render at most ~310px wide.
+   * Above-the-fold clip: its poster is the page's LCP image, it starts a
+   * moment after page load, and it uses the lighter `-sm` encode (432px wide), since hero frames render at most
+   * ~310px wide.
    */
   priority?: boolean
 }
 
+/** Pause after page load before the hero clips start. */
+const HERO_DELAY_MS = 600
+
 type NetworkInfo = { saveData?: boolean; effectiveType?: string }
 
 /**
- * Silent looping clip, built so it never slows the first paint.
+ * Silent looping clip. Clips start playing on hydration with no scroll gating;
+ * above-the-fold clips wait only for page load plus a short beat.
  *
  * The poster is a normal optimised image (responsive, WebP/AVIF), so it is
  * what the visitor sees first and what Lighthouse measures as LCP. The video
- * has no source until it is needed: an above-the-fold clip starts right
- * after its poster paints, others when scrolled into view. Never for
- * reduced-motion, Save-Data or 2G visitors. It fades in over the poster once
- * it is actually playing.
+ * fades in over it once it is actually playing. Never plays for
+ * reduced-motion, Save-Data or 2G visitors.
  */
 export default function LoopVideo({
   name,
@@ -49,41 +51,27 @@ export default function LoopVideo({
 
     // Some React versions drop the muted attribute, which blocks autoplay.
     video.muted = true
-    let attached = false
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          if (!attached) {
-            attached = true
-            video.src = `/media/video/${name}${priority ? '-sm' : ''}.mp4`
-          }
-          video.play().catch(() => {})
-        } else if (attached) {
-          video.pause()
-        }
-      },
-      // Hero clips start as soon as any of the frame is visible (on phones only
-      // its top edge shows under the headline); others once a third is in view.
-      { threshold: priority ? 0 : 0.35 },
-    )
-
-    const begin = () => observer.observe(video)
-    // The hero clip waits only for its poster to paint, so the video never
-    // competes with the LCP image but still starts almost immediately.
-    const poster = video.previousElementSibling as HTMLImageElement | null
-    let fallback: number | undefined
-    if (priority && poster && !poster.complete) {
-      poster.addEventListener('load', begin, { once: true })
-      fallback = window.setTimeout(begin, 1500)
-    } else {
-      begin()
+    const start = () => {
+      video.src = `/media/video/${name}${priority ? '-sm' : ''}.mp4`
+      video.play().catch(() => {})
+    }
+    if (!priority) {
+      start()
+      return
     }
 
+    // Above-the-fold clips wait for the page's own load event, then a beat
+    // more, so the video bytes never compete with the LCP image.
+    let timer: number | undefined
+    const later = () => {
+      timer = window.setTimeout(start, HERO_DELAY_MS)
+    }
+    if (document.readyState === 'complete') later()
+    else window.addEventListener('load', later, { once: true })
+
     return () => {
-      poster?.removeEventListener('load', begin)
-      window.clearTimeout(fallback)
-      observer.disconnect()
+      window.removeEventListener('load', later)
+      window.clearTimeout(timer)
     }
   }, [name, priority])
 
